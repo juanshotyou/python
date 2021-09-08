@@ -23,12 +23,13 @@ def create_log_file():
             if x == 3:
                 print("You have entered an invalid filename 3 times.\nCheck the working folder and rerun.")
                 break
+    return (filename)
 
 def main():
     print("Hello from the main function!")
     print_time_and_cwd()
     if input("Type 'LOG' if you would like to log the actions of this script to a file: ") == "LOG":
-        create_log_file()
+        log_file = create_log_file()
     else: 
         print("This script will continue without logging.")
 
