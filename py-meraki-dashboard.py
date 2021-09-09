@@ -4,7 +4,7 @@ import requests
 import json
 
 URL = "https://n313.meraki.com/api/v1/organizations"
-API_KEY = "00f91d2d07f2e7fc7733f459086f3140b5fd41d9"
+API_KEY = "6bec40cf957de430a6f1f2baa056b99a4fac9ea0"
 ENCODING = "application/json"
 HEADERS = { "X-Cisco-Meraki-API-Key" : API_KEY , "Accept" : ENCODING }
 
@@ -42,7 +42,6 @@ def print_devices_from_network(org_id):
         print(item["model"] + " - " + item["serial"] + " - " + item["mac"] + " - " + item["url"])
 
 def main():
-    print("Hello from the main function!")
     print_time_and_cwd()
     organizations = get_list_of_organizations()
     print_list_of_organizations(organizations)
@@ -50,4 +49,7 @@ def main():
     print_devices_from_network(org_id)
 
 if __name__ == "__main__":
+    start_time = datetime.now()
     main()
+    end_time = datetime.now()
+    print(f'\nScript complete, total runtime {end_time - start_time}')
