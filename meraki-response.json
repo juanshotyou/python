@@ -1,0 +1,742 @@
+[
+    {
+        "id": "739153288842183354",
+        "name": "Testing123",
+        "url": "https://n313.meraki.com/o/x-L8jc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183268",
+        "name": "MSP - Client A",
+        "url": "https://n313.meraki.com/o/6SsW2d5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183560",
+        "name": "DunderMifflin",
+        "url": "https://n313.meraki.com/o/Vnr1ob5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183210",
+        "name": "MYLAND_2021",
+        "url": "https://n313.meraki.com/o/0ODNOb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183824",
+        "name": "Hello",
+        "url": "https://n313.meraki.com/o/ElTMbc5e/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "739153288842183562",
+        "name": "XORGX",
+        "url": "https://n313.meraki.com/o/KCyR1a5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183109",
+        "name": "Second Test Organization",
+        "url": "https://n313.meraki.com/o/nm4Hpa5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183144",
+        "name": "Charles Uneze Organization",
+        "url": "https://n313.meraki.com/o/4JHvcd5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183267",
+        "name": "Nath_Meraki",
+        "url": "https://n313.meraki.com/o/O2uFwc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183615",
+        "name": "NorbertTest",
+        "url": "https://n313.meraki.com/o/EK3Toa5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183617",
+        "name": "TestSD",
+        "url": "https://n313.meraki.com/o/fzk8Gd5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183278",
+        "name": "my_new_test_meraki_org",
+        "url": "https://n313.meraki.com/o/VC9OFa5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183142",
+        "name": "KB",
+        "url": "https://n313.meraki.com/o/aS4jvc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183042",
+        "name": "PAOK",
+        "url": "https://n313.meraki.com/o/U_yS5a5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183275",
+        "name": "Ragab",
+        "url": "https://n313.meraki.com/o/s78Gsd5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183620",
+        "name": "Foresight",
+        "url": "https://n313.meraki.com/o/0-xfCa5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183504",
+        "name": "R4-Sam",
+        "url": "https://n313.meraki.com/o/ptyaid5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183778",
+        "name": "ducTran",
+        "url": "https://n313.meraki.com/o/3LuZ1a5e/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "739153288842183178",
+        "name": "lukas",
+        "url": "https://n313.meraki.com/o/t1p79d5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183567",
+        "name": "JMK Org Test",
+        "url": "https://n313.meraki.com/o/tj6xsd5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183388",
+        "name": "NTT LAB (US)",
+        "url": "https://n313.meraki.com/o/1hDc-d5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183359",
+        "name": "ZAAZA",
+        "url": "https://n313.meraki.com/o/ga3Luc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183264",
+        "name": "SOCORP",
+        "url": "https://n313.meraki.com/o/Ya2x7b5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183519",
+        "name": "Prasad_testing",
+        "url": "https://n313.meraki.com/o/daSNLd5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183777",
+        "name": "ducTran",
+        "url": "https://n313.meraki.com/o/Qq3Hdc5e/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "739153288842183030",
+        "name": "sampleNet",
+        "url": "https://n313.meraki.com/o/r14BKa5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842182996",
+        "name": "This is a test",
+        "url": "https://n313.meraki.com/o/RqKCtb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183259",
+        "name": "FiveFold-Org",
+        "url": "https://n313.meraki.com/o/Iz4zbb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183614",
+        "name": "Syrius_beta",
+        "url": "https://n313.meraki.com/o/Pv_R7c5e/manage/organization/overview",
+        "samlConsumerUrl": "https://n313.meraki.com/saml/login/Pv_R7c5e/0plavbHWhsLd",
+        "samlConsumerUrls": [
+            "https://n313.meraki.com/saml/login/Pv_R7c5e/0plavbHWhsLd"
+        ],
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842182989",
+        "name": "Panenka Systems",
+        "url": "https://n313.meraki.com/o/jg-D5d5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183112",
+        "name": "Org_1",
+        "url": "https://n313.meraki.com/o/iE011b5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183661",
+        "name": "NB",
+        "url": "https://n313.meraki.com/o/68zryc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183345",
+        "name": "HELLO_API",
+        "url": "https://n313.meraki.com/o/3e5zsd5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183516",
+        "name": "Test_ked",
+        "url": "https://n313.meraki.com/o/7sWEla5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842182988",
+        "name": "My Enauto Org",
+        "url": "https://n313.meraki.com/o/qX2xRc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183770",
+        "name": "Stest",
+        "url": "https://n313.meraki.com/o/dEmQod5e/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "739153288842183257",
+        "name": "Meraki_K",
+        "url": "https://n313.meraki.com/o/coiqQb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183131",
+        "name": "My_ORG",
+        "url": "https://n313.meraki.com/o/Or-1Hb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183647",
+        "name": "MB-Sandbox",
+        "url": "https://n313.meraki.com/o/6q8Gvc5e/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "739153288842183281",
+        "name": "my_new_test_meraki_org",
+        "url": "https://n313.meraki.com/o/6mmsbb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183771",
+        "name": "SuperNova",
+        "url": "https://n313.meraki.com/o/CSUSjc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183652",
+        "name": "Merrakki",
+        "url": "https://n313.meraki.com/o/E5fx3c5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183353",
+        "name": "ENAUTO",
+        "url": "https://n313.meraki.com/o/_HsfHc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183833",
+        "name": "YAS-12345",
+        "url": "https://n313.meraki.com/o/bPK6Lc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183338",
+        "name": "MaxOrganization",
+        "url": "https://n313.meraki.com/o/bMtRGd5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183396",
+        "name": "KFC",
+        "url": "https://n313.meraki.com/o/fEM06d5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183386",
+        "name": "NTT LAB (EU)",
+        "url": "https://n313.meraki.com/o/Ln2VTc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183325",
+        "name": "Dxb_silicoon",
+        "url": "https://n313.meraki.com/o/eDIvSc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183561",
+        "name": "DunderMifflinX",
+        "url": "https://n313.meraki.com/o/nTt5Qc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183237",
+        "name": "Test_M_Org",
+        "url": "https://n313.meraki.com/o/t7F-md5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183233",
+        "name": "test01",
+        "url": "https://n313.meraki.com/o/WjT2za5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183605",
+        "name": "Chungus",
+        "url": "https://n313.meraki.com/o/2d0AFc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183506",
+        "name": "TEST_MERAKI",
+        "url": "https://n313.meraki.com/o/iZWXXb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183222",
+        "name": "XYZ",
+        "url": "https://n313.meraki.com/o/J-9OId5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842182990",
+        "name": "My Enauto Org",
+        "url": "https://n313.meraki.com/o/k6FBjc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183649",
+        "name": "DevNetSandbox-J",
+        "url": "https://n313.meraki.com/o/vup0qa5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183333",
+        "name": "DevNet Sandbox2",
+        "url": "https://n313.meraki.com/o/IgKItc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183608",
+        "name": "Dev_901_Test",
+        "url": "https://n313.meraki.com/o/gtRY0c5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183262",
+        "name": "Timisoara",
+        "url": "https://n313.meraki.com/o/yFifib5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183041",
+        "name": "Dunder Mifflin ",
+        "url": "https://n313.meraki.com/o/o0Tqbc5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183346",
+        "name": "HELLO_API",
+        "url": "https://n313.meraki.com/o/5TRipb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183563",
+        "name": "EMEAR ORG",
+        "url": "https://n313.meraki.com/o/mmzmXa5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "739153288842183254",
+        "name": "Training",
+        "url": "https://n313.meraki.com/o/jIFKdb5e/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "959854",
+        "name": "Devnet",
+        "url": "https://n313.meraki.com/o/Aelgwd/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090306",
+        "name": "WinterOrg",
+        "url": "https://n149.meraki.com/o/V0GUacvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090305",
+        "name": "SummerOrg",
+        "url": "https://n149.meraki.com/o/rb1g_cvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090304",
+        "name": "Meraki_Ansible_Test",
+        "url": "https://n149.meraki.com/o/sVhqXcvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090303",
+        "name": "EWO",
+        "url": "https://n149.meraki.com/o/4T-Hwavc/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "646829496481090297",
+        "name": "Omar_test",
+        "url": "https://n149.meraki.com/o/7lm8Wbvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090291",
+        "name": "MyOrg_Test",
+        "url": "https://n149.meraki.com/o/4dqigavc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090277",
+        "name": "Chan",
+        "url": "https://n149.meraki.com/o/1DPMMcvc/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "646829496481090261",
+        "name": "SavTestOrganization",
+        "url": "https://n149.meraki.com/o/NxnxPcvc/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "646829496481090243",
+        "name": "GTECH-ORG",
+        "url": "https://n149.meraki.com/o/0DU21dvc/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "646829496481090242",
+        "name": "Grossetofficet",
+        "url": "https://n149.meraki.com/o/fY9mAavc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090232",
+        "name": "Osho_branch",
+        "url": "https://n149.meraki.com/o/GAvTwdvc/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "646829496481090195",
+        "name": "TestFel",
+        "url": "https://n149.meraki.com/o/HCQPjdvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090182",
+        "name": "GERIS",
+        "url": "https://n149.meraki.com/o/Gonhudvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "549236",
+        "name": "DevNet Sandbox",
+        "url": "https://n149.meraki.com/o/-t35Mb/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090153",
+        "name": "Sandbox Test ",
+        "url": "https://n149.meraki.com/o/UkKd_dvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090148",
+        "name": "greger",
+        "url": "https://n149.meraki.com/o/TMG4Idvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090100",
+        "name": "mh_test",
+        "url": "https://n149.meraki.com/o/cSTuAdvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090077",
+        "name": "CZ-TB-Test",
+        "url": "https://n149.meraki.com/o/MoEANavc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090062",
+        "name": "Meraki-J",
+        "url": "https://n149.meraki.com/o/dimMtbvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481090058",
+        "name": "RD networks",
+        "url": "https://n149.meraki.com/o/VhzFrbvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481089956",
+        "name": "Sam_Test",
+        "url": "https://n149.meraki.com/o/eJXnFcvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481089807",
+        "name": "DevNET Sandbox",
+        "url": "https://n149.meraki.com/o/fqQ5Cdvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "646829496481089711",
+        "name": "IPA",
+        "url": "https://n149.meraki.com/o/mpwmFbvc/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "1062199",
+        "name": "OPLK ",
+        "url": "https://n385.meraki.com/o/Svs4xa/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "1057293",
+        "name": "meraki_test_reston",
+        "url": "https://n109.meraki.com/o/97hh3c/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "1055430",
+        "name": "WARRAQ",
+        "url": "https://n109.meraki.com/o/Mgjx2c/manage/organization/overview",
+        "api": {
+            "enabled": null
+        }
+    },
+    {
+        "id": "1030307",
+        "name": "EZ Testing",
+        "url": "https://n201.meraki.com/o/fle9Ub/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    },
+    {
+        "id": "1008015",
+        "name": "sk-it",
+        "url": "https://n201.meraki.com/o/Gf48Zd/manage/organization/overview",
+        "api": {
+            "enabled": true
+        }
+    }
+]
