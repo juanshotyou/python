@@ -1,0 +1,159 @@
+{
+  "header": {
+    "generatedOn": 1631290672478,
+    "viewKeys": {
+      "uniqueKey": [],
+      "preferenceKey": "grid-TemplateMasterWithFeature"
+    },
+    "columns": [
+      {
+        "title": "Name",
+        "property": "templateName",
+        "hideable": false,
+        "dataType": "string"
+      },
+      {
+        "title": "Description",
+        "property": "templateDescription",
+        "dataType": "string"
+      },
+      {
+        "title": "Type",
+        "property": "configType",
+        "display": "keyvalue",
+        "keyvalueProperty": "configType",
+        "hideable": false,
+        "keyvalue": [
+          {
+            "key": "file",
+            "value": "CLI"
+          },
+          {
+            "key": "template",
+            "value": "Feature"
+          }
+        ],
+        "dataType": "string"
+      },
+      {
+        "title": "Device Model",
+        "property": "deviceType",
+        "display": "keyvalue",
+        "keyvalueProperty": "deviceType",
+        "hideable": false,
+        "minWidth": 100,
+        "dataType": "string"
+      },
+      {
+        "title": "Feature Templates",
+        "property": "templateAttached",
+        "dataType": "string"
+      },
+      {
+        "title": "Devices Attached",
+        "property": "devicesAttached",
+        "display": "deviceLinkCell",
+        "dataType": "number"
+      },
+      {
+        "title": "Updated By",
+        "property": "lastUpdatedBy",
+        "dataType": "string"
+      },
+      {
+        "title": "Last Updated",
+        "property": "lastUpdatedOn",
+        "displayFormat": "DD MMM YYYY h:mm:ss A z",
+        "inputFormat": "unix-time",
+        "dataType": "date"
+      }
+    ],
+    "fields": [
+      {
+        "property": "templateName",
+        "dataType": "string"
+      },
+      {
+        "property": "templateDescription",
+        "dataType": "string"
+      },
+      {
+        "property": "configType",
+        "dataType": "string",
+        "display": "keyvalue"
+      },
+      {
+        "property": "deviceType",
+        "dataType": "string",
+        "display": "keyvalue"
+      },
+      {
+        "property": "templateAttached",
+        "dataType": "string"
+      },
+      {
+        "property": "devicesAttached",
+        "dataType": "number",
+        "display": "deviceLinkCell"
+      },
+      {
+        "property": "lastUpdatedBy",
+        "dataType": "string"
+      },
+      {
+        "property": "lastUpdatedOn",
+        "dataType": "date"
+      }
+    ]
+  },
+  "data": [
+    {
+      "deviceType": "vedge-CSR-1000v",
+      "lastUpdatedBy": "admin",
+      "factoryDefault": false,
+      "templateName": "DC_cEdge_Template",
+      "devicesAttached": 1,
+      "templateDescription": "DC_cEdge_Template",
+      "lastUpdatedOn": 1588877607114,
+      "configType": "template",
+      "templateId": "94ec2fc1-3458-458d-8b74-38559c3b8f7b",
+      "templateAttached": 14
+    },
+    {
+      "deviceType": "vsmart",
+      "lastUpdatedBy": "admin",
+      "factoryDefault": false,
+      "templateName": "vSmart_Template",
+      "devicesAttached": 1,
+      "templateDescription": "vSmart_Template",
+      "lastUpdatedOn": 1588877610274,
+      "configType": "template",
+      "templateId": "a7fa7f99-ee83-43bf-ba3e-c9dbdafbe28f",
+      "templateAttached": 9
+    },
+    {
+      "deviceType": "vedge-cloud",
+      "lastUpdatedBy": "admin",
+      "factoryDefault": false,
+      "templateName": "Site_3_vEdge_Template",
+      "devicesAttached": 1,
+      "templateDescription": "Site_3_vEdge_Template",
+      "lastUpdatedOn": 1588877604938,
+      "configType": "template",
+      "templateId": "ddab0f71-26bf-4561-98ab-d6367f6d1d41",
+      "templateAttached": 13
+    },
+    {
+      "deviceType": "vedge-CSR-1000v",
+      "lastUpdatedBy": "admin",
+      "factoryDefault": false,
+      "templateName": "Site_1_and_2_cEdge_Template",
+      "devicesAttached": 2,
+      "templateDescription": "Site_1_and_2_cEdge_Template",
+      "lastUpdatedOn": 1588877608814,
+      "configType": "template",
+      "templateId": "b7ccd31e-0e59-417d-8f52-72fc9106060a",
+      "templateAttached": 13
+    }
+  ]
+}
