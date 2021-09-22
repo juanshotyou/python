@@ -138,7 +138,7 @@ def createNetworkObject():
                 "Content-Type" : "application/json",
                 "X-auth-access-token" : token
             }
-            response = requests.request("POST", url, headers=headers, data=json.dumps(network_object, indent=4), verify=False)
+            response = requests.request("POST", url, headers=headers, data=json.dumps(network_object), verify=False)
             print(f"The request returned status code {response.status_code}.")
             if response.status_code == 201 or response.status_code == 202:
                 print("Object successfully deployed!")
