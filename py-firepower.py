@@ -7,7 +7,7 @@ from getpass import getpass
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-def getTokenAndDomain(base_url:str):
+def getTokenAndDomain():
 
     username = input("Please input the FMC username: ")
     password = getpass("Please input the FMC password: ")
@@ -29,7 +29,7 @@ def getTokenAndDomain(base_url:str):
         print("\nAuthentication failed! Terminating script!\n")
         sys.exit()
 
-def getDevices(token:str, domain_uuid:str, base_url:str):
+def getDevices():
 
     devices = []
 
@@ -52,10 +52,8 @@ def getDevices(token:str, domain_uuid:str, base_url:str):
         devices.append(item)
 
     return devices
-    #print(formatted_response["items"])
-    #print(json.dumps(formatted_response, indent=4))
 
-def getAccessPolicies(token:str, domain_uuid:str, base_url:str):
+def getAccessPolicies():
 
     policies = []
 
@@ -79,7 +77,7 @@ def getAccessPolicies(token:str, domain_uuid:str, base_url:str):
 
     return policies
 
-def getAccessPoliciesContent(token:str, domain_uuid:str, base_url:str, policies:list):
+def getAccessPoliciesContent(policies:list):
 
     policy_contents = []
 
@@ -116,18 +114,75 @@ def printAccessPolicyContents(policy_contents:list):
             for i in range(len(item)):
                 print(json.dumps(item[i], indent=4))
 
+def createNetworkObject():
+
+    obj_name = input("Please input a name for this network object (no spaces allowed): ")
+    obj_value = input("Please input the value for this network object (formatted as X.X.X.X/YY): ")
+    obj_description = input("Please input a description for this network object: ")
+
+    network_object = {
+        "name" : obj_name,
+        "value" : obj_value,
+        "overridable" : False,
+        "description" : obj_description,
+        "type" : "Network"
+    }
+
+    print("Your object is\n\n", json.dumps(network_object, indent=4), "\n")
+
+    deploy_object = input("Input 1 if you would like to deploy this object or anything else to discard it: ")
+    if deploy_object == "1":
+        try:
+            url = base_url + "/api/fmc_config/v1/domain/" + domain_uuid + "/object/networks"
+            headers = {
+                "Content-Type" : "application/json",
+                "X-auth-access-token" : token
+            }
+            response = requests.request("POST", url, headers=headers, data=json.dumps(network_object, indent=4), verify=False)
+            print(f"The request returned status code {response.status_code}.")
+            if response.status_code == 201 or response.status_code == 202:
+                print("Object successfully deployed!")
+            else:
+                response.raise_for_status()
+            print(json.loads(response.text))
+        except requests.exceptions.HTTPError as err:
+            print("Reason Code: " + str(err))
+        finally:
+            if response:
+                response.close()
+
+def getNetworkObjects():
+
+    url = base_url + "/api/fmc_config/v1/domain/" + domain_uuid + "/object/networks"
+    headers = {
+        "Content-Type" : "application/json",
+        "X-auth-access-token" : token
+    }
+    response = requests.request("GET", url, headers=headers, verify=False)
+
+    formatted_response = json.loads(response.text)
+
+    print("Currently configured objects in FMC:\n")
+    for item in formatted_response["items"]:
+        print(json.dumps(item, indent=4))
+
+    return formatted_response
 
 def main():
 
+    global base_url, token, domain_uuid
+
     ip_address = input("Please input the FMC IP address: ")
     base_url = "https://" + ip_address
-
-    token, domain_uuid = getTokenAndDomain(base_url)
-    devices = getDevices(token, domain_uuid, base_url)
-    policies = getAccessPolicies(token, domain_uuid, base_url)
-    policy_contents = getAccessPoliciesContent(token, domain_uuid, base_url, policies)
+    token, domain_uuid = getTokenAndDomain()
+    devices = getDevices()
+    policies = getAccessPolicies()
+    policy_contents = getAccessPoliciesContent(policies)
     
     printAccessPolicyContents(policy_contents)
+
+    createNetworkObject()
+    network_objects = getNetworkObjects()
 
 if __name__ == "__main__":
     main()
