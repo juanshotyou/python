@@ -77,7 +77,7 @@ def getAccessPolicies():
 
     return policies
 
-def getAccessPoliciesContent(policies:list):
+def getAccessPoliciesContents(policies:list):
 
     policy_contents = []
 
@@ -177,7 +177,7 @@ def main():
     token, domain_uuid = getTokenAndDomain()
     devices = getDevices()
     policies = getAccessPolicies()
-    policy_contents = getAccessPoliciesContent(policies)
+    policy_contents = getAccessPoliciesContents(policies)
     
     printAccessPolicyContents(policy_contents)
 
