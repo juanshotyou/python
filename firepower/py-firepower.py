@@ -25,10 +25,10 @@ def getTokenAndDomain():
     response = requests.request("POST", url, headers = headers, verify = False)
 
     if response.status_code == 204:
-        print("\n##Authentication successfull!\n")
+        print("\n## Authentication successfull!\n")
         return response.headers["X-auth-access-token"], response.headers["DOMAIN_UUID"]
     else:
-        print("\n##Authentication failed! Terminating script!\n")
+        print("\n## Authentication failed! Terminating script!\n")
         sys.exit()
 
 def getDevices():
@@ -39,9 +39,9 @@ def getDevices():
     response = requests.request("GET", url, headers = headers, verify = False)
 
     if response.status_code == 200:
-        print("\n##Device list retrieved successfully!\n")
+        print("\n## Device list retrieved successfully!\n")
     else:
-        print("\n##Error while retrieving device list! Terminating script!\n")
+        print("\n## Error while retrieving device list! Terminating script!\n")
         sys.exit()
 
     formatted_response = json.loads(response.text)
@@ -59,9 +59,9 @@ def getAccessPolicies():
     response = requests.request("GET", url, headers = headers, verify = False)
 
     if response.status_code == 200:
-        print("\n##Policies list retrieved successfully!\n")
+        print("\n## Policies list retrieved successfully!\n")
     else:
-        print("\n##Error while retrieving policies list! Terminating script!\n")
+        print("\n## Error while retrieving policies list! Terminating script!\n")
         sys.exit()
 
     formatted_response = json.loads(response.text)
@@ -80,9 +80,9 @@ def getAccessPoliciesContents(policies:list):
         response = requests.request("GET", url, headers = headers, verify = False)
 
         if response.status_code == 200:
-            print(f"\n##Access rule for policy {policy_id} retrieved successfully!\n")
+            print(f"\n## Access rule for policy {policy_id} retrieved successfully!\n")
         else:
-            print("\n##Error while retrieving policies contents! Terminating script!\n")
+            print("\n## Error while retrieving policies contents! Terminating script!\n")
             sys.exit()
 
         formatted_response = json.loads(response.text)
@@ -178,11 +178,11 @@ def getAllObjects():
         objects.append(json_response["items"])
 
     if result == 5:
-        print("\n##Objects successfully downloaded!\n")
+        print("\n## Objects successfully downloaded!\n")
     elif result <= 0:
-        print("\n##Objects downloaded with some errors. Please check the downloaded data manually.\n")
+        print("\n## Objects downloaded with some errors. Please check the downloaded data manually.\n")
     else:
-        print("\##An error was encountered during the download. No objects have been retrieved.\n")
+        print("\## An error was encountered during the download. No objects have been retrieved.\n")
     result = 0
 
     return objects
