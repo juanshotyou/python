@@ -1,3 +1,4 @@
+from urllib import response
 import requests
 import urllib3
 import base64
@@ -25,8 +26,10 @@ def getTokenAndDomain():
     response = requests.request("POST", url, headers = headers, verify = False)
 
     if response.status_code == 204:
-        print("\n## Authentication successfull!\n")
-        return response.headers["X-auth-access-token"], response.headers["DOMAIN_UUID"]
+        domain_uuid = response.headers["DOMAIN_UUID"]
+        token = response.headers["X-auth-access-token"]
+        print(f"\n## Authentication successfull! Domain id is {domain_uuid}.\n")
+        return token, domain_uuid
     else:
         print("\n## Authentication failed! Terminating script!\n")
         sys.exit()
@@ -187,6 +190,25 @@ def getAllObjects():
 
     return objects
 
+def runCustomCommandAndPrint():
+
+    custom_url = input("Please paste only the API URL for this request: ")
+    url = base_url + custom_url
+
+    try:
+        response = requests.get(url, headers = headers, verify = False)
+        print(f"\nThe request returned status code {response.status_code}.")
+        if response.status_code >= 200 and response.status_code <= 299:
+            json_response = json.loads(response.text)
+            print("Operation completed successfully!\n\n", json.dumps(json_response, indent = 2). "\n")
+        else:
+            response.raise_for_status()
+    except requests.exceptions.HTTPError as err:
+        print("Reason Code: " + str(err))
+    finally:
+        if response:
+            response.close()
+
 def main():
 
     global base_url, token, domain_uuid, headers
@@ -197,16 +219,17 @@ def main():
     #Initialize the menu
 
     menu_choice_list = [
-        "1. Authenticate to FMC", 
+        "1. Authenticate to FMC (compulsory)", 
         "2. Download device list", 
         "3. Download access policies list and contents",
         "4. Download objects (host, network, group, FQDN and URL)",
         "5. Export all downloaded information to local file",
         "6. Print all downloaded information to terminal",
-        "7. Exit script"
+        "7. Send a custom request (GET requests only)",
+        "8. Exit script"
         ]
     menu_exit = False
-    terminal_menu = TerminalMenu(menu_choice_list, title = "FMC data exporter (JSON formatted)")
+    terminal_menu = TerminalMenu(menu_choice_list, title = "FMC data collection tool (JSON formatted)")
 
     while not menu_exit:
         menu_choice = terminal_menu.show()
@@ -262,6 +285,12 @@ def main():
                 print("\nObjects:\n\n", json.dumps(objects, indent = 2),"\n")
 
         elif menu_choice == 6:
+            if not has_authenticated:
+                print("Session needs to be authenticated before commands can be run.")
+            else:
+                runCustomCommandAndPrint()
+
+        elif menu_choice == 7:
             menu_exit = True
    
     
