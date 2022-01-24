@@ -1,3 +1,4 @@
+from doctest import script_from_examples
 from urllib import response
 import requests
 import urllib3
@@ -12,6 +13,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def getTokenAndDomain():
 
+    ip_address = input("Please input the FMC IP address: ")
+    base_url = "https://" + ip_address
     username = input("Please input the FMC username: ")
     password = getpass("Please input the FMC password: ")
     
@@ -29,7 +32,7 @@ def getTokenAndDomain():
         domain_uuid = response.headers["DOMAIN_UUID"]
         token = response.headers["X-auth-access-token"]
         print(f"\n## Authentication successfull! Domain id is {domain_uuid}.\n")
-        return token, domain_uuid
+        return token, domain_uuid, base_url, ip_address
     else:
         print("\n## Authentication failed! Terminating script!\n")
         sys.exit()
@@ -200,7 +203,7 @@ def runCustomCommandAndPrint():
         print(f"\nThe request returned status code {response.status_code}.")
         if response.status_code >= 200 and response.status_code <= 299:
             json_response = json.loads(response.text)
-            print("Operation completed successfully!\n\n", json.dumps(json_response, indent = 2). "\n")
+            print("Operation completed successfully!\n\n", json.dumps(json_response, indent = 2), "\n")
         else:
             response.raise_for_status()
     except requests.exceptions.HTTPError as err:
@@ -209,9 +212,24 @@ def runCustomCommandAndPrint():
         if response:
             response.close()
 
+def saveObjectsToFile(data_export_list: list):
+
+    with open("FMC-configuration-data-" + script_run_time + ".txt", "a+") as file:
+        for item in data_export_list:
+            json.dump(item, file, indent = 2)
+            file.write("\n================================================================\n")
+
+def printObjectsToCLI(data_export_list: list, ip_address):
+
+    print(f"\nThe following information has been downloaded from the FMC at {ip_address}:")
+    print("\nRegistered devices:\n\n", json.dumps(data_export_list[0], indent = 2),"\n")
+    print("\nPolicy IDs:\n\n", json.dumps(data_export_list[1], indent = 2),"\n")
+    print("\nPolicy contents:\n\n", json.dumps(data_export_list[2], indent = 2),"\n")
+    print("\nObjects:\n\n", json.dumps(data_export_list[3], indent = 2),"\n")
+
 def main():
 
-    global base_url, token, domain_uuid, headers
+    global base_url, token, domain_uuid, headers, ip_address
 
     has_authenticated = False
     devices, policies, policy_contents, objects = [], [], [], []
@@ -229,15 +247,13 @@ def main():
         "8. Exit script"
         ]
     menu_exit = False
-    terminal_menu = TerminalMenu(menu_choice_list, title = "FMC data collection tool (JSON formatted)")
+    terminal_menu = TerminalMenu(menu_choice_list, title = "\nFMC data collection tool (JSON formatted)")
 
     while not menu_exit:
         menu_choice = terminal_menu.show()
 
         if menu_choice == 0:
-            ip_address = input("Please input the FMC IP address: ")
-            base_url = "https://" + ip_address
-            token, domain_uuid = getTokenAndDomain()
+            token, domain_uuid, base_url, ip_address = getTokenAndDomain()
             headers = {
                 "Content-Type" : "application/json",
                 "X-auth-access-token" : token
@@ -268,21 +284,14 @@ def main():
                 print("Session needs to be authenticated before data can be downloaded and saved.")
             else:
                 data_export_list = [devices, policies, policy_contents, objects]
-                with open("FMC-configuration-data-" + script_run_time + ".txt", "a+") as file:
-                    for item in data_export_list:
-                        json.dump(item, file, indent = 2)
-                        file.write("\n================================================================\n")
+                saveObjectsToFile(data_export_list)
 
         elif menu_choice == 5:
             if not has_authenticated:
                 print("Session needs to be authenticated before data can be downloaded and saved.")
             else:
                 data_export_list = [devices, policies, policy_contents, objects]
-                print(f"\nThe following information has been downloaded from the FMC at {ip_address}:")
-                print("\nRegistered devices:\n\n", json.dumps(devices, indent = 2),"\n")
-                print("\nPolicy IDs:\n\n", json.dumps(policies, indent = 2),"\n")
-                print("\nPolicy contents:\n\n", json.dumps(policy_contents, indent = 2),"\n")
-                print("\nObjects:\n\n", json.dumps(objects, indent = 2),"\n")
+                printObjectsToCLI(data_export_list, ip_address)
 
         elif menu_choice == 6:
             if not has_authenticated:
@@ -300,5 +309,6 @@ def main():
     # createNetworkObject()
 
 if __name__ == "__main__":
+    global script_run_time 
     script_run_time = datetime.now().strftime("%d-%B-%Y-%I-%M-%p")
     main()
