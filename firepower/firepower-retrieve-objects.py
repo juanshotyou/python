@@ -32,7 +32,7 @@ GROUP_OBJECTS_URL = "https://" + FMC_IP + "/api/fmc_config/v1/domain/" + DOMAIN_
 URL_OBJECTS_URL = "https://" + FMC_IP + "/api/fmc_config/v1/domain/" + DOMAIN_UUID + "/object/urls?expanded=true"
 FQDN_OBJECTS_URL = "https://" + FMC_IP + "/api/fmc_config/v1/domain/" + DOMAIN_UUID + "/object/fqdns?expanded=true"
 
-REQUIRED_DATA = (NETWORK_OBJECTS_URL, HOST_OBJECTS_URL, GROUP_OBJECTS_URL, URL_OBJECTS_URL)
+REQUIRED_DATA = (NETWORK_OBJECTS_URL, HOST_OBJECTS_URL, GROUP_OBJECTS_URL, URL_OBJECTS_URL, FQDN_OBJECTS_URL)
 RECEIVED_DATA = []
 
 for item in REQUIRED_DATA:

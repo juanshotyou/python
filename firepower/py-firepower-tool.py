@@ -13,7 +13,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def getTokenAndDomain():
 
-    ip_address = input("Please input the FMC IP address: ")
+    ip_address = input("\nPlease input the FMC IP address: ")
     base_url = "https://" + ip_address
     username = input("Please input the FMC username: ")
     password = getpass("Please input the FMC password: ")

@@ -4,6 +4,7 @@ from netaddr import IPAddress
 from datetime import datetime
 
 SCRIPT_RUN_TIME = datetime.now().strftime("%d-%B-%Y-%I-%M-%p")
+print(f"\nScript started at {SCRIPT_RUN_TIME}\n")
 
 #Check current working directory and make sure it's set as the working folder
 
@@ -20,7 +21,7 @@ print("\nNew path is:", path)
 filename = input("\nPlease input the name of the file storing the network objects.\nMake sure to include the file extension: ")
 
 with open(filename) as f:
-    objects_json = json.load(f)
+    sonicwall_objects = json.load(f)
 
 #Loop through the data and create Firepower equivalent
 
@@ -34,12 +35,11 @@ ipv4_range_object = {}
 ipv4_host_object_list = []
 ipv4_network_object_list = []
 ipv4_range_object_list = []
-
 fqdn_object = {}
 fqdn_objects_list = []
 
-for object in objects_json["address_objects"]:
-    if "ipv4" in object:
+for item in sonicwall_objects["address_objects"]:
+    if "ipv4" in item:
         if "host" in object["ipv4"] and object["ipv4"]["host"] != {}:
             ipv4_host_object["type"] = "Host"
             ipv4_host_object["value"] = object["ipv4"]["host"]["ip"]
@@ -68,11 +68,11 @@ for object in objects_json["address_objects"]:
             print(f"\nItem at index {index} does not meet criteria so it has been ignored.")
             print("Offending item: \n", object["ipv4"])
             failures+=1
-    if "mac" in object:
+    if "mac" in item:
         print(f"\nItem at index {index} does not meet criteria so it has been ignored.")
         print("Offending item: \n", object["mac"])
         failures+=1
-    if "fqdn" in object:
+    if "fqdn" in item:
         fqdn_object["type"] = "FQDN"
         fqdn_object["name"] = object["fqdn"]["name"]
         fqdn_object["value"] = object["fqdn"]["domain"]
@@ -81,7 +81,7 @@ for object in objects_json["address_objects"]:
         fqdn_objects_list.append(fqdn_object)
         fqdn_object = {}
         successes+=1
-    if "ipv6" in object:
+    if "ipv6" in item:
         print(f"\nItem at index {index} does not meet criteria so it has been ignored.")
         print("Offending item: \n", object["ipv6"])
         failures+=1
@@ -99,3 +99,6 @@ with open("sonicwall-to-ftd-range-objects-" + SCRIPT_RUN_TIME + ".txt", "a+") as
     json.dump(ipv4_range_object_list, f, indent = 2)
 with open("sonicwall-to-ftd-fqdn-objects-" + SCRIPT_RUN_TIME + ".txt", "a+") as f:
     json.dump(fqdn_objects_list, f, indent = 2)
+
+SCRIPT_END_TIME = datetime.now().strftime("%d-%B-%Y-%I-%M-%p")
+print(f"\nScript ended at {SCRIPT_END_TIME}")
