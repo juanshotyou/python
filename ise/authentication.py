@@ -35,9 +35,28 @@ def testAuthentication():
         "Content-Type": "application/json"
     }
 
-    response = requests.get(url, headers=headers, verify = False)
+    try:
+        response = requests.get(url, headers=headers, verify = False)
+    except requests.exceptions.Timeout:
+        print("Operation timed out!")
+        raise SystemError(e)
+    except requests.exceptions.ConnectionError:
+        print("Connection error - please check network connectivity!")
+        raise SystemExit(e)
+    except requests.exceptions.HTTPError as e:
+        print("HTTP error encountered!")
+        raise SystemExit(e)
     data = json.loads(response.content)
-    print(json.dumps(data, indent = 4))
+
+    print(f'Authentication test successfull!\
+        \nPrinting node information:\n\
+        \nPID: { data["ERSDeploymentInfo"]["deploymentInfo"]["nodeList"]["nodeAndNodeCountAndCountInfo"][0]["value"]["content"][7]["value"] }\
+        \nSN: { data["ERSDeploymentInfo"]["deploymentInfo"]["nodeList"]["nodeAndNodeCountAndCountInfo"][0]["value"]["content"][2]["value"] }\
+        \nVersion: { data["ERSDeploymentInfo"]["deploymentInfo"]["nodeList"]["nodeAndNodeCountAndCountInfo"][0]["value"]["content"][5]["value"] }\
+        \nPatch: { data["ERSDeploymentInfo"]["deploymentInfo"]["nodeList"]["nodeAndNodeCountAndCountInfo"][0]["value"]["content"][6]["value"] }\
+        \nRoles enabled: { data["ERSDeploymentInfo"]["deploymentInfo"]["nodeList"]["nodeAndNodeCountAndCountInfo"][0]["value"]["content"][0]["value"] }\
+        \nNodes in deployment: { data["ERSDeploymentInfo"]["deploymentInfo"]["nodeList"]["nodeAndNodeCountAndCountInfo"][2]["value"] }\
+        ')
 
 def main():
     testAuthentication()
