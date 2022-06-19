@@ -10,37 +10,34 @@ from getpass import getpass
 load_dotenv()
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-ISE_IP = "10.221.0.101:9060"
-ISE_FQDN = "ise.dnaclab.net:9060"
+ISE_IP = os.environ.get("IP")
+ISE_FQDN = os.environ.get("FQDN")
 ISE_USER = os.environ.get("USERNAME")
 ISE_PASS = os.environ.get("PASSWORD")
 
+AUTH2ENCODE = ISE_USER + ":" + ISE_PASS
+AUTH = base64.b64encode(AUTH2ENCODE.encode('UTF-8')).decode('ASCII')
+HEADERS = {
+        "Accept": "application/json",
+        "AUTHorization": "Basic " + AUTH,
+        "Content-Type": "application/json"
+    }
 
-def testAuthentication():
+def testAuthentication(string: AUTH):
     # Enable if interactive authentication is required
     # username = input("Please input the ISE username: ")
     # password = getpass("Please input the ISE password: ")
 
     # Enable if credentials are present in the environment
 
-    username = ISE_USER
-    password = ISE_PASS
-
-    auth2encode = username + ":" + password
-    auth = base64.b64encode(auth2encode.encode('UTF-8')).decode('ASCII')
     url = "https://" + ISE_IP + "/ers/config/deploymentinfo/getAllInfo"
-    headers = {
-        "Accept": "application/json",
-        "Authorization": "Basic " + auth,
-        "Content-Type": "application/json"
-    }
 
     try:
-        response = requests.get(url, headers=headers, verify = False)
-    except requests.exceptions.Timeout:
+        response = requests.get(url, headers=HEADERS, verify = False)
+    except requests.exceptions.Timeout as e:
         print("Operation timed out!")
         raise SystemError(e)
-    except requests.exceptions.ConnectionError:
+    except requests.exceptions.ConnectionError as e:
         print("Connection error - please check network connectivity!")
         raise SystemExit(e)
     except requests.exceptions.HTTPError as e:
@@ -59,10 +56,12 @@ def testAuthentication():
         ')
 
 def main():
-    testAuthentication()
+    testAuthentication(AUTH)
     
 
 if __name__ == "__main__":
-    global script_run_time 
-    script_run_time = datetime.now().strftime("%d-%B-%Y-%I-%M-%p")
+    script_start_time = datetime.now()
+    print(f'Script was started at {script_start_time.strftime("%d-%B-%Y-%I-%M-%p")}\n')
     main()
+    script_end_time = datetime.now()
+    print(f'\nScript was completed at {script_end_time.strftime("%d-%B-%Y-%I-%M-%p")}. \nTotal execution time was {script_end_time - script_start_time}')
