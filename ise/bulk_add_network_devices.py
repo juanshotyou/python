@@ -4,6 +4,7 @@ import base64
 import json
 import os
 import pandas as pd
+import sys
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -61,6 +62,12 @@ def getNetworkDevices():
     return network_devices
 
 def buildNetworkDeviceObject(name, ipaddress, description, serialnumber, snmp_string, radius_secret, tacacs_secret, enable_secret, device_user, device_pass):
+    # This function includes hard-coded values which apply to the DNACLAB envrionment only. Edit the values here as needed.
+    # e.g. CoA port is referenced in the following line:
+    #
+    # network_device["NetworkDevice"]["coaPort"] = 1700
+    # and is hard-coded to be 1700. This can be changed to any port needed for the deplyment this script will be used on.
+
     network_device = {"NetworkDevice": \
         {\
             "authenticationSettings": {},\
@@ -150,10 +157,10 @@ def addNetworkDeviceManually():
         print("Operation aborted!")
 
 def addNetworkDevicesFromFile():
-    # Other parameters used in the network device creation
+    # Common parameters used to create network device - edit as needed
 
     network_device_description = "Added via network automation - index "
-    network_device_serial = "Unnecessary" 
+    network_device_serial = "FXCV12345" 
     network_device_snmp = "SNMPString" 
     network_device_radius = "RADIUSKey" 
     network_device_tacacs = "TACACSKey" 
@@ -166,12 +173,24 @@ def addNetworkDevicesFromFile():
     url = "https://" + ISE_IP + "/ers/config/networkdevice/"
 
     data_sources = os.listdir(os.getcwd() + "/data_sources")
+    if len(data_sources)>=2:
+        print("Only one .csv or .xlsx file must be present in the \"data_sources\" folder!\nPlease place in the folder only one file containing the devices you want to add to ISE and re-run the script.\nTerminating!")
+        sys.exit()
+    elif len(data_sources)==0:
+        print("No file found in the \"data_sources\" folder!\nPlease place in the folder a .csv or .xlsx file containing the devices you want to add to ISE and re-run the script.\nTerminating!")
+        sys.exit()
     file_path = os.getcwd() + "/data_sources/" + data_sources[0]
     file_type = os.path.splitext(data_sources[0])[1]
 
     if file_type == ".xlsx":
         network_devices = pd.read_excel(file_path)
-        for device in range(len(network_devices)):
+    elif file_type == ".csv":
+        network_devices = pd.read_csv(file_path)
+    else:
+        print("No supported files found in the data sources directory. \nPlease check the directory contents and try again!\nTerminating script!")
+        sys.exit()
+
+    for device in range(len(network_devices)):
             index += 1
             network_device = buildNetworkDeviceObject(network_devices.iloc[device][0], network_devices.iloc[device][1], network_device_description + str(index), network_device_serial + str(index), network_device_snmp, network_device_radius, network_device_tacacs, network_device_enable, network_device_user, network_device_pass)
             try:
@@ -190,14 +209,6 @@ def addNetworkDevicesFromFile():
                 print("HTTP error encountered!")
                 raise SystemExit(e)
             network_device = {}
-            
-    elif file_type == ".csv":
-        #
-        print("tbc")
-    else:
-        print("No supported files found in the data sources directory. \nPlease check the directory contents and try again!\nTerminating script!")
-        sys.exit()
-
 def main():
     # network_devices = getNetworkDevices()
     # addNetworkDeviceManually()

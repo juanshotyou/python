@@ -263,44 +263,29 @@ def main():
             }
             has_authenticated = True
 
-        elif menu_choice == 1:
-            if not has_authenticated:
-                print("Session needs to be authenticated before data can be downloaded.")
-            else:
-                devices = getDevices()
+        elif menu_choice == 1 and has_authenticated:
+            devices = getDevices()
 
-        elif menu_choice == 2:
-            if not has_authenticated:
-                print("Session needs to be authenticated before data can be downloaded.")
-            else:
-                policies = getAccessPolicies()
-                policy_contents = getAccessPoliciesContents(policies)
+        elif menu_choice == 2 and has_authenticated:
+            policies = getAccessPolicies()
+            policy_contents = getAccessPoliciesContents(policies)
 
-        elif menu_choice == 3:
-            if not has_authenticated:
-                print("Session needs to be authenticated before data can be downloaded.")
-            else:
-                objects = getAllObjects()
+        elif menu_choice == 3 and has_authenticated:
+            objects = getAllObjects()
 
-        elif menu_choice == 4:
-            if not has_authenticated:
-                print("Session needs to be authenticated before data can be downloaded and saved.")
-            else:
-                data_export_list = [devices, policies, policy_contents, objects]
-                saveObjectsToFile(data_export_list)
+        elif menu_choice == 4 and has_authenticated:
+            data_export_list = [devices, policies, policy_contents, objects]
+            saveObjectsToFile(data_export_list)
 
-        elif menu_choice == 5:
-            if not has_authenticated:
-                print("Session needs to be authenticated before data can be downloaded and saved.")
-            else:
-                data_export_list = [devices, policies, policy_contents, objects]
-                printObjectsToCLI(data_export_list, ip_address)
+        elif menu_choice == 5 and has_authenticated:
+            data_export_list = [devices, policies, policy_contents, objects]
+            printObjectsToCLI(data_export_list, ip_address)
 
-        elif menu_choice == 6:
-            if not has_authenticated:
-                print("Session needs to be authenticated before commands can be run.")
-            else:
-                runCustomCommandAndPrint()
+        elif menu_choice == 6 and has_authenticated:
+            runCustomCommandAndPrint()
+
+        elif menu_choice in {1,2,3,4,5,6} and not has_authenticated:
+            print("Session needs to be authenticated before this operation can be performed!")
 
         elif menu_choice == 7:
             menu_exit = True
