@@ -181,7 +181,10 @@ def getAllObjects():
             print("\nThere was an error while retrieving some of the objects!\n")
         
         json_response = json.loads(response.text)
-        objects.append(json_response["items"])
+        if "items" in json_response:
+            objects.append(json_response["items"])
+        else:
+            print("One type of objects requested was not found!")
 
     if result == 5:
         print("\n## Objects successfully downloaded!\n")

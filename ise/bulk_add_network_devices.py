@@ -3,6 +3,7 @@ import urllib3
 import base64
 import json
 import os
+import pandas as pd
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -22,7 +23,7 @@ HEADERS = {
         "Content-Type": "application/json"
     }
 
-def getNetworkDevices(string: AUTH):
+def getNetworkDevices():
     url = "https://" + ISE_IP + "/ers/config/networkdevice"
 
     network_devices = []
@@ -59,10 +60,7 @@ def getNetworkDevices(string: AUTH):
 
     return network_devices
 
-
-def addNetworkDeviceManually(string: AUTH):
-    url = "https://" + ISE_IP + "/ers/config/networkdevice/"
-
+def buildNetworkDeviceObject(name, ipaddress, description, serialnumber, snmp_string, radius_secret, tacacs_secret, enable_secret, device_user, device_pass):
     network_device = {"NetworkDevice": \
         {\
             "authenticationSettings": {},\
@@ -76,34 +74,20 @@ def addNetworkDeviceManually(string: AUTH):
             "NetworkDeviceIPList": [{}],\
             "NetworkDeviceGroupList": {}\
             }}
-
-    print('Please provide the following details for the network device you wish to add to ISE:\
-        \n-name\
-        \n-description\
-        \n-authentication settings\
-        \n-SNMP settings\
-        \n-TrustSec settings\
-        \n-TACACS settings\
-        \n-profile name\
-        \n-CoA port\
-        \n-device IPs list\
-        \n-device group list\
-        \n')
-
-    network_device["NetworkDevice"]["name"] = input("Name: ")
-    network_device["NetworkDevice"]["description"] = input("Description: ")
+    network_device["NetworkDevice"]["name"] = name
+    network_device["NetworkDevice"]["description"] = description
     network_device["NetworkDevice"]["authenticationSettings"]["networkProtocol"] = "RADIUS"
-    network_device["NetworkDevice"]["authenticationSettings"]["radiusSharedSecret"] = input("RADIUS key: ")
+    network_device["NetworkDevice"]["authenticationSettings"]["radiusSharedSecret"] = radius_secret
     network_device["NetworkDevice"]["snmpsettings"]["version"] = "TWO_C"
-    network_device["NetworkDevice"]["snmpsettings"]["roCommunity"] = input("SNMP RO key: ")
+    network_device["NetworkDevice"]["snmpsettings"]["roCommunity"] = snmp_string
     network_device["NetworkDevice"]["snmpsettings"]["securityLevel"] = "NO_AUTH"
     network_device["NetworkDevice"]["snmpsettings"]["privacyProtocol"] = "TRIPLE_DES"
     network_device["NetworkDevice"]["snmpsettings"]["pollingInterval"] = 0
     network_device["NetworkDevice"]["snmpsettings"]["linkTrapQuery"] = False
     network_device["NetworkDevice"]["snmpsettings"]["macTrapQuery"] = False
     network_device["NetworkDevice"]["snmpsettings"]["originatingPolicyServicesNode"] = "Auto"
-    network_device["NetworkDevice"]["trustsecsettings"]["deviceAuthenticationSettings"]["sgaDeviceId"] = input("TrustSec ID: ")
-    network_device["NetworkDevice"]["trustsecsettings"]["deviceAuthenticationSettings"]["sgaDevicePassword"] = input("TrustSec password: ")
+    network_device["NetworkDevice"]["trustsecsettings"]["deviceAuthenticationSettings"]["sgaDeviceId"] = serialnumber
+    network_device["NetworkDevice"]["trustsecsettings"]["deviceAuthenticationSettings"]["sgaDevicePassword"] = serialnumber
     network_device["NetworkDevice"]["trustsecsettings"]["sgaNotificationAndUpdates"]["downlaodEnvironmentDataEveryXSeconds"] = 86400
     network_device["NetworkDevice"]["trustsecsettings"]["sgaNotificationAndUpdates"]["downlaodPeerAuthorizationPolicyEveryXSeconds"] = 86400
     network_device["NetworkDevice"]["trustsecsettings"]["sgaNotificationAndUpdates"]["reAuthenticationEveryXSeconds"] = 86400
@@ -113,16 +97,35 @@ def addNetworkDeviceManually(string: AUTH):
     network_device["NetworkDevice"]["trustsecsettings"]["sgaNotificationAndUpdates"]["sendConfigurationToDeviceUsing"] = "ENABLE_USING_COA"
     network_device["NetworkDevice"]["trustsecsettings"]["sgaNotificationAndUpdates"]["coaSourceHost"] = "ISE.dnaclab.net"
     network_device["NetworkDevice"]["trustsecsettings"]["deviceConfigurationDeployment"]["includeWhenDeployingSGTUpdates"] = True
-    network_device["NetworkDevice"]["trustsecsettings"]["deviceConfigurationDeployment"]["enableModePassword"] = input("Enable secret: ")
-    network_device["NetworkDevice"]["trustsecsettings"]["deviceConfigurationDeployment"]["execModeUsername"] = input("TACACS username: ")
-    network_device["NetworkDevice"]["trustsecsettings"]["deviceConfigurationDeployment"]["execModePassword"] = input("TACACS password: ")
-    network_device["NetworkDevice"]["tacacsSettings"]["sharedSecret"] = input("TACACS key: ")
+    network_device["NetworkDevice"]["trustsecsettings"]["deviceConfigurationDeployment"]["enableModePassword"] = enable_secret
+    network_device["NetworkDevice"]["trustsecsettings"]["deviceConfigurationDeployment"]["execModeUsername"] = device_user
+    network_device["NetworkDevice"]["trustsecsettings"]["deviceConfigurationDeployment"]["execModePassword"] = device_pass
+    network_device["NetworkDevice"]["tacacsSettings"]["sharedSecret"] = tacacs_secret
     network_device["NetworkDevice"]["tacacsSettings"]["connectModeOptions"] = "ON_LEGACY"
     network_device["NetworkDevice"]["profileName"] = "Cisco"
     network_device["NetworkDevice"]["coaPort"] = 1700
-    network_device["NetworkDevice"]["NetworkDeviceIPList"][0]["ipaddress"] = input("IP address: ")
+    network_device["NetworkDevice"]["NetworkDeviceIPList"][0]["ipaddress"] = ipaddress
     network_device["NetworkDevice"]["NetworkDeviceIPList"][0]["mask"] = 32
     network_device["NetworkDevice"]["NetworkDeviceGroupList"] = ["Location#All Locations", "Device Type#All Device Types", "IPSEC#Is IPSEC Device#No"]
+
+    return network_device
+
+
+def addNetworkDeviceManually():
+    url = "https://" + ISE_IP + "/ers/config/networkdevice/"
+
+    network_device_name = input("Name: ")
+    network_device_description = input("Description: ")
+    network_device_radius = input("RADIUS key: ")
+    network_device_snmp = input("SNMP RO key: ")
+    network_device_serial = input("TrustSec ID: ")
+    network_device_enable = input("Enable secret: ")
+    network_device_user = input("TACACS username: ")
+    network_device_pass = input("TACACS password: ")
+    network_device_tacacs = input("TACACS key: ")
+    network_device_ip = input("IP address: ")
+
+    network_device = buildNetworkDeviceObject(network_device_name, network_device_ip, network_device_description, network_device_serial, network_device_snmp, network_device_radius, network_device_tacacs, network_device_enable, network_device_user, network_device_pass)
 
     print("The following object is ready for deployment:\n")
     print(json.dumps(network_device, indent =4))
@@ -147,11 +150,58 @@ def addNetworkDeviceManually(string: AUTH):
         print("Operation aborted!")
 
 def addNetworkDevicesFromFile():
+    # Other parameters used in the network device creation
+
+    network_device_description = "Added via network automation - index "
+    network_device_serial = "Unnecessary" 
+    network_device_snmp = "SNMPString" 
+    network_device_radius = "RADIUSKey" 
+    network_device_tacacs = "TACACSKey" 
+    network_device_enable = "EnableKey" 
+    network_device_user = "Username" 
+    network_device_pass = "Password"
+
+    index = 0
+    network_device = {}
+    url = "https://" + ISE_IP + "/ers/config/networkdevice/"
+
+    data_sources = os.listdir(os.getcwd() + "/data_sources")
+    file_path = os.getcwd() + "/data_sources/" + data_sources[0]
+    file_type = os.path.splitext(data_sources[0])[1]
+
+    if file_type == ".xlsx":
+        network_devices = pd.read_excel(file_path)
+        for device in range(len(network_devices)):
+            index += 1
+            network_device = buildNetworkDeviceObject(network_devices.iloc[device][0], network_devices.iloc[device][1], network_device_description + str(index), network_device_serial + str(index), network_device_snmp, network_device_radius, network_device_tacacs, network_device_enable, network_device_user, network_device_pass)
+            try:
+                response = requests.post(url, headers=HEADERS, data=json.dumps(network_device), verify = False)
+                if response.status_code >= 200 and response.status_code <= 299:
+                    print(f"Device {network_devices.iloc[device][0]} was created successfully!")
+                else:
+                    print(f"\nAn error was encountered while trying to create device {network_devices.iloc[device][0]}. See below for more info:\n", json.dumps(json.loads(response.content), indent = 4))
+            except requests.exceptions.Timeout as e:
+                print("Operation timed out!")
+                raise SystemError(e)
+            except requests.exceptions.ConnectionError as e:
+                print("Connection error - please check network connectivity!")
+                raise SystemExit(e)
+            except requests.exceptions.HTTPError as e:
+                print("HTTP error encountered!")
+                raise SystemExit(e)
+            network_device = {}
+            
+    elif file_type == ".csv":
+        #
+        print("tbc")
+    else:
+        print("No supported files found in the data sources directory. \nPlease check the directory contents and try again!\nTerminating script!")
+        sys.exit()
 
 def main():
-    # network_devices = getNetworkDevices(AUTH)
-    # addNetworkDeviceManually(AUTH)
-    addNetworkDevicesFromFile():
+    # network_devices = getNetworkDevices()
+    # addNetworkDeviceManually()
+    addNetworkDevicesFromFile()
     
 if __name__ == "__main__":
     script_start_time = datetime.now()

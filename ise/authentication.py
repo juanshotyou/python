@@ -19,11 +19,11 @@ AUTH2ENCODE = ISE_USER + ":" + ISE_PASS
 AUTH = base64.b64encode(AUTH2ENCODE.encode('UTF-8')).decode('ASCII')
 HEADERS = {
         "Accept": "application/json",
-        "AUTHorization": "Basic " + AUTH,
+        "Authorization": "Basic " + AUTH,
         "Content-Type": "application/json"
     }
 
-def testAuthentication(string: AUTH):
+def testAuthentication():
     # Enable if interactive authentication is required
     # username = input("Please input the ISE username: ")
     # password = getpass("Please input the ISE password: ")
@@ -43,6 +43,7 @@ def testAuthentication(string: AUTH):
     except requests.exceptions.HTTPError as e:
         print("HTTP error encountered!")
         raise SystemExit(e)
+
     data = json.loads(response.content)
 
     print(f'Authentication test successfull!\
@@ -56,7 +57,7 @@ def testAuthentication(string: AUTH):
         ')
 
 def main():
-    testAuthentication(AUTH)
+    testAuthentication()
     
 
 if __name__ == "__main__":
