@@ -76,7 +76,7 @@ def addSiteToHierarchy(dnac, list_of_sites):
                 if taskId:
                     status = checkTaskExecutionStandard(dnac, taskId)
                     while status["status"] == "IN_PROGRESS":
-                        print(f"Loading building {site['Building']} to {site['Site']} is still in progress. Sleeping for 1s...")
+                        print(f"Loading building {site['Building']} to {site['Site']}-{site['Address']} is still in progress. Sleeping for 1s...")
                         time.sleep(1)
                         status = checkTaskExecutionStandard(dnac, taskId)
                     if status["status"] == "FAILURE":
@@ -130,7 +130,7 @@ def checkTaskExecutionStandard(dnac, taskId):
 def readDataCaptureFile():
 
     data_path = os.getcwd() + "/data_sources/" + "LSDD-Form-SDA-optimized-full.xlsx"
-    net_hierarchy_pd = pd.read_excel(data_path, sheet_name="NetHie", header=3, usecols="B:D")
+    net_hierarchy_pd = pd.read_excel(data_path, sheet_name="NetHie", header=3, usecols="B:E")
     net_hierarchy_list = []
 
     for i in range(len(net_hierarchy_pd.index)):

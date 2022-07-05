@@ -18,7 +18,7 @@ TMP_BUILDING = """{
         "building": {
             "name": "{{ Building }}",
             "parentName": "Global/{{ Site }}",
-            "address": "Manchester"
+            "address": "{{ Address|default("Manchester", true) }}"
         }
     }
 }"""
