@@ -6,7 +6,7 @@ TMP_AREA = """{
     "type": "area",
     "site": {
         "area": {
-            "name": "{{ Site }}",
+            "name": "{{ Area }}",
             "parentName": "Global"
         }
     }
@@ -17,7 +17,7 @@ TMP_BUILDING = """{
     "site": {
         "building": {
             "name": "{{ Building }}",
-            "parentName": "Global/{{ Site }}",
+            "parentName": "Global/{{ Area }}",
             "address": "{{ Address|default("Manchester", true) }}"
         }
     }
@@ -28,7 +28,7 @@ TMP_FLOOR = """{
     "site": {
         "floor": {
             "name": "{{ Floor }}",
-            "parentName": "Global/{{ Site }}/{{ Building }}",
+            "parentName": "Global/{{ Area }}/{{ Building }}",
             "width": 1000,
             "length": 100,
             "height": 10,

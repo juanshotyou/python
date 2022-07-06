@@ -19,10 +19,12 @@ def inventoryAudit(dnac):
         devices = dnac.devices.get_device_list()
         for device in devices.response:
             print(f"{device.hostname} has been up for {device.upTime}")
-    except ApiError as e:
-        print("Error encountered! See below for more info:\n",e)
+    except TypeError as e:
+        print("Type error encountered! See below for more info:\n",e)
 
 def addSiteToHierarchy(dnac, sites_to_add):
+
+    already_added = []
 
     for site in sites_to_add:
         # Start by assuming that fields are missing until we check against the data frame
@@ -31,7 +33,7 @@ def addSiteToHierarchy(dnac, sites_to_add):
         floor_check = False
         
         # Check the presence of each field within the frame
-        if isinstance(site["Site"], str):
+        if isinstance(site["Area"], str):
             area_payload = json.loads(J2_TMP_AREA.render(site))
             area_check = True
         if isinstance(site["Building"], str):
@@ -40,85 +42,45 @@ def addSiteToHierarchy(dnac, sites_to_add):
         if isinstance(site["Floor"], str):
             floor_payload = json.loads(J2_TMP_FLOOR.render(site))
             floor_check = True
-        
-        print(area_check, building_check, floor_check)
 
         # Load area to DNAC
-        if area_check:
+        if area_check and site["Area"] not in already_added:
+            already_added.append(site["Area"])
             try:
-                print(f"\nLoading area - {site['Site']}.")
+                print(f"Loading area - {site['Area']}.")
                 response = dnac.sites.create_site(payload=area_payload)
                 taskId = response["executionId"]
                 if taskId:
-                    status = checkTaskExecutionStandard(dnac, taskId)
-                    while status["status"] == "IN_PROGRESS":
-                        print(f"Loading site {site['Site']} is still in progress. Sleeping for 1s...")
-                        time.sleep(1)
-                        status = checkTaskExecutionStandard(dnac, taskId)
-                    if status["status"] == "FAILURE":
-                        error_msg = json.loads(status["bapiError"])
-                        print(f"Loading site {site['Site']} failed due to the following reason:\n    - {error_msg['result']['result']}")
-                    elif status["status"] == "SUCCESS":
-                        print(f"Site {site['Site']} successfully added!")
-                    else:
-                        print("Unexpected result encountered! Terminating program!")
-                        sys.exit()
+                    checkTaskExecutionStatus(dnac, taskId)
                 else:
                     print("Task ID could not be retrieved! Terminating program!")
                     sys.exit()
-            except ApiError as e:
-                print("Error encountered! See below for more info:\n",e)
             except TypeError as e:
                 print("Type error encountered! See below for more info:\n",e)
 
         # Load building to DNAC
-        if building_check:
+        if building_check and site["Building"] not in already_added:
+            already_added.append(site["Building"])
             try:
-                print(f"\nLoading building - {site['Building']} within {site['Site']}.")
+                print(f"Loading building - {site['Building']} within {site['Area']}.")
                 response = dnac.sites.create_site(payload=building_payload)
                 taskId = response["executionId"]
                 if taskId:
-                    status = checkTaskExecutionStandard(dnac, taskId)
-                    while status["status"] == "IN_PROGRESS":
-                        print(f"Loading building {site['Building']} to {site['Site']}-{site['Address']} is still in progress. Sleeping for 1s...")
-                        time.sleep(1)
-                        status = checkTaskExecutionStandard(dnac, taskId)
-                    if status["status"] == "FAILURE":
-                        error_msg = json.loads(status["bapiError"])
-                        print(f"Loading building {site['Building']} to {site['Site']} failed due to the following reason:\n    - {error_msg['result']['result']}")
-                    elif status["status"] == "SUCCESS":
-                        print(f"Building {site['Building']} successfully added to {site['Site']}!")
-                    else:
-                        print("Unexpected result encountered! Terminating program!")
-                        sys.exit()
+                    checkTaskExecutionStatus(dnac, taskId)
                 else:
                     print("Task ID could not be retrieved! Terminating program!")
                     sys.exit()
-            except ApiError as e:
-                print("Error encountered! See below for more info:\n",e)
             except TypeError as e:
                 print("Type error encountered! See below for more info:\n",e)
 
         # Load floor to DNAC
         if floor_check:
             try:
-                print(f"\nLoading floor - {site['Floor']} within {site['Building']} in {site['Site']}.")
+                print(f"Loading floor - {site['Floor']} within {site['Building']} in {site['Area']}.")
                 response = dnac.sites.create_site(payload=floor_payload)
                 taskId = response["executionId"]
                 if taskId:
-                    status = checkTaskExecutionStandard(dnac, taskId)
-                    while status["status"] == "IN_PROGRESS":
-                        print(f"Loading floor {site['Floor']} to building {site['Building']} in {site['Site']} is still in progress. Sleeping for 1s...")
-                        time.sleep(1)
-                        status = checkTaskExecutionStandard(dnac, taskId)
-                    if status["status"] == "FAILURE":
-                        error_msg = json.loads(status["bapiError"])
-                        print(f"Loading floor {site['Floor']} to building {site['Building']} in {site['Site']} failed due to the following reason:\n    - {error_msg['result']['result']}")
-                    elif status["status"] == "SUCCESS":
-                        print(f"Floor {site['Floor']} successfully added to building {site['Building']} in {site['Site']}")
-                    else:
-                        print("Unexpected result encountered! Terminating program!")
-                        sys.exit()
+                    checkTaskExecutionStatus(dnac, taskId)
                 else:
                     print("Task ID could not be retrieved! Terminating program!")
                     sys.exit()
@@ -127,38 +89,26 @@ def addSiteToHierarchy(dnac, sites_to_add):
 
 def deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy):
 
-    for i in site_hierarchy["response"]:
-        for k in i["additionalInfo"]:
-            if k["nameSpace"] == "Location" and k["attributes"]["type"] == "floor":
-                for j in sites_to_add:
-                    if j["Floor"] == i["name"]:
-                        try:
-                            result = dnac.sites.delete_site(site_id=i["id"])
-                            print(f"Floor {i['name']} successfully deleted!")
-                        except ApiError as e:
-                            print("Error encountered! See below for more info:\n",e)
-  
-    for i1 in site_hierarchy["response"]:
-        for k1 in i1["additionalInfo"]:
-            if k1["nameSpace"] == "Location" and k1["attributes"]["type"] == "building":
-                for j1 in sites_to_add:
-                    if j1["Building"] == i1["name"]:
-                        try:
-                            result = dnac.sites.delete_site(site_id=i1["id"])
-                            print(f"Building {i1['name']} successfully deleted!")
-                        except ApiError as e:
-                            print("Error encountered! See below for more info:\n",e)
+    already_deleted = []
 
-    for i2 in site_hierarchy["response"]:
-        for k2 in i2["additionalInfo"]:
-            if k2["nameSpace"] == "Location" and k2["attributes"]["type"] == "area":
-                for j2 in sites_to_add:
-                    if j2["Site"] == i2["name"]:
-                        try:
-                            result = dnac.sites.delete_site(site_id=i2["id"])
-                            print(f"Area {i2['name']} successfully deleted!")
-                        except ApiError as e:
-                            print("Error encountered! See below for more info:\n",e)
+    for element in ["floor", "building", "area"]:
+        for i in site_hierarchy["response"]:
+            for k in i["additionalInfo"]:
+                if k["nameSpace"] == "Location" and k["attributes"]["type"] == element:
+                    for j in sites_to_add:
+                        if j[element.title()] == i["name"] and j[element.title()] not in already_deleted:
+                            already_deleted.append(j[element.title()])
+                            try:
+                                print(f"Deleting {element} {i['name']}...")
+                                result = dnac.sites.delete_site(site_id=i["id"])
+                                taskId = result["executionId"]
+                                if taskId:
+                                    checkTaskExecutionStatus(dnac, taskId)
+                                else:
+                                    print("Task ID could not be retrieved! Terminating program!")
+                                    sys.exit()
+                            except TypeError as e:
+                                print("Error encountered! See below for more info:\n",e)
 
 
 def getSiteHierarchy(dnac):
@@ -169,12 +119,22 @@ def getSiteHierarchy(dnac):
     except ApiError as e:
         print("Error encountered! See below for more info:\n",e)
 
-def checkTaskExecutionStandard(dnac, taskId):
+def checkTaskExecutionStatus(dnac, taskId):
 
     try:
         task_status = dnac.task.get_business_api_execution_details(execution_id = taskId)
-        return task_status
-    except ApiError as e:
+        while task_status["status"] == "IN_PROGRESS":
+            time.sleep(1)
+            task_status = dnac.task.get_business_api_execution_details(execution_id = taskId)
+        if task_status["status"] == "FAILURE":
+            error_msg = json.loads(task_status["bapiError"])
+            print(f"Task failed due to the following reason:\n    - {error_msg}")
+        elif task_status["status"] == "SUCCESS":
+            print(f"Task successfully completed!")
+        else:
+            print("Unexpected result encountered! Terminating program!")
+            sys.exit()
+    except TypeError as e:
         print("Error encountered! See below for more info:\n",e)
 
 def readDataCaptureFile():
@@ -193,13 +153,15 @@ def main():
 
     # Create a DNACenterAPI connection object which we will use for the other tasks
     dnac = DNACenterAPI()
+    # Check that the connection is correctly set up by requesting the device inventory list
     # inventoryAudit(dnac)
     # Retrieve sites, buildings and floors from data capture file
     sites_to_add = readDataCaptureFile()
     site_hierarchy = getSiteHierarchy(dnac)
-    # print(json.dumps(site_hierarchy["response"], indent = 4))
-    # Add data to DNAC
-    # addSiteToHierarchy(dnac, sites_to_add)
+
+    # Function that adds data from the data source to DNAC
+    addSiteToHierarchy(dnac, sites_to_add)
+    # Function that removes data from the data source from DNAC
     deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy)
 
 if __name__ == "__main__":
