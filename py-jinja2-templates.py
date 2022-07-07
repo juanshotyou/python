@@ -180,3 +180,72 @@ ip prefix-list {{ pl_name }}
 
 j2_template_better = Template(dictionary_template_better)
 print(j2_template_better.render(data_dict_better))
+
+########################################################
+
+print("\n####### Section 8 #######\n")
+
+routing_bgp = {
+    "hostname": "router-w-bgp",
+    "routing_protocol": "bgp",
+    "interfaces":{
+        "Loopback0":{ 
+            "ip": "10.0.0.1",
+            "mask": "32"
+            }
+        },
+    "bgp": {
+        "as": "65001"
+    }
+}
+
+routing_ospf = {
+    "hostname": "router-w-ospf",
+    "routing_protocol": "ospf",
+    "interfaces":{
+        "Loopback0":{ 
+            "ip": "10.0.0.2",
+            "mask": "32"
+            }
+        },
+    "bgp": {
+        "pid": "1"
+    }
+}
+
+routing_defgw = {
+    "hostname": "router-w-bgp",
+    "routing_protocol": "bgp",
+    "interfaces":{
+        "Loopback0":{ 
+            "ip": "10.0.0.3",
+            "mask": "32"
+            }
+        },
+    "default_nh": "10.10.0.1"
+    }
+}
+
+
+routing_template = """
+hostname {{ hostname }}
+ip routing
+
+{% for intf, idata in interfaces.items() -%}
+interface {{ intf }}
+  ip address {{ idata.ip }}/{{ idata.mask }}
+{%- endfor %}
+
+{% if routing_protocol == 'bgp' -%}
+router bgp {{ bgp.as }}
+  router-id {{ interfaces.Loopback0.ip }}
+  network {{ interfaces.Loopback0.ip }}/{{ interfaces.Loopback0.mask }}
+{%- elif routing_protocol == 'ospf' -%}
+router ospf {{ ospf.pid }}
+  router-id {{ interfaces.Loopback0.ip }}
+  network {{ interfaces.Loopback0.ip }}/{{ interfaces.Loopback0.mask }} area 0
+{%- else -%}
+  ip route 0.0.0.0/0 {{ default_nh }}
+{%- endif %}
+"""
+
