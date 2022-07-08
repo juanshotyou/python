@@ -92,7 +92,7 @@ def deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy):
     already_deleted = []
 
     for element in ["floor", "building", "area"]:
-        for i in site_hierarchy["response"]:
+        for i in site_hierarchy:
             for k in i["additionalInfo"]:
                 if k["nameSpace"] == "Location" and k["attributes"]["type"] == element:
                     for j in sites_to_add:
@@ -115,8 +115,8 @@ def getSiteHierarchy(dnac):
 
     try:
         site_hierarchy = dnac.sites.get_site()
-        return site_hierarchy
-    except ApiError as e:
+        return site_hierarchy["response"]
+    except TypeError as e:
         print("Error encountered! See below for more info:\n",e)
 
 def checkTaskExecutionStatus(dnac, taskId):
@@ -148,6 +148,13 @@ def readDataCaptureFile():
 
     return net_hierarchy_list
 
+def getDeviceCredentials(dnac):
+
+    try:
+        device_credentials = dnac.sites.get_site()
+        return device_credentials["response"]
+    except TypeError as e:
+        print("Error encountered! See below for more info:\n",e)
 
 def main():
 
@@ -156,13 +163,16 @@ def main():
     # Check that the connection is correctly set up by requesting the device inventory list
     # inventoryAudit(dnac)
     # Retrieve sites, buildings and floors from data capture file
-    sites_to_add = readDataCaptureFile()
-    site_hierarchy = getSiteHierarchy(dnac)
+    # sites_to_add = readDataCaptureFile()
+    # site_hierarchy = getSiteHierarchy(dnac)
 
     # Function that adds data from the data source to DNAC
-    addSiteToHierarchy(dnac, sites_to_add)
+    # addSiteToHierarchy(dnac, sites_to_add)
     # Function that removes data from the data source from DNAC
-    deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy)
+    # deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy)
+
+    device_credentials = getDeviceCredentials(dnac)
+    print(json.dumps(device_credentials, indent=2))
 
 if __name__ == "__main__":
     main()
