@@ -7,6 +7,7 @@ import math
 import pandas as pd
 from dnacentersdk import DNACenterAPI
 from dotenv import load_dotenv
+from prettytable import PrettyTable
 from jinja_templates.site_templates import *
 
 load_dotenv()
@@ -135,7 +136,15 @@ def checkTaskExecutionStatus(dnac, taskId):
             print("Unexpected result encountered! Terminating program!")
             sys.exit()
     except TypeError as e:
-        print("Error encountered! See below for more info:\n",e)
+        print("Type error encountered! See below for more info:\n",e)
+
+def getDeviceCredentials(dnac):
+
+    try:
+        device_credentials = dnac.network_settings.get_device_credential_details()
+        
+    except TypeError as e:
+        print("Type error encountered! See below for more info:\n",e)
 
 def readDataCaptureFile():
 
@@ -162,7 +171,8 @@ def main():
     # Function that adds data from the data source to DNAC
     addSiteToHierarchy(dnac, sites_to_add)
     # Function that removes data from the data source from DNAC
-    deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy)
+    # deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy)
+    getDeviceCredentials(dnac)
 
 if __name__ == "__main__":
     main()
