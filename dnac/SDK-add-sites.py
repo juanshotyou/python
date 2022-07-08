@@ -179,12 +179,9 @@ def main():
     # addSiteToHierarchy(dnac, sites_to_add)
     # Function that removes data from the data source from DNAC
     # deleteSiteFromHierarchy(dnac, sites_to_add, site_hierarchy)
-<<<<<<< HEAD
-=======
 
     device_credentials = getDeviceCredentials(dnac)
     print(json.dumps(device_credentials, indent=2))
->>>>>>> device-credentials
 
 if __name__ == "__main__":
     main()

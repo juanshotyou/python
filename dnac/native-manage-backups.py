@@ -10,10 +10,13 @@ from dotenv import load_dotenv
 load_dotenv()
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# This section contains the essential variables for the script. DNAC details are read from the '.env' file present in the folder.
+# The 'RETENTION' variable specifies the number of backups to be kept - edit it as needed
+
 DNAC_URL = os.environ.get("DNA_CENTER_BASE_URL")
 DNAC_USER = os.environ.get("DNA_CENTER_USERNAME")
 DNAC_PASS = os.environ.get("DNA_CENTER_PASSWORD")
-RETENTION = 5
+RETENTION_POLICY = 1
 
 def getAuthenticationToken():
     url = DNAC_URL + "/dna/system/api/v1/auth/token"
@@ -38,7 +41,7 @@ def getAuthenticationToken():
         raise SystemExit(e)
     
     if response.status_code >=200 and response.status_code<=299:
-        print("Authentication successfull!\n")
+        print("Authentication successfull!")
     else:
         print("Authentication failed! See message below for more info!\n", response.content)
         sys.exit()
@@ -66,17 +69,17 @@ def getBackupsList(token):
         raise SystemExit(e)
     
     if response.status_code >=200 and response.status_code<=299:
-        print("Backups list successfully retrieved!")
+        print("\nBackups list successfully retrieved!")
         backups_list = json.loads(response.content)
         index = 1
         print(f"There are currently {len(backups_list['response'])} backups available for this DNAC node:")
-        for item in backups_list['response']:
+        for item in sorted(backups_list['response'], key=lambda d: d['start_timestamp'], reverse=True):
             backup_start_time = datetime.fromtimestamp(item['start_timestamp']).replace(microsecond=0)
             backup_end_time = datetime.fromtimestamp(item['end_timestamp']).replace(microsecond=0)
             print(f"{index} - Name: {item['description']} -> Size: {item['backup_size'] / 1000000} MB -> Start time: {backup_start_time} -> End time: {backup_end_time}-> Completion status: {item['status']}")
             index+=1
 
-        return backups_list['response']
+        return sorted(backups_list['response'], key=lambda d: d['start_timestamp'])
 
 def getBackupsHistory(token):
     # Unused function
@@ -109,7 +112,7 @@ def deleteOldestBackup(token, backups_list):
 
     id_of_item_to_delete = backups_list[0]["backup_id"]
 
-    print(f"Attempting to delete backup {backups_list[0]['description']}")
+    print(f"\nAttempting to delete backup {backups_list[0]['description']}")
 
     url = DNAC_URL + "/api/system/v1/maglev/backup/" + id_of_item_to_delete
     headers = {
@@ -131,6 +134,20 @@ def deleteOldestBackup(token, backups_list):
 
     if response.status_code >=200 and response.status_code<=299:
         print(f"Backup {backups_list[0]['description']} has been successfully deleted!")
+
+def enforceBackupPolicy(token):
+    # Get list of backups currently present on DNAC
+    print(f"\nCurrent backup policy: keep newest {RETENTION_POLICY} backups.")
+    
+    backups_list = getBackupsList(token)
+    index = 0 
+
+    while len(backups_list) > RETENTION_POLICY:
+        index+=1
+        deleteOldestBackup(token, backups_list)
+        backups_list = getBackupsList(token)
+
+    print(f"\nPolicy enforcement has been completed! {index} old backups have been purged.")
     
 
 def main():
@@ -138,7 +155,7 @@ def main():
     # backups_list = getBackupsList(token)
     # deleteOldestBackup(token, backups_list)
     # backups_list = getBackupsList(token)
-    # getBackupsHistory(token)
+    enforceBackupPolicy(token)
     
 
 if __name__ == "__main__":
