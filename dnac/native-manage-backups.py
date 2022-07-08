@@ -16,6 +16,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 DNAC_URL = os.environ.get("DNA_CENTER_BASE_URL")
 DNAC_USER = os.environ.get("DNA_CENTER_USERNAME")
 DNAC_PASS = os.environ.get("DNA_CENTER_PASSWORD")
+WEBEX_TOKEN = os.environ.get("WEBEX_TOKEN")
 RETENTION_POLICY = 1
 
 def getAuthenticationToken():
@@ -106,6 +107,8 @@ def getBackupsHistory(token):
         print("Backups history successfully retrieved!")
         backups_history = json.loads(response.content)
         print(json.dumps(backups_history['response'], indent = 2))
+    else:
+        print("An issue has been ecountered!\n", response.content)
 
 def deleteOldestBackup(token, backups_list):
     # Select the oldest backup ID to delete (1st element in the backups list) and use it in the API call to delete it
@@ -134,10 +137,12 @@ def deleteOldestBackup(token, backups_list):
 
     if response.status_code >=200 and response.status_code<=299:
         print(f"Backup {backups_list[0]['description']} has been successfully deleted!")
+    else:
+        print("An issue has been ecountered!\n", response.content)
 
-def enforceBackupPolicy(token):
+def applyBackupPolicy(token):
     # Get list of backups currently present on DNAC
-    print(f"\nCurrent backup policy: keep newest {RETENTION_POLICY} backups.")
+    print(f"\nCurrent backup policy: keep newest {RETENTION_POLICY} backup(s).")
     
     backups_list = getBackupsList(token)
     index = 0 
@@ -147,7 +152,37 @@ def enforceBackupPolicy(token):
         deleteOldestBackup(token, backups_list)
         backups_list = getBackupsList(token)
 
-    print(f"\nPolicy enforcement has been completed! {index} old backups have been purged.")
+    print(f"\nPolicy has been applied! {index} old backup(s) have been purged.")
+    sendWebexMessage(f"Policy has been applied! {index} old backup(s) have been purged.")
+
+def sendWebexMessage(message: str):
+    webex_url = "https://webexapis.com/v1/messages"
+    payload = {
+        "text": message,
+        "toPersonEmail": "vlad.raducanu@virginmedia.co.uk"
+    }
+    headers = {
+        "Authorization": "Bearer " + WEBEX_TOKEN,
+        "Content-Type": "application/json"
+    }
+
+    try:
+        response = requests.post(webex_url, data=json.dumps(payload), headers=headers, verify = False)
+    except requests.exceptions.Timeout as e:
+        print("Operation timed out!")
+        raise SystemError(e)
+    except requests.exceptions.ConnectionError as e:
+        print("Connection error - please check network connectivity!")
+        raise SystemExit(e)
+    except requests.exceptions.HTTPError as e:
+        print("HTTP error encountered!")
+        raise SystemExit(e)
+
+    if response.status_code >=200 and response.status_code<=299:
+        formatted_response = json.loads(response.text)
+        print(json.dumps(formatted_response, indent=4))
+    else:
+        print("An issue has been ecountered!\n", response.content)
     
 
 def main():
@@ -155,7 +190,7 @@ def main():
     # backups_list = getBackupsList(token)
     # deleteOldestBackup(token, backups_list)
     # backups_list = getBackupsList(token)
-    enforceBackupPolicy(token)
+    applyBackupPolicy(token)
     
 
 if __name__ == "__main__":
