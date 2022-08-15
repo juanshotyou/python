@@ -1,9 +1,11 @@
+from pipes import Template
 import requests
 import urllib3
 import base64
 import json
 import os
 import pandas as pd
+import jinja2
 import sys
 from dotenv import load_dotenv
 from datetime import datetime
@@ -60,6 +62,31 @@ def getNetworkDevices():
         # data = json.loads(response.content)
 
     return network_devices
+
+def createObjectFromTemplate(object_data) -> dict:
+    # This function takes the information for a network device object as inputs and
+    # returns a dictionary that can be used in the API call.
+
+    # Default values are declared in the Jinja template.
+
+    NETWORK_DEVICE = """{
+        "NetworkDevice":
+            {
+                "authenticationSettings": {{ name }},
+                "snmpsettings": {},
+                "trustsecsettings": {
+                    "deviceAuthenticationSettings": {},
+                    "sgaNotificationAndUpdates": {},
+                    "deviceConfigurationDeployment": {}
+                        },
+                "tacacsSettings": {},
+                "NetworkDeviceIPList": [{}],
+                "NetworkDeviceGroupList": {}
+                }}
+    """
+
+    J2_NETWORK_DEVICE = Template(NETWORK_DEVICE)
+    return J2_NETWORK_DEVICE.render(object_data)
 
 def buildNetworkDeviceObject(name, ipaddress, description, serialnumber, snmp_string, radius_secret, tacacs_secret, enable_secret, device_user, device_pass):
     # This function includes hard-coded values which apply to the DNACLAB envrionment only. Edit the values here as needed.
