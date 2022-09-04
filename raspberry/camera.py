@@ -40,9 +40,9 @@ def main():
         print("Stage started...\nCurrent disk statistics: "
             f"{d_total} GB total, {d_used} GB used, {d_free} GB free")
 
-        # Take 100 pictures, one every 2 seconds
+        # Take 1250 pictures, one every 2 seconds
         index = 0
-        while index < 100:
+        while index < 1250:
             timestamp = datetime.now().strftime("%d-%b-%Y-%H-%M-%S")
             camera.capture(f"/home/vlad/pi-camera/{timestamp}.jpg")
             index+=1
@@ -50,7 +50,7 @@ def main():
             sleep(2)
 
         # Copy pictures to PI451 external HDD then delete from disk
-        print("100 pictures taken. Copying pictures to PI451.")
+        print(f"{index} pictures taken. Copying pictures to PI451.")
         scp_local = "/home/vlad/pi-camera/* "
         scp_remote = "vlad@192.168.0.51:/srv/dev-disk-by-uuid-94BA918FBA916F0C/_PIZERO/pi-camera/"
         os.system("scp " + scp_local + scp_remote)
