@@ -57,4 +57,5 @@ while Exit==False:
         Exit = True #Exit Program
 
 FiveSecond.terminate()
+TwoSecond.terminate()
 print("Goodbye :)")
