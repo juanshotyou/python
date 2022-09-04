@@ -37,27 +37,24 @@ def main():
 
         # Retrieve current system stats and print
         d_total, d_free, d_used = getDiskStats("/")
-        print("Program started...\nCurrent disk statistics: "
+        print("Stage started...\nCurrent disk statistics: "
             f"{d_total} GB total, {d_used} GB used, {d_free} GB free")
 
-        # Take a picture every 2 seconds, check disk space every 100 pictures
+        # Take 100 pictures, one every 2 seconds
         index = 0
-        while True:
+        while index < 100:
             timestamp = datetime.now().strftime("%d-%b-%Y-%H-%M-%S")
             camera.capture(f"/home/vlad/pi-camera/{timestamp}.jpg")
             index+=1
             total+=1
             sleep(2)
-            if index == 100:
-                if not checkDiskSpace():
-                    break
 
-        # When loop is interrupted, copy pictures to PI451 external HDD then delete
+        # Copy pictures to PI451 external HDD then delete from disk
+        print("100 pictures taken. Copying pictures to PI451.")
         scp_local = "/home/vlad/pi-camera/* "
         scp_remote = "vlad@192.168.0.51:/srv/dev-disk-by-uuid-94BA918FBA916F0C/_PIZERO/pi-camera/"
         os.system("scp " + scp_local + scp_remote)
         os.system("rm -rf /home/vlad/pi-camera/*")
-
 
 
 if __name__ == "__main__":
