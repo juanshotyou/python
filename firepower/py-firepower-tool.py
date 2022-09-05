@@ -59,6 +59,8 @@ def getDevices():
 
 def getAccessPolicies():
 
+    print("this is a new change")
+
     policies = []
 
     url = base_url + "/api/fmc_config/v1/domain/" + domain_uuid + "/policy/accesspolicies"
