@@ -31,23 +31,29 @@ def main():
     camera.resolution = (2592, 1944)
     camera.framerate = 15
 
-    # Hardcode to take max 5000 pics beforeq quitting
+    # Hardcode to take max 12500 pics beforeq quitting
     total = 0
-    while total < 5000:
-
+    stage = 0
+    while total < 12500:
+        stage+=1
         # Retrieve current system stats and print
         d_total, d_free, d_used = getDiskStats("/")
-        print("Stage started...\nCurrent disk statistics: "
-            f"{d_total} GB total, {d_used} GB used, {d_free} GB free")
+        print(f"Stage {stage} started...\nCurrent disk statistics: "
+            f"{d_total} GB total, {d_used} GB used, {d_free} GB free.")
 
-        # Take 1250 pictures, one every 2 seconds
+        # Take 2500 pictures, one every 2 seconds
         index = 0
-        while index < 1250:
+        while index < 2500:
             timestamp = datetime.now().strftime("%d-%b-%Y-%H-%M-%S")
             camera.capture(f"/home/vlad/pi-camera/{timestamp}.jpg")
             index+=1
             total+=1
             sleep(2)
+
+        # Print current disk usage stats
+        d_total, d_free, d_used = getDiskStats("/")
+        print(f"Stage {stage} completed...\nCurrent disk statistics: "
+            f"{d_total} GB total, {d_used} GB used, {d_free} GB free.")
 
         # Copy pictures to PI451 external HDD then delete from disk
         print(f"{index} pictures taken. Copying pictures to PI451.")
@@ -61,4 +67,4 @@ if __name__ == "__main__":
     SCRIPT_RUN_TIME = datetime.now().strftime("%d-%b-%Y-%H-%M-%S")
     main()
     SCRIPT_END_TIME = datetime.now().strftime("%d-%b-%Y-%H-%M-%S")
-    print(f"Script started - {SCRIPT_RUN_TIME} and ended - {SCRIPT_END_TIME}.")
+    print(f"\nScript started - {SCRIPT_RUN_TIME} and ended - {SCRIPT_END_TIME}.")
