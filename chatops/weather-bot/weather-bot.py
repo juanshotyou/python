@@ -31,13 +31,16 @@ def index() -> tuple:
             logger.debug(f"Notification contents:\n{printable_data}")
             # Filter out messages from self
             if webex.bot_id == data.get("data").get("personId"):
-                logger.debug(f"Message from self received:\n{printable_data}")
                 return ("Message from self ignored.", 200)
             else:
                 # Read message contents
                 room_id = data["data"]["roomId"]
                 data_id = data["data"]["id"]
-                if data["resource"] == "messages":
+                user_id = data["data"]["personId"]
+                time = data["data"]["created"]
+                if "personEmail" in data["data"]:
+                    user_email = data["data"]["personEmail"]
+                if data["resource"] == "messages" and data["event"] == "created":
                     msg_contents = webex.getMessage(message_id=data_id)
                     # Check message text contents and reply
                     if "text" in msg_contents:
@@ -50,27 +53,28 @@ def index() -> tuple:
                             webex.sendMessageToRoom(
                                 room_id=room_id, text=text, attachments=attachments)
                             return (data, 200)
-                        elif "start" in msg_contents["text"].lower():
+                        elif msg_contents["text"].lower() in  "start":
                             logger.debug(f'Start command received:{msg_contents["text"]}')
                             attachments = json.loads(templates.J2_START.render())
                             text = attachments["content"]["body"][1]["text"]
                             webex.sendMessageToRoom(
                                 room_id=room_id, text=text, attachments=attachments)
                             return (data, 200)
-                        elif len(msg_contents["text"].split()) > 1:
-                            logger.debug(f'Invalid command received: {msg_contents["text"]}')
-                            text = "Could not process request! Too many words...aghhh"
-                            webex.sendMessageToRoom(room_id=room_id, text=text)
-                            return (data, 400)
                         else:
                             logger.debug(f'Looking up weather info for {msg_contents["text"]}')
                             geolocation = weather.getGeolocationData(msg_contents["text"])
-                            weather_info = weather.getCurrentWeather(geolocation)
-                            text = json.dumps(weather_info, indent=2)
-                            attachments = json.loads(templates.J2_WEATHER.render(weather_info))
-                            webex.sendMessageToRoom(room_id=room_id, text=text, attachments=attachments)
-                            return (data, 200)
-                elif data["resource"] == "attachmentActions":
+                            if len(geolocation) != 0:
+                                weather_info = weather.getCurrentWeather(geolocation)
+                                text = json.dumps(weather_info, indent=2)
+                                attachments = json.loads(templates.J2_WEATHER.render(weather_info))
+                                webex.sendMessageToRoom(room_id=room_id, text=text, attachments=attachments)
+                                return (data, 200)
+                            else:
+                                text = f'Could not find {msg_contents["text"]}'
+                                attachments = json.loads(templates.J2_INVALID.render(msg_contents))
+                                webex.sendMessageToRoom(room_id=room_id, text=text, attachments=attachments)
+                                return (data, 400)
+                elif data["resource"] == "attachmentActions" and data["event"] == "created":
                     action_contents = webex.getAttachmentActionData(
                         action_id=data_id)
                     if "inputs" in action_contents:

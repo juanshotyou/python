@@ -9149,3 +9149,1673 @@ To start, type 'start' and press enter.",
   }
 }
 [14/09/2022 23:43:17.583] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [14/Sep/2022 23:43:17] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:15:19.411] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:15:19.411] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:15:19.754] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:15:19.754] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:15:19.754] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:15:19.760] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 78, 'gauge': 0, 'rate1': 3.6288583247275286e-12, 'rate5': 0.00029457885135290217, 'rate15': 0.004067179041917614, 'p50': 374107020.5, 'p90': 2083074637.5000002, 'p95': 2362965129.15, 'p99': 2465294084}, 'http': {'count': 78, 'rate1': 3.6288583247275286e-12, 'rate5': 0.00029457885135290217, 'rate15': 0.004067179041917614, 'p50': 372444833, 'p90': 2080962741.4, 'p95': 2361107356.9, 'p99': 2463024250}}}
+
+[15/09/2022 00:15:19.760] [INFO] [weather-bot.py] [main():96] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:15:19.772] [INFO] [_internal.py] [_log():224] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.80.2.16:5005
+[15/09/2022 00:15:19.772] [INFO] [_internal.py] [_log():224] [33mPress CTRL+C to quit[0m
+[15/09/2022 00:15:19.773] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:15:19.912] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:15:19.912] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:15:20.188] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:15:20.188] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:15:20.188] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:15:20.193] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 78, 'gauge': 0, 'rate1': 3.6288583247275286e-12, 'rate5': 0.00029457885135290217, 'rate15': 0.004067179041917614, 'p50': 374107020.5, 'p90': 2083074637.5000002, 'p95': 2362965129.15, 'p99': 2465294084}, 'http': {'count': 78, 'rate1': 3.6288583247275286e-12, 'rate5': 0.00029457885135290217, 'rate15': 0.004067179041917614, 'p50': 372444833, 'p90': 2080962741.4, 'p95': 2361107356.9, 'p99': 2463024250}}}
+
+[15/09/2022 00:15:20.194] [INFO] [weather-bot.py] [main():96] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:15:20.201] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:15:20.215] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:15:41.313] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:15:41.315] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjY1NmRiNjAtMzQ4My0xMWVkLWEzNjYtNTdmYjdiYjYyM2Jm",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:15:40.694Z"
+  }
+}
+[15/09/2022 00:15:41.315] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjY1NmRiNjAtMzQ4My0xMWVkLWEzNjYtNTdmYjdiYjYyM2Jm
+[15/09/2022 00:15:41.315] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjY1NmRiNjAtMzQ4My0xMWVkLWEzNjYtNTdmYjdiYjYyM2Jm 
+ {}
+[15/09/2022 00:15:41.668] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:15:41.669] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjY1NmRiNjAtMzQ4My0xMWVkLWEzNjYtNTdmYjdiYjYyM2Jm",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Hello",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:15:40.694Z"
+}
+
+[15/09/2022 00:15:41.669] [DEBUG] [weather-bot.py] [index():46] Help command received: Hello
+[15/09/2022 00:15:41.669] [DEBUG] [weather-bot.py] [index():48] Attachment: 
+
+
+ {'contentType': 'application/vnd.microsoft.card.adaptive', 'content': {'type': 'AdaptiveCard', 'body': [{'type': 'TextBlock', 'size': 'Medium', 'weight': 'Bolder', 'text': 'Welcome to the Weather ChatBot'}, {'type': 'ColumnSet', 'columns': [{'type': 'Column', 'items': [{'type': 'Image', 'style': 'Person', 'url': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a?quarantineState=evaluating', 'size': 'Medium'}], 'width': 'auto'}, {'type': 'Column', 'width': 'stretch', 'items': [{'type': 'TextBlock', 'text': "You can ask the bot for weather info for any city by sending it the name of the city. \n\nOnly single word locations are currently supported. Type 'help' or 'hello' to see this message again. \n\nTo start, type 'start' and press enter.", 'wrap': True}]}]}], '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2'}} 
+
+
+
+[15/09/2022 00:15:41.669] [INFO] [webex_module.py] [sendMessageToRoom():129] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3
+[15/09/2022 00:15:41.670] [DEBUG] [webex_module.py] [sendMessageToRoom():139] Message contents: 
+{
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "text": "Welcome to the Weather ChatBot\nYou can ask the bot for weather info for any city by sending it the name of the city. \n\nOnly single word locations are currently supported. Type 'help' or 'hello' to see this message again. \n\nTo start, type 'start' and press enter.",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Welcome to the Weather ChatBot"
+          },
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "Image",
+                    "style": "Person",
+                    "url": "https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a?quarantineState=evaluating",
+                    "size": "Medium"
+                  }
+                ],
+                "width": "auto"
+              },
+              {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "You can ask the bot for weather info for any city by sending it the name of the city. \n\nOnly single word locations are currently supported. Type 'help' or 'hello' to see this message again. \n\nTo start, type 'start' and press enter.",
+                    "wrap": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2"
+      }
+    }
+  ]
+}
+
+[15/09/2022 00:15:41.670] [DEBUG] [webex_module.py] [_makeRequest():36] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3', 'text': "Welcome to the Weather ChatBot\nYou can ask the bot for weather info for any city by sending it the name of the city. \n\nOnly single word locations are currently supported. Type 'help' or 'hello' to see this message again. \n\nTo start, type 'start' and press enter.", 'attachments': [{'contentType': 'application/vnd.microsoft.card.adaptive', 'content': {'type': 'AdaptiveCard', 'body': [{'type': 'TextBlock', 'size': 'Medium', 'weight': 'Bolder', 'text': 'Welcome to the Weather ChatBot'}, {'type': 'ColumnSet', 'columns': [{'type': 'Column', 'items': [{'type': 'Image', 'style': 'Person', 'url': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a?quarantineState=evaluating', 'size': 'Medium'}], 'width': 'auto'}, {'type': 'Column', 'width': 'stretch', 'items': [{'type': 'TextBlock', 'text': "You can ask the bot for weather info for any city by sending it the name of the city. \n\nOnly single word locations are currently supported. Type 'help' or 'hello' to see this message again. \n\nTo start, type 'start' and press enter.", 'wrap': True}]}]}], '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2'}}]}
+[15/09/2022 00:15:43.565] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:15:43.567] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:15:43] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:15:43.876] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:15:43.877] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMjdlOTNiMzAtMzQ4My0xMWVkLWFjNWQtOWQ2NzE1ZjZhM2Qz",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "personEmail": "chatty-mcbot@webex.bot",
+    "created": "2022-09-14T23:15:43.331Z"
+  }
+}
+[15/09/2022 00:15:43.878] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:15:43] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:15:49.301] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:15:49.302] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmFmYWMwZjAtMzQ4My0xMWVkLThmMzUtNDMxMmJmMWVhYzcy",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:15:48.479Z"
+  }
+}
+[15/09/2022 00:15:49.302] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmFmYWMwZjAtMzQ4My0xMWVkLThmMzUtNDMxMmJmMWVhYzcy
+[15/09/2022 00:15:49.302] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmFmYWMwZjAtMzQ4My0xMWVkLThmMzUtNDMxMmJmMWVhYzcy 
+ {}
+[15/09/2022 00:15:49.650] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:15:49.651] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmFmYWMwZjAtMzQ4My0xMWVkLThmMzUtNDMxMmJmMWVhYzcy",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Start",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:15:48.479Z"
+}
+
+[15/09/2022 00:15:49.651] [DEBUG] [weather-bot.py] [index():55] Start command received:Start
+[15/09/2022 00:15:49.651] [INFO] [webex_module.py] [sendMessageToRoom():129] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3
+[15/09/2022 00:15:49.651] [DEBUG] [webex_module.py] [sendMessageToRoom():139] Message contents: 
+{
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "text": "Enter the name of a location:",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "Get current weather",
+            "wrap": true,
+            "size": "Large",
+            "weight": "Bolder"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Enter the name of a location:"
+          },
+          {
+            "type": "Input.Text",
+            "placeholder": "e.g. Lisbon, Zagreb, Baguley, etc",
+            "id": "location"
+          },
+          {
+            "type": "ActionSet",
+            "actions": [
+              {
+                "type": "Action.Submit",
+                "title": "Send",
+                "style": "positive",
+                "id": "2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+[15/09/2022 00:15:49.651] [DEBUG] [webex_module.py] [_makeRequest():36] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3', 'text': 'Enter the name of a location:', 'attachments': [{'contentType': 'application/vnd.microsoft.card.adaptive', 'content': {'type': 'AdaptiveCard', '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2', 'body': [{'type': 'TextBlock', 'text': 'Get current weather', 'wrap': True, 'size': 'Large', 'weight': 'Bolder'}, {'type': 'TextBlock', 'text': 'Enter the name of a location:'}, {'type': 'Input.Text', 'placeholder': 'e.g. Lisbon, Zagreb, Baguley, etc', 'id': 'location'}, {'type': 'ActionSet', 'actions': [{'type': 'Action.Submit', 'title': 'Send', 'style': 'positive', 'id': '2'}]}]}}]}
+[15/09/2022 00:15:50.221] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:15:50.222] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:15:50] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:15:51.040] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:15:51.041] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmJlYTlmMzAtMzQ4My0xMWVkLWI5NGYtZmZkNzQ4MTYxNmI1",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "personEmail": "chatty-mcbot@webex.bot",
+    "created": "2022-09-14T23:15:50.051Z"
+  }
+}
+[15/09/2022 00:15:51.042] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:15:51] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:16:02.713] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:16:02.714] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL0FUVEFDSE1FTlRfQUNUSU9OLzMyZGE5N2EwLTM0ODMtMTFlZC1iY2EwLTRmMzIzYzkxZjQ0Mg",
+    "type": "submit",
+    "messageId": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmJlYTlmMzAtMzQ4My0xMWVkLWI5NGYtZmZkNzQ4MTYxNmI1",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "created": "2022-09-14T23:16:01.690Z"
+  }
+}
+[15/09/2022 00:16:02.730] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:16:02] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[15/09/2022 00:17:12.588] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/weather-bot.py', reloading
+[15/09/2022 00:17:12.633] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:17:12.812] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:17:12.812] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:17:13.165] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:17:13.165] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:17:13.165] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:17:13.172] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 83, 'gauge': 0, 'rate1': 0.02233186953168198, 'rate5': 0.012995058837941791, 'rate15': 0.008685304342654502, 'p50': 373856750, 'p90': 2125548450.0000002, 'p95': 2346090499.9999995, 'p99': 2465294084}, 'http': {'count': 83, 'rate1': 0.02233186953168198, 'rate5': 0.012995058837941791, 'rate15': 0.008685304342654502, 'p50': 372412416, 'p90': 2123301033.4, 'p95': 2344198633.7999997, 'p99': 2463024250}}}
+
+[15/09/2022 00:17:13.172] [INFO] [weather-bot.py] [main():97] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:17:13.187] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:17:13.196] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:17:45.633] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/weather-bot.py', reloading
+[15/09/2022 00:17:45.680] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:17:45.834] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:17:45.834] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:17:46.122] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:17:46.123] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:17:46.123] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:17:46.130] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 83, 'gauge': 0, 'rate1': 0.012461968069429829, 'rate5': 0.011564065972801213, 'rate15': 0.008354025784220969, 'p50': 373856750, 'p90': 2125548450.0000002, 'p95': 2346090499.9999995, 'p99': 2465294084}, 'http': {'count': 83, 'rate1': 0.012461968069429829, 'rate5': 0.011564065972801213, 'rate15': 0.008354025784220969, 'p50': 372412416, 'p90': 2123301033.4, 'p95': 2344198633.7999997, 'p99': 2463024250}}}
+
+[15/09/2022 00:17:46.130] [INFO] [weather-bot.py] [main():98] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:17:46.144] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:17:46.157] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:18:03.342] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:18:03.343] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL0FUVEFDSE1FTlRfQUNUSU9OLzdhZDJhYTIwLTM0ODMtMTFlZC04ZWZhLWRmZWE5Yjc0YTBiOQ",
+    "type": "submit",
+    "messageId": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmJlYTlmMzAtMzQ4My0xMWVkLWI5NGYtZmZkNzQ4MTYxNmI1",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "created": "2022-09-14T23:18:02.434Z"
+  }
+}
+[15/09/2022 00:18:03.343] [INFO] [webex_module.py] [getAttachmentActionData():110] Retrieving attachment action Y2lzY29zcGFyazovL3VzL0FUVEFDSE1FTlRfQUNUSU9OLzdhZDJhYTIwLTM0ODMtMTFlZC04ZWZhLWRmZWE5Yjc0YTBiOQ
+[15/09/2022 00:18:03.343] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/attachment/actions/Y2lzY29zcGFyazovL3VzL0FUVEFDSE1FTlRfQUNUSU9OLzdhZDJhYTIwLTM0ODMtMTFlZC04ZWZhLWRmZWE5Yjc0YTBiOQ 
+ {}
+[15/09/2022 00:18:03.654] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:18:03.655] [DEBUG] [webex_module.py] [getAttachmentActionData():113] Attachment action retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL0FUVEFDSE1FTlRfQUNUSU9OLzdhZDJhYTIwLTM0ODMtMTFlZC04ZWZhLWRmZWE5Yjc0YTBiOQ",
+  "type": "submit",
+  "messageId": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmJlYTlmMzAtMzQ4My0xMWVkLWI5NGYtZmZkNzQ4MTYxNmI1",
+  "inputs": {
+    "location": "kiev"
+  },
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "created": "2022-09-14T23:18:02.434Z"
+}
+
+[15/09/2022 00:18:03.655] [DEBUG] [weather-bot.py] [index():75] Action notification received:{'location': 'kiev'}
+[15/09/2022 00:18:03.655] [DEBUG] [weather-bot.py] [index():77] Looking up weather info for kiev
+[15/09/2022 00:18:03.655] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for kiev...
+[15/09/2022 00:18:03.655] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=kiev&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:18:03.836] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+<Response [200]>
+
+[15/09/2022 00:18:03.836] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:18:03.836] [INFO] [weather_module.py] [getCurrentWeather():60] Retrieving weather info for Kyiv
+[15/09/2022 00:18:03.837] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/data/2.5/weather?lat=50.4500336&lon=30.5241361&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:18:03.984] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+<Response [200]>
+
+[15/09/2022 00:18:03.985] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:18:03.985] [INFO] [webex_module.py] [sendMessageToRoom():129] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3
+[15/09/2022 00:18:03.986] [DEBUG] [webex_module.py] [sendMessageToRoom():139] Message contents: 
+{
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "text": "{\n  \"location\": \"Kyiv\",\n  \"w_main\": \"Clouds\",\n  \"w_desc\": \"Overcast clouds\",\n  \"tmp\": 12.57,\n  \"tmp_feel\": 12.32,\n  \"tmp_min\": 10.86,\n  \"temp_max\": 15.28,\n  \"pressure\": 0.995,\n  \"humidity\": 94\n}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "Weather in Kyiv now:",
+                "wrap": true,
+                "fontType": "Default",
+                "size": "Large",
+                "weight": "Bolder"
+              }
+            ]
+          },
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "**Sky**: Clouds",
+                    "wrap": true,
+                    "horizontalAlignment": "Left",
+                    "fontType": "Default"
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Outdoor**: Overcast clouds",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Temperature**: 12.57 \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Feels like**: 12.32 \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Day range**: 10.86 \u00b0C - 15.28 \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Atmospheric pressure**: 0.995 hPa",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Humidity**: 94 %",
+                    "wrap": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+[15/09/2022 00:18:03.986] [DEBUG] [webex_module.py] [_makeRequest():36] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3', 'text': '{\n  "location": "Kyiv",\n  "w_main": "Clouds",\n  "w_desc": "Overcast clouds",\n  "tmp": 12.57,\n  "tmp_feel": 12.32,\n  "tmp_min": 10.86,\n  "temp_max": 15.28,\n  "pressure": 0.995,\n  "humidity": 94\n}', 'attachments': [{'contentType': 'application/vnd.microsoft.card.adaptive', 'content': {'type': 'AdaptiveCard', '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2', 'body': [{'type': 'Container', 'items': [{'type': 'TextBlock', 'text': 'Weather in Kyiv now:', 'wrap': True, 'fontType': 'Default', 'size': 'Large', 'weight': 'Bolder'}]}, {'type': 'ColumnSet', 'columns': [{'type': 'Column', 'width': 'stretch', 'items': [{'type': 'TextBlock', 'text': '**Sky**: Clouds', 'wrap': True, 'horizontalAlignment': 'Left', 'fontType': 'Default'}, {'type': 'TextBlock', 'text': '**Outdoor**: Overcast clouds', 'wrap': True}, {'type': 'TextBlock', 'text': '**Temperature**: 12.57 °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Feels like**: 12.32 °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Day range**: 10.86 °C - 15.28 °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Atmospheric pressure**: 0.995 hPa', 'wrap': True}, {'type': 'TextBlock', 'text': '**Humidity**: 94 %', 'wrap': True}]}]}]}}]}
+[15/09/2022 00:18:04.522] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:18:04.524] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:18:04] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:18:05.390] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:18:05.391] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvN2JmZDk1OTAtMzQ4My0xMWVkLTljNDItMTdkOThjOWIwNWE3",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "personEmail": "chatty-mcbot@webex.bot",
+    "created": "2022-09-14T23:18:04.393Z"
+  }
+}
+[15/09/2022 00:18:05.392] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:18:05] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:18:14.197] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:18:14.198] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODE1OGU0NDAtMzQ4My0xMWVkLTk3N2UtNTc0NjUwMGMzNDMy",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:18:13.380Z"
+  }
+}
+[15/09/2022 00:18:14.198] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODE1OGU0NDAtMzQ4My0xMWVkLTk3N2UtNTc0NjUwMGMzNDMy
+[15/09/2022 00:18:14.198] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODE1OGU0NDAtMzQ4My0xMWVkLTk3N2UtNTc0NjUwMGMzNDMy 
+ {}
+[15/09/2022 00:18:14.525] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:18:14.526] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODE1OGU0NDAtMzQ4My0xMWVkLTk3N2UtNTc0NjUwMGMzNDMy",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "San Francisco",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:18:13.380Z"
+}
+
+[15/09/2022 00:18:14.526] [DEBUG] [weather-bot.py] [index():64] Looking up weather info for San Francisco
+[15/09/2022 00:18:14.526] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for San Francisco...
+[15/09/2022 00:18:14.526] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=San Francisco&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:18:14.719] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+<Response [200]>
+
+[15/09/2022 00:18:14.720] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:18:14.720] [INFO] [weather_module.py] [getCurrentWeather():60] Retrieving weather info for San Francisco
+[15/09/2022 00:18:14.720] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/data/2.5/weather?lat=37.7790262&lon=-122.419906&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:18:15.095] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+<Response [200]>
+
+[15/09/2022 00:18:15.095] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:18:15.096] [INFO] [webex_module.py] [sendMessageToRoom():129] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3
+[15/09/2022 00:18:15.096] [DEBUG] [webex_module.py] [sendMessageToRoom():139] Message contents: 
+{
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "text": "{\n  \"location\": \"San Francisco\",\n  \"w_main\": \"Clouds\",\n  \"w_desc\": \"Broken clouds\",\n  \"tmp\": 20.73,\n  \"tmp_feel\": 20.88,\n  \"tmp_min\": 18,\n  \"temp_max\": 25.74,\n  \"pressure\": 1.014,\n  \"humidity\": 78\n}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "Weather in San Francisco now:",
+                "wrap": true,
+                "fontType": "Default",
+                "size": "Large",
+                "weight": "Bolder"
+              }
+            ]
+          },
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "**Sky**: Clouds",
+                    "wrap": true,
+                    "horizontalAlignment": "Left",
+                    "fontType": "Default"
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Outdoor**: Broken clouds",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Temperature**: 20.73 \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Feels like**: 20.88 \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Day range**: 18 \u00b0C - 25.74 \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Atmospheric pressure**: 1.014 hPa",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Humidity**: 78 %",
+                    "wrap": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+[15/09/2022 00:18:15.096] [DEBUG] [webex_module.py] [_makeRequest():36] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3', 'text': '{\n  "location": "San Francisco",\n  "w_main": "Clouds",\n  "w_desc": "Broken clouds",\n  "tmp": 20.73,\n  "tmp_feel": 20.88,\n  "tmp_min": 18,\n  "temp_max": 25.74,\n  "pressure": 1.014,\n  "humidity": 78\n}', 'attachments': [{'contentType': 'application/vnd.microsoft.card.adaptive', 'content': {'type': 'AdaptiveCard', '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2', 'body': [{'type': 'Container', 'items': [{'type': 'TextBlock', 'text': 'Weather in San Francisco now:', 'wrap': True, 'fontType': 'Default', 'size': 'Large', 'weight': 'Bolder'}]}, {'type': 'ColumnSet', 'columns': [{'type': 'Column', 'width': 'stretch', 'items': [{'type': 'TextBlock', 'text': '**Sky**: Clouds', 'wrap': True, 'horizontalAlignment': 'Left', 'fontType': 'Default'}, {'type': 'TextBlock', 'text': '**Outdoor**: Broken clouds', 'wrap': True}, {'type': 'TextBlock', 'text': '**Temperature**: 20.73 °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Feels like**: 20.88 °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Day range**: 18 °C - 25.74 °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Atmospheric pressure**: 1.014 hPa', 'wrap': True}, {'type': 'TextBlock', 'text': '**Humidity**: 78 %', 'wrap': True}]}]}]}}]}
+[15/09/2022 00:18:15.734] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:18:15.735] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:18:15] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:18:16.551] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:18:16.552] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODJhMGE2ODAtMzQ4My0xMWVkLWE4YmEtZmJlNTc0MjU5ZmRl",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "personEmail": "chatty-mcbot@webex.bot",
+    "created": "2022-09-14T23:18:15.528Z"
+  }
+}
+[15/09/2022 00:18:16.553] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:18:16] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:18:24.396] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:18:24.398] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODc5Mjg1MDAtMzQ4My0xMWVkLTgwZTQtMTE0YmE1NjhiN2Yw",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:18:23.824Z"
+  }
+}
+[15/09/2022 00:18:24.398] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODc5Mjg1MDAtMzQ4My0xMWVkLTgwZTQtMTE0YmE1NjhiN2Yw
+[15/09/2022 00:18:24.398] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODc5Mjg1MDAtMzQ4My0xMWVkLTgwZTQtMTE0YmE1NjhiN2Yw 
+ {}
+[15/09/2022 00:18:24.714] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:18:24.714] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODc5Mjg1MDAtMzQ4My0xMWVkLTgwZTQtMTE0YmE1NjhiN2Yw",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Buddies cucueb",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:18:23.824Z"
+}
+
+[15/09/2022 00:18:24.715] [DEBUG] [weather-bot.py] [index():64] Looking up weather info for Buddies cucueb
+[15/09/2022 00:18:24.715] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for Buddies cucueb...
+[15/09/2022 00:18:24.715] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=Buddies cucueb&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:18:24.886] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+<Response [200]>
+
+[15/09/2022 00:18:24.887] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:18:24.887] [WARNING] [weather_module.py] [getGeolocationData():55] Could not find geolocation data for Buddies cucueb!
+[15/09/2022 00:18:24.887] [WARNING] [weather_module.py] [getCurrentWeather():78] Geolocation data missing!
+[15/09/2022 00:18:24.888] [INFO] [webex_module.py] [sendMessageToRoom():129] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3
+[15/09/2022 00:18:24.888] [DEBUG] [webex_module.py] [sendMessageToRoom():139] Message contents: 
+{
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "text": "{}",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "Container",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "Weather in  now:",
+                "wrap": true,
+                "fontType": "Default",
+                "size": "Large",
+                "weight": "Bolder"
+              }
+            ]
+          },
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "**Sky**: ",
+                    "wrap": true,
+                    "horizontalAlignment": "Left",
+                    "fontType": "Default"
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Outdoor**: ",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Temperature**:  \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Feels like**:  \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Day range**:  \u00b0C -  \u00b0C",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Atmospheric pressure**:  hPa",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "**Humidity**:  %",
+                    "wrap": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+[15/09/2022 00:18:24.888] [DEBUG] [webex_module.py] [_makeRequest():36] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3', 'text': '{}', 'attachments': [{'contentType': 'application/vnd.microsoft.card.adaptive', 'content': {'type': 'AdaptiveCard', '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2', 'body': [{'type': 'Container', 'items': [{'type': 'TextBlock', 'text': 'Weather in  now:', 'wrap': True, 'fontType': 'Default', 'size': 'Large', 'weight': 'Bolder'}]}, {'type': 'ColumnSet', 'columns': [{'type': 'Column', 'width': 'stretch', 'items': [{'type': 'TextBlock', 'text': '**Sky**: ', 'wrap': True, 'horizontalAlignment': 'Left', 'fontType': 'Default'}, {'type': 'TextBlock', 'text': '**Outdoor**: ', 'wrap': True}, {'type': 'TextBlock', 'text': '**Temperature**:  °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Feels like**:  °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Day range**:  °C -  °C', 'wrap': True}, {'type': 'TextBlock', 'text': '**Atmospheric pressure**:  hPa', 'wrap': True}, {'type': 'TextBlock', 'text': '**Humidity**:  %', 'wrap': True}]}]}]}}]}
+[15/09/2022 00:18:25.325] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:18:25.327] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:18:25] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:18:25.768] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:18:25.769] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvODg2MmY0NjAtMzQ4My0xMWVkLWE0YjMtYTc2ZWMxYTExY2Qw",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "personEmail": "chatty-mcbot@webex.bot",
+    "created": "2022-09-14T23:18:25.190Z"
+  }
+}
+[15/09/2022 00:18:25.770] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:18:25] "POST / HTTP/1.1" 200 -
+[15/09/2022 00:22:21.620] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/weather-bot.py', reloading
+[15/09/2022 00:22:21.663] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:22:21.827] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:22:21.827] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:22:22.163] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:22:22.164] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:22:22.164] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:22:22.169] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 89, 'gauge': 0, 'rate1': 0.0019010052963135192, 'rate5': 0.013539294306712496, 'rate15': 0.011246768388947344, 'p50': 373856750, 'p90': 2074579875.0000002, 'p95': 2321941437.4999995, 'p99': 2465294084}, 'http': {'count': 89, 'rate1': 0.0019010052963135192, 'rate5': 0.013539294306712496, 'rate15': 0.011246768388947344, 'p50': 372412416, 'p90': 2072495083.0000002, 'p95': 2319996583.4999995, 'p99': 2463024250}}}
+
+[15/09/2022 00:22:22.169] [INFO] [weather-bot.py] [main():101] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:22:22.182] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:22:22.196] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:23:22.937] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/weather-bot.py', reloading
+[15/09/2022 00:23:22.983] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:23:23.132] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:23:23.132] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:23:23.419] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:23:23.420] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:23:23.420] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:23:23.426] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 89, 'gauge': 0, 'rate1': 0.0006993407660717699, 'rate5': 0.011085036623879153, 'rate15': 0.010521430386893028, 'p50': 373856750, 'p90': 2074579875.0000002, 'p95': 2321941437.4999995, 'p99': 2465294084}, 'http': {'count': 89, 'rate1': 0.0006993407660717699, 'rate5': 0.011085036623879153, 'rate15': 0.010521430386893028, 'p50': 372412416, 'p90': 2072495083.0000002, 'p95': 2319996583.4999995, 'p99': 2463024250}}}
+
+[15/09/2022 00:23:23.426] [INFO] [weather-bot.py] [main():102] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:23:23.441] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:23:23.451] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:23:52.744] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/jinja_templates/templates.py', reloading
+[15/09/2022 00:23:52.792] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:30:38.401] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:30:38.401] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:30:38.734] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:30:38.735] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:30:38.735] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:30:38.741] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 89, 'gauge': 0, 'rate1': 4.966539011377013e-07, 'rate5': 0.002600220234393631, 'rate15': 0.006488820889396408, 'p50': 373856750, 'p90': 2074579875.0000002, 'p95': 2321941437.4999995, 'p99': 2465294084}, 'http': {'count': 89, 'rate1': 4.966539011377013e-07, 'rate5': 0.002600220234393631, 'rate15': 0.006488820889396408, 'p50': 372412416, 'p90': 2072495083.0000002, 'p95': 2319996583.4999995, 'p99': 2463024250}}}
+
+[15/09/2022 00:30:38.742] [INFO] [weather-bot.py] [main():102] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:30:38.753] [INFO] [_internal.py] [_log():224] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.80.2.16:5005
+[15/09/2022 00:30:38.754] [INFO] [_internal.py] [_log():224] [33mPress CTRL+C to quit[0m
+[15/09/2022 00:30:38.755] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:30:38.893] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:30:38.893] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:30:39.184] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:30:39.185] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:30:39.185] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:30:39.191] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 89, 'gauge': 0, 'rate1': 4.5694364774560616e-07, 'rate5': 0.0025572423741754913, 'rate15': 0.006452871835400151, 'p50': 373856750, 'p90': 2074579875.0000002, 'p95': 2321941437.4999995, 'p99': 2465294084}, 'http': {'count': 89, 'rate1': 4.5694364774560616e-07, 'rate5': 0.0025572423741754913, 'rate15': 0.006452871835400151, 'p50': 372412416, 'p90': 2072495083.0000002, 'p95': 2319996583.4999995, 'p99': 2463024250}}}
+
+[15/09/2022 00:30:39.191] [INFO] [weather-bot.py] [main():102] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:30:39.198] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:30:39.212] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:30:47.695] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:30:47.696] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNDI4YWEyYjAtMzQ4NS0xMWVkLWIzMTctMmQ0ODcxNzM4Yzgy",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:30:47.003Z"
+  }
+}
+[15/09/2022 00:30:47.696] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNDI4YWEyYjAtMzQ4NS0xMWVkLWIzMTctMmQ0ODcxNzM4Yzgy
+[15/09/2022 00:30:47.696] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNDI4YWEyYjAtMzQ4NS0xMWVkLWIzMTctMmQ0ODcxNzM4Yzgy 
+ {}
+[15/09/2022 00:30:48.110] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:30:48.111] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvNDI4YWEyYjAtMzQ4NS0xMWVkLWIzMTctMmQ0ODcxNzM4Yzgy",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Bcjdoske reichcj",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:30:47.003Z"
+}
+
+[15/09/2022 00:30:48.111] [DEBUG] [weather-bot.py] [index():64] Looking up weather info for Bcjdoske reichcj
+[15/09/2022 00:30:48.111] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for Bcjdoske reichcj...
+[15/09/2022 00:30:48.111] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=Bcjdoske reichcj&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:30:48.320] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+<Response [200]>
+
+[15/09/2022 00:30:48.320] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:30:48.321] [WARNING] [weather_module.py] [getGeolocationData():55] Could not find geolocation data for Bcjdoske reichcj!
+[15/09/2022 00:30:48.334] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:30:48] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[15/09/2022 00:33:11.128] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/modules/weather_module.py', reloading
+[15/09/2022 00:33:11.172] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:33:11.327] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:33:11.327] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:33:11.652] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:33:11.652] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:33:11.653] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:33:11.659] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 90, 'gauge': 0, 'rate1': 0.0015507275992476897, 'rate5': 0.0036240200850328327, 'rate15': 0.00641064509339162, 'p50': 374107020.5, 'p90': 2031633050.000001, 'p95': 2317916593.7499995, 'p99': 2465294084}, 'http': {'count': 90, 'rate1': 0.0015507275992476897, 'rate5': 0.0036240200850328327, 'rate15': 0.00641064509339162, 'p50': 372444833, 'p90': 2029545966.4000008, 'p95': 2315962908.45, 'p99': 2463024250}}}
+
+[15/09/2022 00:33:11.659] [INFO] [weather-bot.py] [main():102] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:33:11.674] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:33:11.682] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:33:18.153] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:33:18.154] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOWMyYzU4NDAtMzQ4NS0xMWVkLWFhYmEtYzc5ZGU0YWIzOWJi",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:33:17.380Z"
+  }
+}
+[15/09/2022 00:33:18.154] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOWMyYzU4NDAtMzQ4NS0xMWVkLWFhYmEtYzc5ZGU0YWIzOWJi
+[15/09/2022 00:33:18.155] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOWMyYzU4NDAtMzQ4NS0xMWVkLWFhYmEtYzc5ZGU0YWIzOWJi 
+ {}
+[15/09/2022 00:33:18.504] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:33:18.505] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvOWMyYzU4NDAtMzQ4NS0xMWVkLWFhYmEtYzc5ZGU0YWIzOWJi",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Shxuci ejeje",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:33:17.380Z"
+}
+
+[15/09/2022 00:33:18.505] [DEBUG] [weather-bot.py] [index():64] Looking up weather info for Shxuci ejeje
+[15/09/2022 00:33:18.505] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for Shxuci ejeje...
+[15/09/2022 00:33:18.506] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=Shxuci ejeje&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:33:18.685] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+<bound method Response.json of <Response [200]>>
+
+[15/09/2022 00:33:18.686] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:33:18.686] [WARNING] [weather_module.py] [getGeolocationData():55] Could not find geolocation data for Shxuci ejeje!
+[15/09/2022 00:33:18.703] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:33:18] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[15/09/2022 00:33:46.098] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/modules/weather_module.py', reloading
+[15/09/2022 00:33:46.147] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:33:46.296] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:33:46.296] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:33:46.589] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:33:46.590] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:33:46.590] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:33:46.598] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 91, 'gauge': 0, 'rate1': 0.011407354599457882, 'rate5': 0.006266348730037921, 'rate15': 0.007243802878746005, 'p50': 374357291, 'p90': 1988686225.000001, 'p95': 2313891749.9999995, 'p99': 2465294084}, 'http': {'count': 91, 'rate1': 0.011407354599457882, 'rate5': 0.006266348730037921, 'rate15': 0.007243802878746005, 'p50': 372477250, 'p90': 1986596849.800001, 'p95': 2311929233.3999996, 'p99': 2463024250}}}
+
+[15/09/2022 00:33:46.598] [INFO] [weather-bot.py] [main():102] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:33:46.613] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:33:46.623] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:33:59.975] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:33:59.976] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYjRlZWIxNzAtMzQ4NS0xMWVkLWE4MTYtYjk4NWUyZDE5ZTQ4",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:33:58.919Z"
+  }
+}
+[15/09/2022 00:33:59.976] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYjRlZWIxNzAtMzQ4NS0xMWVkLWE4MTYtYjk4NWUyZDE5ZTQ4
+[15/09/2022 00:33:59.976] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYjRlZWIxNzAtMzQ4NS0xMWVkLWE4MTYtYjk4NWUyZDE5ZTQ4 
+ {}
+[15/09/2022 00:34:00.319] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:34:00.320] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYjRlZWIxNzAtMzQ4NS0xMWVkLWE4MTYtYjk4NWUyZDE5ZTQ4",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Vjttfbkvffh",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:33:58.919Z"
+}
+
+[15/09/2022 00:34:00.320] [DEBUG] [weather-bot.py] [index():64] Looking up weather info for Vjttfbkvffh
+[15/09/2022 00:34:00.320] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for Vjttfbkvffh...
+[15/09/2022 00:34:00.320] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=Vjttfbkvffh&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:34:00.498] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+[]
+
+[15/09/2022 00:34:00.498] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:34:00.499] [WARNING] [weather_module.py] [getGeolocationData():55] Could not find geolocation data for Vjttfbkvffh!
+[15/09/2022 00:34:00.512] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:34:00] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[15/09/2022 00:37:26.340] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/weather-bot.py', reloading
+[15/09/2022 00:37:26.384] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:37:26.552] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:37:26.552] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:37:26.893] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:37:26.893] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:37:26.893] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:37:26.901] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 92, 'gauge': 0, 'rate1': 0.0008620564775102879, 'rate5': 0.004706968225655008, 'rate15': 0.006560149511728465, 'p50': 375020208, 'p90': 1945739400.000001, 'p95': 2309866906.2499995, 'p99': 2465294084}, 'http': {'count': 92, 'rate1': 0.0008620564775102879, 'rate5': 0.004706968225655008, 'rate15': 0.006560149511728465, 'p50': 373097437.5, 'p90': 1943647733.200001, 'p95': 2307895558.35, 'p99': 2463024250}}}
+
+[15/09/2022 00:37:26.902] [INFO] [weather-bot.py] [main():104] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:37:26.917] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:37:26.928] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:37:41.119] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/weather-bot.py', reloading
+[15/09/2022 00:37:41.170] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:37:41.289] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:37:41.289] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:37:41.587] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:37:41.588] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:37:41.588] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:37:41.596] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 92, 'gauge': 0, 'rate1': 0.0006713702597367893, 'rate5': 0.004477406676432961, 'rate15': 0.0064517197775867665, 'p50': 375020208, 'p90': 1945739400.000001, 'p95': 2309866906.2499995, 'p99': 2465294084}, 'http': {'count': 92, 'rate1': 0.0006713702597367893, 'rate5': 0.004477406676432961, 'rate15': 0.0064517197775867665, 'p50': 373097437.5, 'p90': 1943647733.200001, 'p95': 2307895558.35, 'p99': 2463024250}}}
+
+[15/09/2022 00:37:41.596] [INFO] [weather-bot.py] [main():104] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:37:41.612] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:37:41.624] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:40:29.652] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/weather-bot.py', reloading
+[15/09/2022 00:40:29.704] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:40:29.873] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:40:29.873] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:40:30.187] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:40:30.188] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:40:30.188] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:40:30.194] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 92, 'gauge': 0, 'rate1': 3.948762984337974e-05, 'rate5': 0.0025405417489710253, 'rate15': 0.00534124001500525, 'p50': 375020208, 'p90': 1945739400.000001, 'p95': 2309866906.2499995, 'p99': 2465294084}, 'http': {'count': 92, 'rate1': 3.948762984337974e-05, 'rate5': 0.0025405417489710253, 'rate15': 0.00534124001500525, 'p50': 373097437.5, 'p90': 1943647733.200001, 'p95': 2307895558.35, 'p99': 2463024250}}}
+
+[15/09/2022 00:40:30.194] [INFO] [weather-bot.py] [main():104] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:40:30.205] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:40:30.214] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:40:46.103] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:40:46.103] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYTczZjAyZTAtMzQ4Ni0xMWVkLTkzNDEtNGI3ZmQyYTk1ODll",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:40:45.454Z"
+  }
+}
+[15/09/2022 00:40:46.103] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYTczZjAyZTAtMzQ4Ni0xMWVkLTkzNDEtNGI3ZmQyYTk1ODll
+[15/09/2022 00:40:46.103] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYTczZjAyZTAtMzQ4Ni0xMWVkLTkzNDEtNGI3ZmQyYTk1ODll 
+ {}
+[15/09/2022 00:40:46.447] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:40:46.448] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYTczZjAyZTAtMzQ4Ni0xMWVkLTkzNDEtNGI3ZmQyYTk1ODll",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Chuckle in cd",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:40:45.454Z"
+}
+
+[15/09/2022 00:40:46.448] [DEBUG] [weather-bot.py] [index():64] Looking up weather info for Chuckle in cd
+[15/09/2022 00:40:46.448] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for Chuckle in cd...
+[15/09/2022 00:40:46.448] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=Chuckle in cd&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:40:46.620] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+[]
+
+[15/09/2022 00:40:46.621] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:40:46.621] [WARNING] [weather_module.py] [getGeolocationData():55] Could not find geolocation data for Chuckle in cd!
+[15/09/2022 00:40:46.621] [INFO] [webex_module.py] [sendMessageToRoom():129] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3
+[15/09/2022 00:40:46.622] [DEBUG] [webex_module.py] [sendMessageToRoom():139] Message contents: 
+{
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "text": "Could not find Chuckle in cd",
+  "attachments": [
+    {
+      "type": "AdaptiveCard",
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.2",
+      "body": [
+        {
+          "type": "Image",
+          "horizontalAlignment": "Center",
+          "url": "https://media.istockphoto.com/vectors/error-page-or-file-not-found-icon-vector-id924949200"
+        },
+        {
+          "type": "TextBlock",
+          "wrap": true,
+          "horizontalAlignment": "Center",
+          "text": "Could not find Chuckle in cd."
+        }
+      ]
+    }
+  ]
+}
+
+[15/09/2022 00:40:46.622] [DEBUG] [webex_module.py] [_makeRequest():36] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3', 'text': 'Could not find Chuckle in cd', 'attachments': [{'type': 'AdaptiveCard', '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2', 'body': [{'type': 'Image', 'horizontalAlignment': 'Center', 'url': 'https://media.istockphoto.com/vectors/error-page-or-file-not-found-icon-vector-id924949200'}, {'type': 'TextBlock', 'wrap': True, 'horizontalAlignment': 'Center', 'text': 'Could not find Chuckle in cd.'}]}]}
+[15/09/2022 00:40:46.904] [ERROR] [webex_module.py] [_makeRequest():61] Operation failed: 400
+{"message":"The request could not be understood by the server due to malformed syntax.","errors":[{"description":"The request could not be understood by the server due to malformed syntax."}],"trackingId":"ROUTER_6322667C-E662-01BB-0145-0AFDDA620145"}
+[15/09/2022 00:40:46.906] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:40:46] "[31m[1mPOST / HTTP/1.1[0m" 400 -
+[15/09/2022 00:41:25.884] [INFO] [_internal.py] [_log():224]  * Detected change in '/Users/vlad/Desktop/DevNet/python/chatops/weather-bot/jinja_templates/templates.py', reloading
+[15/09/2022 00:41:25.932] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[15/09/2022 00:41:26.088] [INFO] [webex_module.py] [getWebhooks():75] Retrieving webhooks from Webex API...
+[15/09/2022 00:41:26.089] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[15/09/2022 00:41:26.365] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:41:26.366] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook AttachmentActionsWebhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svOGMwODEzODgtZTg5ZC00ZTM1LThhNWEtNDY3MjY0ZTdiMTM0",
+  "name": "AttachmentActionsWebhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "attachmentActions",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T20:04:17.380Z"
+}
+
+[15/09/2022 00:41:26.366] [DEBUG] [webex_module.py] [getWebhooks():81] Webhook NGROK test webhook:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "all",
+  "event": "all",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z"
+}
+
+[15/09/2022 00:41:26.373] [DEBUG] [utils.py] [getNgrokURLs():36] Found the following URLs:
+{'name': 'command_line', 'ID': '2cdcc0c8ca4384846b132d222e201e24', 'uri': '/api/tunnels/command_line', 'public_url': 'https://02d6-82-30-62-223.eu.ngrok.io', 'proto': 'https', 'config': {'addr': 'http://localhost:5005', 'inspect': True}, 'metrics': {'conns': {'count': 93, 'gauge': 0, 'rate1': 0.00893939446263478, 'rate5': 0.005056667545981514, 'rate15': 0.006090371848980898, 'p50': 375683125, 'p90': 1902792575.000001, 'p95': 2305842062.4999995, 'p99': 2465294084}, 'http': {'count': 93, 'rate1': 0.00893939446263478, 'rate5': 0.005056667545981514, 'rate15': 0.006090371848980898, 'p50': 373717625, 'p90': 1900698616.6000009, 'p95': 2303861883.2999997, 'p99': 2463024250}}}
+
+[15/09/2022 00:41:26.374] [INFO] [weather-bot.py] [main():104] Target webhook: https://02d6-82-30-62-223.eu.ngrok.io
+[15/09/2022 00:41:26.389] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[15/09/2022 00:41:26.398] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 106-633-099
+[15/09/2022 00:41:30.413] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:41:30.414] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzFjMWY3ZDAtMzQ4Ni0xMWVkLTg5NTQtODUyNDk3NmNiMTA1",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+    "personEmail": "vlad.raducanu@outlook.com",
+    "created": "2022-09-14T23:41:29.933Z"
+  }
+}
+[15/09/2022 00:41:30.414] [INFO] [webex_module.py] [getMessage():103] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzFjMWY3ZDAtMzQ4Ni0xMWVkLTg5NTQtODUyNDk3NmNiMTA1
+[15/09/2022 00:41:30.414] [DEBUG] [webex_module.py] [_makeRequest():36] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzFjMWY3ZDAtMzQ4Ni0xMWVkLTg5NTQtODUyNDk3NmNiMTA1 
+ {}
+[15/09/2022 00:41:30.769] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:41:30.769] [DEBUG] [webex_module.py] [getMessage():106] Message retrieved:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzFjMWY3ZDAtMzQ4Ni0xMWVkLTg5NTQtODUyNDk3NmNiMTA1",
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "roomType": "direct",
+  "text": "Ghchjgfgh",
+  "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS82NzUwNWVlNC01ZTg3LTQxZDEtYTZkYi03NzA3ZmFjNGQ0ZDM",
+  "personEmail": "vlad.raducanu@outlook.com",
+  "created": "2022-09-14T23:41:29.933Z"
+}
+
+[15/09/2022 00:41:30.769] [DEBUG] [weather-bot.py] [index():64] Looking up weather info for Ghchjgfgh
+[15/09/2022 00:41:30.769] [INFO] [weather_module.py] [getGeolocationData():48] Retrieving geolocation data for Ghchjgfgh...
+[15/09/2022 00:41:30.769] [DEBUG] [weather_module.py] [_makeRequest():21] Executing GET - https://api.openweathermap.org/geo/1.0/direct?q=Ghchjgfgh&appid=43874af76ed70212cc5eed5fb0c4bb1a
+[15/09/2022 00:41:30.944] [DEBUG] [weather_module.py] [_makeRequest():25] Response received:
+[]
+
+[15/09/2022 00:41:30.944] [INFO] [weather_module.py] [_makeRequest():43] Operation successful!
+[15/09/2022 00:41:30.944] [WARNING] [weather_module.py] [getGeolocationData():55] Could not find geolocation data for Ghchjgfgh!
+[15/09/2022 00:41:30.945] [INFO] [webex_module.py] [sendMessageToRoom():129] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3
+[15/09/2022 00:41:30.945] [DEBUG] [webex_module.py] [sendMessageToRoom():139] Message contents: 
+{
+  "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+  "text": "Could not find Ghchjgfgh",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "Image",
+            "horizontalAlignment": "Center",
+            "url": "https://media.istockphoto.com/vectors/error-page-or-file-not-found-icon-vector-id924949200"
+          },
+          {
+            "type": "TextBlock",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "text": "Could not find Ghchjgfgh."
+          }
+        ]
+      }
+    }
+  ]
+}
+
+[15/09/2022 00:41:30.945] [DEBUG] [webex_module.py] [_makeRequest():36] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3', 'text': 'Could not find Ghchjgfgh', 'attachments': [{'contentType': 'application/vnd.microsoft.card.adaptive', 'content': {'type': 'AdaptiveCard', '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json', 'version': '1.2', 'body': [{'type': 'Image', 'horizontalAlignment': 'Center', 'url': 'https://media.istockphoto.com/vectors/error-page-or-file-not-found-icon-vector-id924949200'}, {'type': 'TextBlock', 'wrap': True, 'horizontalAlignment': 'Center', 'text': 'Could not find Ghchjgfgh.'}]}}]}
+[15/09/2022 00:41:32.844] [INFO] [webex_module.py] [_makeRequest():66] Operation successful!
+[15/09/2022 00:41:32.845] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:41:32] "[31m[1mPOST / HTTP/1.1[0m" 400 -
+[15/09/2022 00:41:33.586] [INFO] [weather-bot.py] [index():27] POST request received.
+[15/09/2022 00:41:33.587] [DEBUG] [weather-bot.py] [index():31] Notification contents:
+{
+  "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svZmY4NWY5NzQtYzBkMi00NTBlLThlMjEtYzc4ZWI0NTEwYWEw",
+  "name": "NGROK test webhook",
+  "targetUrl": "https://02d6-82-30-62-223.eu.ngrok.io",
+  "resource": "messages",
+  "event": "created",
+  "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+  "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+  "ownedBy": "creator",
+  "status": "active",
+  "created": "2022-09-14T19:34:09.610Z",
+  "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+  "data": {
+    "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzM2ZDVkZTAtMzQ4Ni0xMWVkLTk0YTgtNjM3ZTJhNWZiM2Fm",
+    "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vZWQ2MDk1OTAtMzQ2My0xMWVkLWJiZDItN2RkMWQ2Njc5YWU3",
+    "roomType": "direct",
+    "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "personEmail": "chatty-mcbot@webex.bot",
+    "created": "2022-09-14T23:41:32.734Z"
+  }
+}
+[15/09/2022 00:41:33.588] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [15/Sep/2022 00:41:33] "POST / HTTP/1.1" 200 -

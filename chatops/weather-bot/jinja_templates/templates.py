@@ -157,6 +157,28 @@ TMP_WEATHER = """{
     }
 }"""
 
+TMP_INVALID = """{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "body": [
+            {
+                "type": "Image",
+                "horizontalAlignment": "Center",
+                "url": "https://media.istockphoto.com/vectors/error-page-or-file-not-found-icon-vector-id924949200"
+            },
+            {
+                "type": "TextBlock",
+                "wrap": true,
+                "horizontalAlignment": "Center",
+                "text": "Could not find {{ text }}."
+            }
+        ]
+    }
+}"""
 J2_HELLO = Template(TMP_HELLO)
 J2_START = Template(TMP_START)
 J2_WEATHER = Template(TMP_WEATHER)
+J2_INVALID = Template(TMP_INVALID)

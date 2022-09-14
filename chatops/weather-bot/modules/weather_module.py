@@ -22,7 +22,7 @@ class OpenWeather():
             response = requests.request(
                 method=method, url=url, verify=True
             )
-            logger.debug(f"Response received:\n{response}\n")
+            logger.debug(f"Response received:\n{response.json()}\n")
         except requests.exceptions.Timeout as e:
             logger.error(f"Operation timed out:\n{e}")
             logger.info("Please check connectivity and try again!")
