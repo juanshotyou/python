@@ -1,0 +1,647 @@
+[09/09/2022 13:41:17.136] [INFO] [weather-bot.py] [getBotID():69] Retrieving BOT ID...
+[09/09/2022 13:41:17.137] [DEBUG] [weather-bot.py] [makeRequest():28] Executing GET - /people/me 
+ {}
+[09/09/2022 13:41:17.623] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[09/09/2022 13:41:17.624] [DEBUG] [weather-bot.py] [getBotID():72] Response received:
+
+{'id': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA', 'emails': ['chatty-mcbot@webex.bot'], 'phoneNumbers': [], 'displayName': 'ChatOpsTutorial', 'nickName': 'ChatOpsTutorial', 'userName': 'chatty-mcbot', 'avatar': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a~80', 'orgId': 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY', 'created': '2022-09-06T11:57:08.569Z', 'status': 'unknown', 'type': 'bot'}
+[12/09/2022 11:27:17.607] [INFO] [weather-bot.py] [getBotID():69] Retrieving BOT ID...
+[12/09/2022 11:27:17.609] [DEBUG] [weather-bot.py] [makeRequest():28] Executing GET - /people/me 
+ {}
+[12/09/2022 11:27:24.341] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 11:27:24.341] [DEBUG] [weather-bot.py] [getBotID():72] Response received:
+
+{'id': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA', 'emails': ['chatty-mcbot@webex.bot'], 'phoneNumbers': [], 'displayName': 'ChatOpsTutorial', 'nickName': 'ChatOpsTutorial', 'userName': 'chatty-mcbot', 'avatar': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a~80', 'orgId': 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY', 'created': '2022-09-06T11:57:08.569Z', 'status': 'unknown', 'type': 'bot'}
+[12/09/2022 14:35:03.101] [INFO] [weather-bot.py] [getBotID():69] Retrieving BOT ID...
+[12/09/2022 14:35:03.103] [DEBUG] [weather-bot.py] [makeRequest():28] Executing GET - /people/me 
+ {}
+[12/09/2022 14:35:10.339] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 14:35:10.342] [DEBUG] [weather-bot.py] [getBotID():72] Response received:
+
+{'id': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA', 'emails': ['chatty-mcbot@webex.bot'], 'phoneNumbers': [], 'displayName': 'ChatOpsTutorial', 'nickName': 'ChatOpsTutorial', 'userName': 'chatty-mcbot', 'avatar': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a~80', 'orgId': 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY', 'created': '2022-09-06T11:57:08.569Z', 'status': 'unknown', 'type': 'bot'}
+[12/09/2022 14:35:10.343] [DEBUG] [weather-bot.py] [makeRequest():28] Executing POST - /messages 
+ {}
+[12/09/2022 14:35:11.752] [ERROR] [weather-bot.py] [makeRequest():56] Operation failed: 400 
+{"message":"The request could not be understood by the server due to malformed syntax.","errors":[{"description":"The request could not be understood by the server due to malformed syntax."}],"trackingId":"ROUTER_631F358D-3F12-01BB-017C-0AFDE9ED017C"}
+[12/09/2022 14:38:06.825] [INFO] [weather-bot.py] [getBotID():69] Retrieving BOT ID...
+[12/09/2022 14:38:06.828] [DEBUG] [weather-bot.py] [makeRequest():28] Executing GET - /people/me 
+ {}
+[12/09/2022 14:38:09.009] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 14:38:09.015] [DEBUG] [weather-bot.py] [getBotID():72] Response received:
+
+{'id': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA', 'emails': ['chatty-mcbot@webex.bot'], 'phoneNumbers': [], 'displayName': 'ChatOpsTutorial', 'nickName': 'ChatOpsTutorial', 'userName': 'chatty-mcbot', 'avatar': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a~80', 'orgId': 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY', 'created': '2022-09-06T11:57:08.569Z', 'status': 'unknown', 'type': 'bot'}
+[12/09/2022 14:38:09.019] [INFO] [weather-bot.py] [sendMessageToPersonEmail():91] Sending message to chatty-mcbot@webex.bot
+[12/09/2022 14:38:09.040] [DEBUG] [weather-bot.py] [makeRequest():28] Executing POST - /messages 
+ {}
+[12/09/2022 14:38:10.786] [ERROR] [weather-bot.py] [makeRequest():56] Operation failed: 400 
+{"message":"The request could not be understood by the server due to malformed syntax.","errors":[{"description":"The request could not be understood by the server due to malformed syntax."}],"trackingId":"ROUTER_631F363F-0BFA-01BB-0147-0AFDE9ED0147"}
+[12/09/2022 14:40:30.468] [INFO] [weather-bot.py] [getBotID():69] Retrieving BOT ID...
+[12/09/2022 14:40:30.470] [DEBUG] [weather-bot.py] [makeRequest():28] Executing GET - /people/me 
+ {}
+[12/09/2022 14:40:31.822] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 14:40:31.823] [DEBUG] [weather-bot.py] [getBotID():72] Response received:
+
+{'id': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA', 'emails': ['chatty-mcbot@webex.bot'], 'phoneNumbers': [], 'displayName': 'ChatOpsTutorial', 'nickName': 'ChatOpsTutorial', 'userName': 'chatty-mcbot', 'avatar': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a~80', 'orgId': 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY', 'created': '2022-09-06T11:57:08.569Z', 'status': 'unknown', 'type': 'bot'}
+[12/09/2022 14:40:31.824] [INFO] [weather-bot.py] [sendMessageToPersonEmail():91] Sending message to vlad.raducanu@virginmedia.co.uk
+[12/09/2022 14:40:31.824] [DEBUG] [weather-bot.py] [makeRequest():28] Executing POST - /messages 
+ {}
+[12/09/2022 14:40:32.825] [ERROR] [weather-bot.py] [makeRequest():56] Operation failed: 400 
+{"message":"The request could not be understood by the server due to malformed syntax.","errors":[{"description":"The request could not be understood by the server due to malformed syntax."}],"trackingId":"ROUTER_631F36CE-C788-01BB-0145-0AFDE9ED0145"}
+[12/09/2022 14:42:12.755] [INFO] [weather-bot.py] [getBotID():69] Retrieving BOT ID...
+[12/09/2022 14:42:12.757] [DEBUG] [weather-bot.py] [makeRequest():28] Executing GET - https://webexapis.com/v1/people/me 
+ {}
+[12/09/2022 14:42:14.066] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 14:42:14.067] [DEBUG] [weather-bot.py] [getBotID():72] Response received:
+
+{'id': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA', 'emails': ['chatty-mcbot@webex.bot'], 'phoneNumbers': [], 'displayName': 'ChatOpsTutorial', 'nickName': 'ChatOpsTutorial', 'userName': 'chatty-mcbot', 'avatar': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a~80', 'orgId': 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY', 'created': '2022-09-06T11:57:08.569Z', 'status': 'unknown', 'type': 'bot'}
+[12/09/2022 14:42:14.068] [INFO] [weather-bot.py] [sendMessageToPersonEmail():91] Sending message to vlad.raducanu@virginmedia.co.uk
+[12/09/2022 14:42:14.070] [DEBUG] [weather-bot.py] [makeRequest():28] Executing POST - https://webexapis.com/v1/messages 
+ {'toPersonEmail': 'vlad.raducanu@virginmedia.co.uk', 'text': 'TESTURU'}
+[12/09/2022 14:42:15.243] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 14:49:22.998] [INFO] [weather-bot.py] [getBotID():69] Retrieving BOT ID...
+[12/09/2022 14:49:22.998] [DEBUG] [weather-bot.py] [makeRequest():28] Executing GET - https://webexapis.com/v1/people/me 
+ {}
+[12/09/2022 14:49:23.864] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 14:49:23.865] [DEBUG] [weather-bot.py] [getBotID():72] Response received:
+
+{'id': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA', 'emails': ['chatty-mcbot@webex.bot'], 'phoneNumbers': [], 'displayName': 'ChatOpsTutorial', 'nickName': 'ChatOpsTutorial', 'userName': 'chatty-mcbot', 'avatar': 'https://avatar-prod-us-east-2.webexcontent.com/Avtr~V1~cca99e60-7e42-4fa8-ab73-90635eb378a6/V1~85dc04dd38e5511315d91ce8be030b01debfacf69bb8641687d54ec9523fc1b3~2897f018607249cfa9d12f8f1afd609a~80', 'orgId': 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY', 'created': '2022-09-06T11:57:08.569Z', 'status': 'unknown', 'type': 'bot'}
+[12/09/2022 14:49:23.865] [INFO] [weather-bot.py] [sendMessageToPersonEmail():91] Sending message to vlad.raducanu@virginmedia.co.uk
+[12/09/2022 14:49:23.866] [DEBUG] [weather-bot.py] [makeRequest():28] Executing POST - https://webexapis.com/v1/messages 
+ {'toPersonEmail': 'vlad.raducanu@virginmedia.co.uk', 'text': 'TESTURU'}
+[12/09/2022 14:49:24.906] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 14:49:24.907] [INFO] [weather-bot.py] [sendMessageToRoom():82] Sedning message to room Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy
+[12/09/2022 14:49:24.908] [DEBUG] [weather-bot.py] [makeRequest():28] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy', 'text': 'OTHER TEST'}
+[12/09/2022 14:49:25.799] [DEBUG] [weather-bot.py] [makeRequest():60] Operation successful!
+[12/09/2022 17:25:13.841] [INFO] [_internal.py] [_log():224] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.80.2.16:5005
+[12/09/2022 17:25:13.843] [INFO] [_internal.py] [_log():224] [33mPress CTRL+C to quit[0m
+[12/09/2022 17:25:13.845] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 17:25:14.213] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 17:25:14.216] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 17:26:06.141] [INFO] [weather-bot.py] [index():19] GET request received.
+[12/09/2022 17:26:06.141] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 17:26:06] "GET / HTTP/1.1" 200 -
+[12/09/2022 17:26:07.057] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 17:26:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[12/09/2022 17:28:49.004] [INFO] [weather-bot.py] [index():19] GET request received.
+[12/09/2022 17:28:49.006] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 17:28:49] "GET / HTTP/1.1" 200 -
+[12/09/2022 17:30:17.575] [INFO] [weather-bot.py] [index():19] GET request received.
+[12/09/2022 17:30:17.576] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 17:30:17] "GET / HTTP/1.1" 200 -
+[12/09/2022 17:31:46.375] [INFO] [weather-bot.py] [index():19] GET request received.
+[12/09/2022 17:31:46.377] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 17:31:46] "GET / HTTP/1.1" 200 -
+[12/09/2022 17:31:46.926] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 17:31:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[12/09/2022 17:32:59.265] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 17:32:59.356] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 17:32:59.964] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 17:32:59.967] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 17:33:08.141] [INFO] [weather-bot.py] [index():19] GET request received.
+[12/09/2022 17:33:08.143] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 17:33:08] "GET / HTTP/1.1" 200 -
+[12/09/2022 17:34:47.639] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 17:34:47.689] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 17:34:48.133] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 17:34:48.136] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 17:35:57.185] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 17:35:57.232] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 17:35:57.651] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 17:35:57.653] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 17:36:18.034] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 17:36:18.120] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 17:36:18.582] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 17:36:18.585] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 17:38:50.078] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 17:38:50.131] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 19:50:17.640] [INFO] [webex_module.py] [getWebhooks():71] Retrieving webhooks from Webex API...
+[12/09/2022 19:50:17.643] [DEBUG] [webex_module.py] [_makeRequest():29] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 19:50:18.132] [INFO] [webex_module.py] [_makeRequest():61] Operation successful!
+[12/09/2022 19:50:18.137] [INFO] [webex_module.py] [registerWebhook():79] Registering webhook NGROK test webhook...
+[12/09/2022 19:50:18.138] [DEBUG] [webex_module.py] [_makeRequest():29] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 19:50:18.585] [INFO] [webex_module.py] [_makeRequest():61] Operation successful!
+[12/09/2022 19:50:18.670] [INFO] [_internal.py] [_log():224] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.80.2.16:5005
+[12/09/2022 19:50:18.671] [INFO] [_internal.py] [_log():224] [33mPress CTRL+C to quit[0m
+[12/09/2022 19:50:18.703] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 19:50:19.059] [INFO] [webex_module.py] [getWebhooks():71] Retrieving webhooks from Webex API...
+[12/09/2022 19:50:19.060] [DEBUG] [webex_module.py] [_makeRequest():29] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 19:50:19.440] [INFO] [webex_module.py] [_makeRequest():61] Operation successful!
+[12/09/2022 19:50:19.445] [INFO] [weather-bot.py] [main():73] Target webhook: https://53b8-82-30-62-223.eu.ngrok.io
+[12/09/2022 19:50:19.454] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 19:50:19.456] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 19:52:09.990] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 19:52:10.050] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 19:52:10.591] [INFO] [webex_module.py] [getWebhooks():72] Retrieving webhooks from Webex API...
+[12/09/2022 19:52:10.592] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 19:52:11.095] [INFO] [webex_module.py] [_makeRequest():62] Operation successful!
+[12/09/2022 19:52:11.100] [INFO] [weather-bot.py] [main():73] Target webhook: https://53b8-82-30-62-223.eu.ngrok.io
+[12/09/2022 19:52:11.119] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 19:52:11.120] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 19:55:02.574] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 19:55:02.658] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 19:55:03.156] [INFO] [webex_module.py] [getWebhooks():72] Retrieving webhooks from Webex API...
+[12/09/2022 19:55:03.156] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 19:55:03.604] [INFO] [webex_module.py] [_makeRequest():62] Operation successful!
+[12/09/2022 19:55:03.611] [INFO] [webex_module.py] [registerWebhook():80] Registering webhook NGROK test webhook...
+[12/09/2022 19:55:03.611] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 19:55:04.017] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409 
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F8086-920C-01BB-0146-0AFDDA620146, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F8086-920C-01BB-0146-0AFDDA620146, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F8086-920C-01BB-0146-0AFDDA620146"}
+[12/09/2022 19:55:04.034] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 19:55:04.036] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 19:57:05.482] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 19:57:05.531] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 19:57:05.958] [INFO] [webex_module.py] [getWebhooks():72] Retrieving webhooks from Webex API...
+[12/09/2022 19:57:05.958] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 19:57:06.393] [INFO] [webex_module.py] [_makeRequest():62] Operation successful!
+[12/09/2022 19:57:06.401] [INFO] [webex_module.py] [registerWebhook():80] Registering webhook NGROK test webhook...
+[12/09/2022 19:57:06.401] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 19:57:06.868] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409 
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F8100-4DA2-01BB-0146-0AFDC5920146, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F8100-4DA2-01BB-0146-0AFDC5920146, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F8100-4DA2-01BB-0146-0AFDC5920146"}
+[12/09/2022 19:57:06.885] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 19:57:06.886] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:02:43.241] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:02:43.292] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:02:43.777] [INFO] [webex_module.py] [getWebhooks():72] Retrieving webhooks from Webex API...
+[12/09/2022 20:02:43.777] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:02:44.237] [INFO] [webex_module.py] [_makeRequest():62] Operation successful!
+[12/09/2022 20:02:44.242] [INFO] [webex_module.py] [registerWebhook():80] Registering webhook NGROK test webhook...
+[12/09/2022 20:02:44.243] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:02:44.659] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F824E-4850-01BB-0147-0AFDC5920147, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F824E-4850-01BB-0147-0AFDC5920147, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F824E-4850-01BB-0147-0AFDC5920147"}
+[12/09/2022 20:02:44.693] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:02:44.696] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:02:52.209] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:02:52.270] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:02:52.696] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:02:52.696] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:02:53.149] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:02:53.153] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook...
+[12/09/2022 20:02:53.154] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:02:53.626] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F8259-22F8-01BB-014A-0AFDDA62014A, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F8259-22F8-01BB-014A-0AFDDA62014A, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F8259-22F8-01BB-014A-0AFDDA62014A"}
+[12/09/2022 20:02:53.641] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:02:53.645] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:03:50.957] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:03:51.054] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:03:52.045] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:03:52.046] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:03:52.554] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:03:52.563] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook...
+[12/09/2022 20:03:52.564] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:03:52.933] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 400
+{"message":"The request could not be understood by the server due to malformed syntax.","errors":[{"description":"The request could not be understood by the server due to malformed syntax."}],"trackingId":"ROUTER_631F8296-8728-01BB-0148-0AFDE9ED0148"}
+[12/09/2022 20:03:52.951] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:03:52.953] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:04:06.350] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:04:06.522] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:04:07.445] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:04:07.447] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:04:07.932] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:04:07.938] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook...
+[12/09/2022 20:04:07.939] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:04:08.446] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F82A2-FC7A-01BB-0146-0AFDC5920146, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F82A2-FC7A-01BB-0146-0AFDC5920146, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F82A2-FC7A-01BB-0146-0AFDC5920146"}
+[12/09/2022 20:04:08.461] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:04:08.462] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:05:15.653] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:05:15.818] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:05:16.795] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:05:16.796] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:05:17.372] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:05:17.377] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook with target https://53b8-82-30-62-223.eu.ngrok.io...
+[12/09/2022 20:05:17.378] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:05:17.765] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F82EA-78F8-01BB-014D-0AFDDA62014D, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F82EA-78F8-01BB-014D-0AFDDA62014D, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F82EA-78F8-01BB-014D-0AFDDA62014D"}
+[12/09/2022 20:05:17.794] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:05:17.797] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:08:36.012] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:08:36.131] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:08:36.808] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:08:36.808] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:08:37.321] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:08:37.335] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook with target https://53b8-82-30-62-223.eu.ngrok.io...
+[12/09/2022 20:08:37.336] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'url'}
+[12/09/2022 20:08:37.846] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 400
+{"message":"POST failed: HTTP/1.1 400 Bad Request (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F83B2-948A-01BB-0144-0AFDE9ED0144, error = 'Invalid targetUrl'')","errors":[{"description":"POST failed: HTTP/1.1 400 Bad Request (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F83B2-948A-01BB-0144-0AFDE9ED0144, error = 'Invalid targetUrl'')"}],"trackingId":"ROUTER_631F83B2-948A-01BB-0144-0AFDE9ED0144"}
+[12/09/2022 20:08:37.858] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:08:37.859] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:09:09.294] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:09:09.426] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:09:10.288] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:09:10.289] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:09:10.753] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:09:10.758] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook with target https://53b8-82-30-62-223.eu.ngrok.io...
+[12/09/2022 20:09:10.758] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:09:11.148] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F83D4-99E2-01BB-0145-0AFDC5920145, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F83D4-99E2-01BB-0145-0AFDC5920145, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F83D4-99E2-01BB-0145-0AFDC5920145"}
+[12/09/2022 20:09:11.160] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:09:11.161] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:09:33.849] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:09:33.911] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:09:34.348] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:09:34.349] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:09:34.769] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:09:34.774] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook with target https://53b8-82-30-62-223.eu.ngrok.io...
+[12/09/2022 20:09:34.775] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:09:35.198] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F83E9-0C06-01BB-0147-0AFDDA620147, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F83E9-0C06-01BB-0147-0AFDDA620147, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F83E9-0C06-01BB-0147-0AFDDA620147"}
+[12/09/2022 20:09:35.211] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:09:35.212] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:13:10.955] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:13:11.004] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:13:11.456] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:13:11.456] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:13:11.977] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:13:11.982] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook with target https://53b8-82-30-62-223.eu.ngrok.io...
+[12/09/2022 20:13:11.983] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:13:12.385] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F84C4-957E-01BB-0144-0AFDDA620144, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F84C4-957E-01BB-0144-0AFDDA620144, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F84C4-957E-01BB-0144-0AFDDA620144"}
+[12/09/2022 20:13:12.401] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:13:12.406] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:19:37.472] [INFO] [weather-bot.py] [index():23] POST request received.
+[12/09/2022 20:19:37.496] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:19:37] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[12/09/2022 20:20:31.554] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 20:20:31.714] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:20:47.831] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:20:47.832] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:20:48.371] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:20:48.378] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook with target https://53b8-82-30-62-223.eu.ngrok.io...
+[12/09/2022 20:20:48.379] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:20:48.783] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F868C-CAA4-01BB-0145-0AFDE9ED0145, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F868C-CAA4-01BB-0145-0AFDE9ED0145, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F868C-CAA4-01BB-0145-0AFDE9ED0145"}
+[12/09/2022 20:20:48.804] [INFO] [_internal.py] [_log():224] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.80.2.16:5005
+[12/09/2022 20:20:48.806] [INFO] [_internal.py] [_log():224] [33mPress CTRL+C to quit[0m
+[12/09/2022 20:20:48.810] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:20:49.280] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:20:49.281] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:20:49.688] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:20:49.696] [INFO] [webex_module.py] [registerWebhook():81] Registering webhook NGROK test webhook with target https://53b8-82-30-62-223.eu.ngrok.io...
+[12/09/2022 20:20:49.696] [DEBUG] [webex_module.py] [_makeRequest():30] Executing POST - https://webexapis.com/v1/webhooks 
+ {'name': 'NGROK test webhook', 'resource': 'all', 'event': 'all', 'targetUrl': 'https://53b8-82-30-62-223.eu.ngrok.io'}
+[12/09/2022 20:20:50.152] [ERROR] [webex_module.py] [_makeRequest():58] Operation failed: 409
+{"message":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F868F-C988-01BB-0147-0AFDDA620147, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')","errors":[{"description":"POST failed: HTTP/1.1 409 Conflict (url = https://webhook-engine-a.wbx2.com/webhook-engine/api/v1/webhooks, request/response TrackingId = ROUTER_631F868F-C988-01BB-0147-0AFDDA620147, error = 'Duplicate webhooks with same filter/targetUrl criteria can not be created.')"}],"trackingId":"ROUTER_631F868F-C988-01BB-0147-0AFDDA620147"}
+[12/09/2022 20:20:50.170] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:20:50.171] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:21:04.664] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 20:21:04.759] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:21:05.368] [INFO] [webex_module.py] [getWebhooks():73] Retrieving webhooks from Webex API...
+[12/09/2022 20:21:05.369] [DEBUG] [webex_module.py] [_makeRequest():30] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:21:05.900] [INFO] [webex_module.py] [_makeRequest():63] Operation successful!
+[12/09/2022 20:21:05.905] [INFO] [weather-bot.py] [main():73] Target webhook: https://53b8-82-30-62-223.eu.ngrok.io
+[12/09/2022 20:21:05.919] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:21:05.920] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:21:29.968] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:21:29.970] [DEBUG] [weather-bot.py] [index():32] Message received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMTkxZmJjNTAtMzJkMC0xMWVkLTg4ZmQtYTUxZGEyNDk5ZDQz",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+        "personEmail": "vlad.raducanu@virginmedia.co.uk",
+        "created": "2022-09-12T19:21:27.445Z"
+    }
+}
+[12/09/2022 20:21:29.971] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:21:29] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:22:07.700] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:22:07.702] [DEBUG] [weather-bot.py] [index():32] Message received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvMmY1Y2EzMjAtMzJkMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+        "personEmail": "vlad.raducanu@virginmedia.co.uk",
+        "created": "2022-09-12T19:22:04.754Z"
+    }
+}
+[12/09/2022 20:22:07.702] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:22:07] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:25:37.157] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/webex_module.py', reloading
+[12/09/2022 20:25:37.236] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:47:29.633] [INFO] [webex_module.py] [getWebhooks():78] Retrieving webhooks from Webex API...
+[12/09/2022 20:47:29.634] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:47:30.137] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:47:30.143] [INFO] [weather-bot.py] [main():65] Target webhook: https://53b8-82-30-62-223.eu.ngrok.io
+[12/09/2022 20:47:30.162] [INFO] [_internal.py] [_log():224] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5005
+ * Running on http://10.80.2.16:5005
+[12/09/2022 20:47:30.163] [INFO] [_internal.py] [_log():224] [33mPress CTRL+C to quit[0m
+[12/09/2022 20:47:30.165] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:47:30.550] [INFO] [webex_module.py] [getWebhooks():78] Retrieving webhooks from Webex API...
+[12/09/2022 20:47:30.551] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:47:30.991] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:47:30.996] [INFO] [weather-bot.py] [main():65] Target webhook: https://53b8-82-30-62-223.eu.ngrok.io
+[12/09/2022 20:47:31.011] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:47:31.013] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:47:44.271] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:47:44.272] [DEBUG] [weather-bot.py] [index():32] Message received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzQ4NWUxNzAtMzJkMy0xMWVkLTgyZjktNDM2NzBkNzE0ODVl",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+        "personEmail": "vlad.raducanu@virginmedia.co.uk",
+        "created": "2022-09-12T19:47:43.495Z"
+    }
+}
+[12/09/2022 20:47:44.273] [INFO] [webex_module.py] [getMessage():104] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzQ4NWUxNzAtMzJkMy0xMWVkLTgyZjktNDM2NzBkNzE0ODVl
+[12/09/2022 20:47:44.274] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzQ4NWUxNzAtMzJkMy0xMWVkLTgyZjktNDM2NzBkNzE0ODVl 
+ {}
+[12/09/2022 20:47:44.841] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:47:44.842] [INFO] [webex_module.py] [sendMessageToRoom():116] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy
+[12/09/2022 20:47:44.842] [DEBUG] [webex_module.py] [_makeRequest():35] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy', 'text': "You sent me this - ({'id': 'Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzQ4NWUxNzAtMzJkMy0xMWVkLTgyZjktNDM2NzBkNzE0ODVl', 'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy', 'roomType': 'direct', 'text': 'hi there', 'personId': 'Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg', 'personEmail': 'vlad.raducanu@virginmedia.co.uk', 'created': '2022-09-12T19:47:43.495Z'})"}
+[12/09/2022 20:47:45.399] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:47:45.400] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:47:45] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:47:46.400] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:47:46.400] [DEBUG] [weather-bot.py] [index():29] Message from self received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvYzU5NmI1MzAtMzJkMy0xMWVkLTg4Y2QtNDkzZmY4YTEyOGY2",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+        "personEmail": "chatty-mcbot@webex.bot",
+        "created": "2022-09-12T19:47:45.283Z"
+    }
+}
+[12/09/2022 20:47:46.402] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:47:46] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:48:22.944] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 20:48:23.010] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:48:23.546] [INFO] [webex_module.py] [getWebhooks():78] Retrieving webhooks from Webex API...
+[12/09/2022 20:48:23.547] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:48:24.008] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:48:24.014] [INFO] [weather-bot.py] [main():65] Target webhook: https://53b8-82-30-62-223.eu.ngrok.io
+[12/09/2022 20:48:24.051] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:48:24.053] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:48:29.148] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:48:29.149] [DEBUG] [weather-bot.py] [index():32] Message received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZGY1NTZmYzAtMzJkMy0xMWVkLWFhOTItMTc2NDA4Zjc3NDIx",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+        "personEmail": "vlad.raducanu@virginmedia.co.uk",
+        "created": "2022-09-12T19:48:28.476Z"
+    }
+}
+[12/09/2022 20:48:29.149] [INFO] [webex_module.py] [getMessage():104] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZGY1NTZmYzAtMzJkMy0xMWVkLWFhOTItMTc2NDA4Zjc3NDIx
+[12/09/2022 20:48:29.149] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZGY1NTZmYzAtMzJkMy0xMWVkLWFhOTItMTc2NDA4Zjc3NDIx 
+ {}
+[12/09/2022 20:48:29.610] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:48:29.613] [INFO] [webex_module.py] [sendMessageToRoom():116] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy
+[12/09/2022 20:48:29.614] [DEBUG] [webex_module.py] [_makeRequest():35] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy', 'text': 'You sent me this - (hello there)'}
+[12/09/2022 20:48:30.356] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:48:30.358] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:48:30] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:48:31.026] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:48:31.028] [DEBUG] [weather-bot.py] [index():29] Message from self received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZTA1ZWYwODAtMzJkMy0xMWVkLWFlZjItZDM4OTBiYmVkYzM5",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+        "personEmail": "chatty-mcbot@webex.bot",
+        "created": "2022-09-12T19:48:30.216Z"
+    }
+}
+[12/09/2022 20:48:31.030] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:48:31] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:48:44.983] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 20:48:45.059] [INFO] [_internal.py] [_log():224]  * Restarting with stat
+[12/09/2022 20:48:45.579] [INFO] [webex_module.py] [getWebhooks():78] Retrieving webhooks from Webex API...
+[12/09/2022 20:48:45.579] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/webhooks 
+ {}
+[12/09/2022 20:48:46.125] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:48:46.133] [INFO] [weather-bot.py] [main():65] Target webhook: https://53b8-82-30-62-223.eu.ngrok.io
+[12/09/2022 20:48:46.151] [WARNING] [_internal.py] [_log():224]  * Debugger is active!
+[12/09/2022 20:48:46.156] [INFO] [_internal.py] [_log():224]  * Debugger PIN: 144-465-819
+[12/09/2022 20:48:54.348] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:48:54.349] [DEBUG] [weather-bot.py] [index():32] Message received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZWUzZGY3MDAtMzJkMy0xMWVkLWFjMTgtOGY2NTJmNWI1YjBi",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+        "personEmail": "vlad.raducanu@virginmedia.co.uk",
+        "created": "2022-09-12T19:48:53.488Z"
+    }
+}
+[12/09/2022 20:48:54.349] [INFO] [webex_module.py] [getMessage():104] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZWUzZGY3MDAtMzJkMy0xMWVkLWFjMTgtOGY2NTJmNWI1YjBi
+[12/09/2022 20:48:54.350] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZWUzZGY3MDAtMzJkMy0xMWVkLWFjMTgtOGY2NTJmNWI1YjBi 
+ {}
+[12/09/2022 20:48:54.875] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:48:54.876] [INFO] [webex_module.py] [sendMessageToRoom():116] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy
+[12/09/2022 20:48:54.877] [DEBUG] [webex_module.py] [_makeRequest():35] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy', 'text': 'You sent me this - "muhahaha"'}
+[12/09/2022 20:48:55.459] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:48:55.460] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:48:55] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:48:55.551] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:48:55.551] [DEBUG] [weather-bot.py] [index():29] Message from self received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZWY1ODY3YjAtMzJkMy0xMWVkLTlhNzctNDllNjBkZjRlNzQ5",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+        "personEmail": "chatty-mcbot@webex.bot",
+        "created": "2022-09-12T19:48:55.339Z"
+    }
+}
+[12/09/2022 20:48:55.552] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:48:55] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:49:00.226] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:49:00.227] [DEBUG] [weather-bot.py] [index():32] Message received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZjEzNTY1MTAtMzJkMy0xMWVkLTlhNGEtNDFkZDA3ZTcyNTM0",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS8yODUwMDFmMi1jNGRhLTRhNjQtOGQzNS1hNjk2MzY3MGIxNDg",
+        "personEmail": "vlad.raducanu@virginmedia.co.uk",
+        "created": "2022-09-12T19:48:58.465Z"
+    }
+}
+[12/09/2022 20:49:00.227] [INFO] [webex_module.py] [getMessage():104] Retrieving message Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZjEzNTY1MTAtMzJkMy0xMWVkLTlhNGEtNDFkZDA3ZTcyNTM0
+[12/09/2022 20:49:00.228] [DEBUG] [webex_module.py] [_makeRequest():35] Executing GET - https://webexapis.com/v1/messages/Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZjEzNTY1MTAtMzJkMy0xMWVkLTlhNGEtNDFkZDA3ZTcyNTM0 
+ {}
+[12/09/2022 20:49:00.655] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:49:00.657] [INFO] [webex_module.py] [sendMessageToRoom():116] Sending message to room Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy
+[12/09/2022 20:49:00.659] [DEBUG] [webex_module.py] [_makeRequest():35] Executing POST - https://webexapis.com/v1/messages 
+ {'roomId': 'Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy', 'text': 'You sent me this - "this shitsu is pretty cool"'}
+[12/09/2022 20:49:01.287] [INFO] [webex_module.py] [_makeRequest():68] Operation successful!
+[12/09/2022 20:49:01.289] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:49:01] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:49:02.404] [INFO] [weather-bot.py] [index():24] POST request received.
+[12/09/2022 20:49:02.405] [DEBUG] [weather-bot.py] [index():29] Message from self received:
+{
+    "id": "Y2lzY29zcGFyazovL3VzL1dFQkhPT0svNTZiMjRjMGEtMzc5NS00ZGM4LTg2YjAtZWUwNTFmZDNmZTBi",
+    "name": "NGROK test webhook",
+    "targetUrl": "https://53b8-82-30-62-223.eu.ngrok.io",
+    "resource": "messages",
+    "event": "created",
+    "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jY2E5OWU2MC03ZTQyLTRmYTgtYWI3My05MDYzNWViMzc4YTY",
+    "createdBy": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "appId": "Y2lzY29zcGFyazovL3VzL0FQUExJQ0FUSU9OL0MzMmM4MDc3NDBjNmU3ZGYxMWRhZjE2ZjIyOGRmNjI4YmJjYTQ5YmE1MmZlY2JiMmM3ZDUxNWNiNGEwY2M5MWFh",
+    "ownedBy": "creator",
+    "status": "active",
+    "created": "2022-09-12T18:50:18.353Z",
+    "actorId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+    "data": {
+        "id": "Y2lzY29zcGFyazovL3VzL01FU1NBR0UvZjJkNDIwZjAtMzJkMy0xMWVkLWEyNDQtMDcxOGRhYWQ5Y2Zk",
+        "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vNDYxNWJmYTAtMzJhMC0xMWVkLWE1NGItZjlhZWE3ZTcyYTMy",
+        "roomType": "direct",
+        "personId": "Y2lzY29zcGFyazovL3VzL1BFT1BMRS83MWQ4ZmUxYi00OGE2LTQ1YWUtODQ3MS1lMWZlYmRhZGE3YjA",
+        "personEmail": "chatty-mcbot@webex.bot",
+        "created": "2022-09-12T19:49:01.183Z"
+    }
+}
+[12/09/2022 20:49:02.406] [INFO] [_internal.py] [_log():224] 127.0.0.1 - - [12/Sep/2022 20:49:02] "POST / HTTP/1.1" 200 -
+[12/09/2022 20:49:43.251] [INFO] [_internal.py] [_log():224]  * Detected change in '/mnt/c/Users/R7800389/Desktop/Devnet/python/chatops/weather-bot.py', reloading
+[12/09/2022 20:49:43.346] [INFO] [_internal.py] [_log():224]  * Restarting with stat

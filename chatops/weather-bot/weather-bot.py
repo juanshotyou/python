@@ -2,19 +2,20 @@ import json
 import utils
 import logging
 import logging.config
-from time import sleep
-from webex_module import Messenger
+from modules.webex_module import Messenger
+from module.weather_module import OpenWeather
 from flask import Flask, request
 
 # Initialize logger
 logging.config.fileConfig("logger.conf")
 logger = logging.getLogger(__name__)
 logging.getLogger("webex_module").disabled = False
+logging.getLogger("weather_module").disabled = False
 
 # Instantiate Webex handler, Flask gateway and define routes
 webex = Messenger()
 gateway = Flask(__name__)
-
+weather = OpenWeather()
 
 @gateway.route("/", methods=["GET", "POST"])
 def index() -> tuple:
@@ -30,7 +31,6 @@ def index() -> tuple:
             if webex.bot_id == data.get("data").get("personId"):
                 logger.debug(f"Message from self received:\n{printable_data}")
                 return ("Message from self ignored.", 200)
-            
             else:
                 # Read message contents
                 logger.debug(f"Notification received:\n{printable_data}")
@@ -47,6 +47,9 @@ def index() -> tuple:
                     msg["attachments"] = msg_contents["attachments"]
                 # Echo section - for debug only
                 logger.debug(f"Data extracted:\n{json.dumps(msg, indent=4)}\n")
+#
+#
+#
                 text = f'You sent me this - "{msg}"'
                 webex.sendMessageToRoom(room_id=room_id, text=text)
                 return (data, 200)
