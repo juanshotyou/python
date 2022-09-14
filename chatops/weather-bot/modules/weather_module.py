@@ -23,6 +23,7 @@ class OpenWeather():
             response = requests.request(
                 method=method, url=url, verify=True
             )
+            logger.debug(f"Response received:\n{response}\n")
         except requests.exceptions.Timeout as e:
             logger.error(f"Operation timed out:\n{e}")
             logger.info("Please check connectivity and try again!")
@@ -42,7 +43,7 @@ class OpenWeather():
         elif response.status_code >= 200 or response.status_code < 300:
             logger.info("Operation successful!")
 
-        return response
+        return response.json()
 
     def getGeolocationData(self, location: str) -> dict:
         logger.info(f"Retrieving geolocation data for {location}...")
@@ -58,8 +59,8 @@ class OpenWeather():
     def getCurrentWeather(self, geo_data: dict) -> dict:
         if geo_data:
             logger.info(f'Retrieving current weather information for {geo_data["name"]}')
-            endpoint = "/data/2.5/weather?lat=" + geo_data["lat"] +\
-                "&lon=" + geo_data["lon"] +\
+            endpoint = "/data/2.5/weather?lat=" + str(geo_data["lat"]) +\
+                "&lon=" + str(geo_data["lon"]) +\
                 "&appid=" + self.api_token
             response = self._makeRequest(method="GET", endpoint=endpoint)
             if response:

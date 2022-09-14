@@ -1,21 +1,20 @@
 import json
-import utils
 import logging
 import logging.config
-from modules.webex_module import Messenger
-from module.weather_module import OpenWeather
+from modules import utils, webex_module, weather_module
 from flask import Flask, request
 
 # Initialize logger
 logging.config.fileConfig("logger.conf")
 logger = logging.getLogger(__name__)
-logging.getLogger("webex_module").disabled = False
-logging.getLogger("weather_module").disabled = False
+logging.getLogger("modules.webex_module").disabled = False
+logging.getLogger("modules.weather_module").disabled = False
+logging.getLogger("modules.utils").disabled = False
 
 # Instantiate Webex handler, Flask gateway and define routes
-webex = Messenger()
+webex = webex_module.Messenger()
 gateway = Flask(__name__)
-weather = OpenWeather()
+weather = weather_module.OpenWeather()
 
 @gateway.route("/", methods=["GET", "POST"])
 def index() -> tuple:
@@ -37,22 +36,36 @@ def index() -> tuple:
                 room_id = data["data"]["roomId"]
                 message_id = data["data"]["id"]
                 msg_contents = webex.getMessage(message_id=message_id)
+                # Extract all information from message
                 msg = {}
                 if "text" in msg_contents:
                     msg["text"] = msg_contents["text"]
                 if "files" in msg_contents:
                     msg["files"] = msg_contents["files"]
-                    webex.downloadFiles(msg_contents["files"])
                 if "attachments" in msg_contents:
                     msg["attachments"] = msg_contents["attachments"]
-                # Echo section - for debug only
-                logger.debug(f"Data extracted:\n{json.dumps(msg, indent=4)}\n")
-#
-#
-#
-                text = f'You sent me this - "{msg}"'
-                webex.sendMessageToRoom(room_id=room_id, text=text)
-                return (data, 200)
+                # Check message contents and reply
+                if msg["text"].lower() in ["hello", "help"]:
+                    logger.debug(f'Help command received: {msg["text"]}')
+                    text = "Welcome to the Weather Bot!\n\n" +\
+                        "You can ask the bot for weather info for any city" +\
+                        " by sending it the name of the city. Only single" +\
+                        " word locations are currently supported.\n" +\
+                        "Type \"help\" or \"hello\" to see this message again"
+                    webex.sendMessageToRoom(room_id=room_id, text=text)
+                    return (data, 200)
+                elif len(msg["text"].split()) > 1:
+                    logger.debug(f'Invalid command received: {msg["text"]}')
+                    text = "Could not process request! Too many words...aghhh"
+                    webex.sendMessageToRoom(room_id=room_id, text=text)
+                    return (data, 400)
+                else:
+                    logger.debug(f'Looking up weather info for {msg["text"]}')
+                    geolocation = weather.getGeolocationData(msg["text"])
+                    weather_info = weather.getCurrentWeather(geolocation)
+                    text = json.dumps(weather_info, indent=4)
+                    webex.sendMessageToRoom(room_id=room_id, text=text)
+                    return (data, 200)
         else:
             return ("Wrong data format", 400)
 

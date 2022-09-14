@@ -7,3 +7,5 @@ ise/.DS_Store
 */.env
 */*.log
 */__pycache__
+*/*/__pycache__
+*/*/*/__pycache__
