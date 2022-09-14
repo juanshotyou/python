@@ -1,7 +1,8 @@
 import json
-import requests
+import utils
 import logging
 import logging.config
+from time import sleep
 from webex_module import Messenger
 from flask import Flask, request
 
@@ -25,41 +26,40 @@ def index() -> tuple:
         if "application/json" in request.headers.get("Content-Type"):
             data = request.get_json()
             printable_data = json.dumps(data, indent=4)
+            # Filter out messages from self
             if webex.bot_id == data.get("data").get("personId"):
                 logger.debug(f"Message from self received:\n{printable_data}")
                 return ("Message from self ignored.", 200)
+            
             else:
-                logger.debug(f"Message received:\n{printable_data}")
+                # Read message contents
+                logger.debug(f"Notification received:\n{printable_data}")
                 room_id = data["data"]["roomId"]
                 message_id = data["data"]["id"]
-                msg_contents = webex.getMessage(message_id=message_id)["text"]
-                reply = f'You sent me this - "{msg_contents}"'
-                webex.sendMessageToRoom(room_id=room_id, message=reply)
+                msg_contents = webex.getMessage(message_id=message_id)
+                msg = {}
+                if "text" in msg_contents:
+                    msg["text"] = msg_contents["text"]
+                if "files" in msg_contents:
+                    msg["files"] = msg_contents["files"]
+                    webex.downloadFiles(msg_contents["files"])
+                if "attachments" in msg_contents:
+                    msg["attachments"] = msg_contents["attachments"]
+                # Echo section - for debug only
+                logger.debug(f"Data extracted:\n{json.dumps(msg, indent=4)}\n")
+                text = f'You sent me this - "{msg}"'
+                webex.sendMessageToRoom(room_id=room_id, text=text)
                 return (data, 200)
         else:
             return ("Wrong data format", 400)
 
 
-def getNgrokURLs() -> list:
-    urls = []
-    ngrok_console = "http://127.0.0.1:4040/api/tunnels"
-    try:
-        tunnels = requests.request(
-            method="GET",
-            url=ngrok_console
-        ).json()["tunnels"]
-        for tunnel in tunnels:
-            urls.append(tunnel["public_url"])
-    except ConnectionRefusedError as e:
-        logger.warning("Connection refused! Is Ngrok running?")
-        logger.debug(f"Error text:{e}")
-
-    return urls
-
-
 def main():
     webhook_urls = webex.getWebhooks()
-    ngrok_urls = getNgrokURLs()
+    ngrok_urls = utils.getNgrokURLs()
+    if not ngrok_urls:
+        utils.startNgrok()
+        ngrok_urls = utils.getNgrokURLs()
     target_url = list(set(ngrok_urls) & set(webhook_urls))
     if target_url:
         logger.info(f"Target webhook: {target_url[0]}")
