@@ -6,6 +6,7 @@ from time import sleep
 # Initialize logger
 logger = logging.getLogger(__name__)
 
+
 def startNgrok() -> bool:
     logging.debug("Starting Ngrok...")
     number_of_tries = 5
@@ -13,13 +14,14 @@ def startNgrok() -> bool:
     p = subprocess.Popen(["sh","start_ngrok.sh"], stdout=subprocess.DEVNULL)
     sleep(5)
     while number_of_tries:
-        number_of_tries-=1
+        number_of_tries -= 1
         try:
             tunnels = requests.get(ngrok_console).json()["tunnels"]
             return True
         except Exception as e:
             logger.error(f"Could not start NGROK!\n{e}")
     return False
+
 
 def getNgrokURLs() -> list:
     urls = []

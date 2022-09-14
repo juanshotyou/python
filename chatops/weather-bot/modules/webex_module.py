@@ -112,10 +112,24 @@ class Messenger:
         response = self._makeRequest(method="GET", endpoint=endpoint)
         return response
 
-    def sendMessageToRoom(self, room_id: str, text: str=None, files: str=None, photos: str=None) -> None:
+    def sendMessageToRoom(
+        self,
+        room_id: str,
+        text: str = None,
+        files: str = None,
+        attachments: dict = None
+    ) -> None:
         logger.info(f"Sending message to room {room_id}")
         endpoint = "/messages"
-        data = {"roomId": room_id, "text": text}
+        data = {
+            "roomId": room_id,
+            "text": text
+        }
+        if attachments:
+            data["attachments"] = [attachments]  # For Adaptive cards
+        if files:
+            data["files"] = files  # Must be URL to file
+        logger.debug(f"Message contents: \n{json.dumps(data, indent=2)}\n")
         self._makeRequest(method="POST", endpoint=endpoint, payload=data)
 
     def sendMessageToPersonEmail(self, email: str, message: str) -> None:
@@ -134,5 +148,6 @@ class Messenger:
         for file in files:
             filename = file.split("/")[-1]
             with open(file=filename, mode="wb") as file_content:
-                content = requests.get(url=file, headers=self.headers, stream=True).content
+                content = requests.get(
+                    url=file, headers=self.headers, stream=True).content
                 file_content.write(content)

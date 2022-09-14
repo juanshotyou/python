@@ -2,6 +2,7 @@ import json
 import logging
 import logging.config
 from modules import utils, webex_module, weather_module
+from modules import ac_module as ac
 from flask import Flask, request
 
 # Initialize logger
@@ -15,6 +16,7 @@ logging.getLogger("modules.utils").disabled = False
 webex = webex_module.Messenger()
 gateway = Flask(__name__)
 weather = weather_module.OpenWeather()
+
 
 @gateway.route("/", methods=["GET", "POST"])
 def index() -> tuple:
@@ -44,15 +46,21 @@ def index() -> tuple:
                     msg["files"] = msg_contents["files"]
                 if "attachments" in msg_contents:
                     msg["attachments"] = msg_contents["attachments"]
-                # Check message contents and reply
+                # Check message text contents and reply
                 if msg["text"].lower() in ["hello", "help"]:
                     logger.debug(f'Help command received: {msg["text"]}')
-                    text = "Welcome to the Weather Bot!\n\n" +\
-                        "You can ask the bot for weather info for any city" +\
-                        " by sending it the name of the city. Only single" +\
-                        " word locations are currently supported.\n" +\
-                        "Type \"help\" or \"hello\" to see this message again"
-                    webex.sendMessageToRoom(room_id=room_id, text=text)
+                    attachments = json.loads(ac.hello)
+                    text = attachments["content"]["body"][0]["text"] + "\n" +\
+                        attachments["content"]["body"][1]["columns"][1]["items"][0]["text"]
+                    webex.sendMessageToRoom(
+                        room_id=room_id, text=text, attachments=attachments)
+                    return (data, 200)
+                elif "start" in msg["text"].lower():
+                    logger.debug(f'Start command received: {msg["text"]}')
+                    attachments = json.loads(ac.start)
+                    text = attachments["content"]["body"][1]["text"]
+                    webex.sendMessageToRoom(
+                        room_id=room_id, text=text, attachments=attachments)
                     return (data, 200)
                 elif len(msg["text"].split()) > 1:
                     logger.debug(f'Invalid command received: {msg["text"]}')

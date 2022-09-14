@@ -1,7 +1,6 @@
 import requests
 import os
 import logging
-import json
 from dotenv import load_dotenv
 
 # Initialize logger
@@ -58,7 +57,7 @@ class OpenWeather():
 
     def getCurrentWeather(self, geo_data: dict) -> dict:
         if geo_data:
-            logger.info(f'Retrieving current weather information for {geo_data["name"]}')
+            logger.info(f'Retrieving weather info for {geo_data["name"]}')
             endpoint = "/data/2.5/weather?lat=" + str(geo_data["lat"]) +\
                 "&lon=" + str(geo_data["lon"]) +\
                 "&appid=" + self.api_token
