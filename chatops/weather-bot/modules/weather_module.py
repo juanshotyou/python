@@ -66,11 +66,11 @@ class OpenWeather():
                 weather_data = {}
                 weather_data["location"] = geo_data["name"]
                 weather_data["w_main"] = response["weather"][0]["main"]
-                weather_data["w_desc"] = response["weather"][0]["description"]
-                weather_data["tmp"] = response["main"]["temp"] - 273
-                weather_data["tmp_feel"] = response["main"]["feels_like"] - 273
-                weather_data["tmp_min"] = response["main"]["temp_min"] - 273
-                weather_data["temp_max"] = response["main"]["temp_max"] - 273
+                weather_data["w_desc"] = response["weather"][0]["description"].capitalize()
+                weather_data["tmp"] = round(response["main"]["temp"] - 273, 2)
+                weather_data["tmp_feel"] = round(response["main"]["feels_like"] - 273, 2)
+                weather_data["tmp_min"] = round(response["main"]["temp_min"] - 273, 2)
+                weather_data["temp_max"] = round(response["main"]["temp_max"] - 273, 2)
                 weather_data["pressure"] = response["main"]["pressure"] / 1000
                 weather_data["humidity"] = response["main"]["humidity"]
                 return weather_data

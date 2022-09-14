@@ -78,6 +78,7 @@ class Messenger:
         webhooks = self._makeRequest(method="GET", endpoint=endpoint)
         for webhook in webhooks["items"]:
             webhook_urls.append(webhook["targetUrl"])
+            logger.debug(f'Webhook {webhook["name"]}:\n{json.dumps(webhook, indent=2)}\n')
         return webhook_urls
 
     def registerWebhook(self, url: str, name: str) -> None:
@@ -102,8 +103,14 @@ class Messenger:
         logger.info(f"Retrieving message {message_id}")
         endpoint = "/messages/" + message_id
         response = self._makeRequest(method="GET", endpoint=endpoint)
-        printable_response = json.dumps(response, indent=4)
-        logger.debug(f"Message retrieved:\n{printable_response}\n")
+        logger.debug(f"Message retrieved:\n{json.dumps(response, indent=2)}\n")
+        return response
+
+    def getAttachmentActionData(self, action_id: str) -> dict:
+        logger.info(f"Retrieving attachment action {action_id}")
+        endpoint = "/attachment/actions/"+ action_id
+        response = self._makeRequest(method="GET", endpoint=endpoint)
+        logger.debug(f"Attachment action retrieved:\n{json.dumps(response, indent=2)}\n")
         return response
 
     def getPersonInfo(self, person_id: str) -> dict:

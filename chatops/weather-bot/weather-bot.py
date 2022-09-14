@@ -1,8 +1,8 @@
 import json
 import logging
 import logging.config
+from jinja_templates import templates
 from modules import utils, webex_module, weather_module
-from modules import ac_module as ac
 from flask import Flask, request
 
 # Initialize logger
@@ -27,52 +27,63 @@ def index() -> tuple:
         logger.info("POST request received.")
         if "application/json" in request.headers.get("Content-Type"):
             data = request.get_json()
-            printable_data = json.dumps(data, indent=4)
+            printable_data = json.dumps(data, indent=2)
+            logger.debug(f"Notification contents:\n{printable_data}")
             # Filter out messages from self
             if webex.bot_id == data.get("data").get("personId"):
                 logger.debug(f"Message from self received:\n{printable_data}")
                 return ("Message from self ignored.", 200)
             else:
                 # Read message contents
-                logger.debug(f"Notification received:\n{printable_data}")
                 room_id = data["data"]["roomId"]
-                message_id = data["data"]["id"]
-                msg_contents = webex.getMessage(message_id=message_id)
-                # Extract all information from message
-                msg = {}
-                if "text" in msg_contents:
-                    msg["text"] = msg_contents["text"]
-                if "files" in msg_contents:
-                    msg["files"] = msg_contents["files"]
-                if "attachments" in msg_contents:
-                    msg["attachments"] = msg_contents["attachments"]
-                # Check message text contents and reply
-                if msg["text"].lower() in ["hello", "help"]:
-                    logger.debug(f'Help command received: {msg["text"]}')
-                    attachments = json.loads(ac.hello)
-                    text = attachments["content"]["body"][0]["text"] + "\n" +\
-                        attachments["content"]["body"][1]["columns"][1]["items"][0]["text"]
-                    webex.sendMessageToRoom(
-                        room_id=room_id, text=text, attachments=attachments)
-                    return (data, 200)
-                elif "start" in msg["text"].lower():
-                    logger.debug(f'Start command received: {msg["text"]}')
-                    attachments = json.loads(ac.start)
-                    text = attachments["content"]["body"][1]["text"]
-                    webex.sendMessageToRoom(
-                        room_id=room_id, text=text, attachments=attachments)
-                    return (data, 200)
-                elif len(msg["text"].split()) > 1:
-                    logger.debug(f'Invalid command received: {msg["text"]}')
-                    text = "Could not process request! Too many words...aghhh"
-                    webex.sendMessageToRoom(room_id=room_id, text=text)
-                    return (data, 400)
-                else:
-                    logger.debug(f'Looking up weather info for {msg["text"]}')
-                    geolocation = weather.getGeolocationData(msg["text"])
-                    weather_info = weather.getCurrentWeather(geolocation)
-                    text = json.dumps(weather_info, indent=4)
-                    webex.sendMessageToRoom(room_id=room_id, text=text)
+                data_id = data["data"]["id"]
+                if data["resource"] == "messages":
+                    msg_contents = webex.getMessage(message_id=data_id)
+                    # Check message text contents and reply
+                    if "text" in msg_contents:
+                        if msg_contents["text"].lower() in ["hello", "help"]:
+                            logger.debug(f'Help command received: {msg_contents["text"]}')
+                            attachments = json.loads(templates.J2_HELLO.render())
+                            logger.debug(f"Attachment: \n\n\n {attachments} \n\n\n")
+                            text = attachments["content"]["body"][0]["text"] + "\n" +\
+                                attachments["content"]["body"][1]["columns"][1]["items"][0]["text"]
+                            webex.sendMessageToRoom(
+                                room_id=room_id, text=text, attachments=attachments)
+                            return (data, 200)
+                        elif "start" in msg_contents["text"].lower():
+                            logger.debug(f'Start command received:{msg_contents["text"]}')
+                            attachments = json.loads(templates.J2_START.render())
+                            text = attachments["content"]["body"][1]["text"]
+                            webex.sendMessageToRoom(
+                                room_id=room_id, text=text, attachments=attachments)
+                            return (data, 200)
+                        elif len(msg_contents["text"].split()) > 1:
+                            logger.debug(f'Invalid command received: {msg_contents["text"]}')
+                            text = "Could not process request! Too many words...aghhh"
+                            webex.sendMessageToRoom(room_id=room_id, text=text)
+                            return (data, 400)
+                        else:
+                            logger.debug(f'Looking up weather info for {msg_contents["text"]}')
+                            geolocation = weather.getGeolocationData(msg_contents["text"])
+                            weather_info = weather.getCurrentWeather(geolocation)
+                            text = json.dumps(weather_info, indent=2)
+                            attachments = json.loads(templates.J2_WEATHER.render(weather_info))
+                            webex.sendMessageToRoom(room_id=room_id, text=text, attachments=attachments)
+                            return (data, 200)
+                elif data["resource"] == "attachmentActions":
+                    action_contents = webex.getAttachmentActionData(
+                        action_id=data_id)
+                    if "inputs" in action_contents:
+                        logger.debug(f'Action notification received:{action_contents["inputs"]}')
+                        location = action_contents["inputs"]["location"]
+                        logger.debug(f'Looking up weather info for {location}')
+                        geolocation = weather.getGeolocationData(location)
+                        weather_info = weather.getCurrentWeather(geolocation)
+                        text = json.dumps(weather_info, indent=2)
+                        attachments = json.loads(templates.J2_WEATHER.render(weather_info))
+                        webex.sendMessageToRoom(
+                            room_id=room_id, text=text, attachments=attachments
+                        )
                     return (data, 200)
         else:
             return ("Wrong data format", 400)
