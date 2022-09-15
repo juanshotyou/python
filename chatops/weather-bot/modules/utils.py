@@ -33,7 +33,7 @@ def getNgrokURLs() -> list:
         ).json()["tunnels"]
         for tunnel in tunnels:
             urls.append(tunnel["public_url"])
-        logger.debug(f"Found the following URLs:\n{tunnel}\n")
+        logger.debug(f"Found the following URLs:\n{urls}\n")
     except Exception as e:
         logger.warning("Connection refused! Is Ngrok running?")
         logger.debug(f"Error text:{e}")

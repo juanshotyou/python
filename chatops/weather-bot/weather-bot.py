@@ -97,13 +97,18 @@ def main():
     webhook_urls = webex.getWebhooks()
     ngrok_urls = utils.getNgrokURLs()
     if not ngrok_urls:
+        logger.debug["No active Ngrok sessions found! Starting Ngrok..."]
         utils.startNgrok()
         ngrok_urls = utils.getNgrokURLs()
     target_url = list(set(ngrok_urls) & set(webhook_urls))
     if target_url:
         logger.info(f"Target webhook: {target_url[0]}")
     else:
-        webex.registerWebhook(url=ngrok_urls[0], name="NGROK test webhook")
+        webex.deleteNgrokWebhooks()
+        webex.registerWebhook(
+            url=ngrok_urls[0], name="NGROK general webhook", resource="all")
+        webex.registerWebhook(
+            url=ngrok_urls[0], name="NGROK action webhook", resource="attachmentActions")
     gateway.run(host="0.0.0.0", port=5005, debug=True)
 
 

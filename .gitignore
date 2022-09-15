@@ -5,7 +5,6 @@ dnac/LSDD-Form-SD Access-v0.05.xls
 dnac/.DS_Store
 ise/.DS_Store
 */.env
-*/*.log
 */__pycache__
 */*/__pycache__
 */*/*/__pycache__

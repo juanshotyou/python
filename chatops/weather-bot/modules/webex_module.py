@@ -78,19 +78,38 @@ class Messenger:
         webhooks = self._makeRequest(method="GET", endpoint=endpoint)
         for webhook in webhooks["items"]:
             webhook_urls.append(webhook["targetUrl"])
-            logger.debug(f'Webhook {webhook["name"]}:\n{json.dumps(webhook, indent=2)}\n')
+            logger.debug(
+                f'Found {webhook["name"]}:\n{json.dumps(webhook, indent=2)}\n')
         return webhook_urls
 
-    def registerWebhook(self, url: str, name: str) -> None:
+    def registerWebhook(
+        self, url: str, name: str, resource: str = "all", event: str = "all"
+    ) -> None:
         logger.info(f"Registering webhook {name} with target {url}...")
         endpoint = "/webhooks"
         data = {
             "name": name,
-            "resource": "all",
-            "event": "all",
+            "resource": resource,
+            "event": event,
             "targetUrl": url
         }
         self._makeRequest(method="POST", endpoint=endpoint, payload=data)
+
+    def deleteWebhook(self, webhook_id: str) -> None:
+        logger.info(f"Deleting webhook {webhook_id}")
+        endpoint = "/webhooks/" + webhook_id
+        self._makeRequest(method="DELETE", endpoint=endpoint)
+
+    def deleteNgrokWebhooks(self) -> None:
+        logger.info(f"Deleting all Ngrok webhooks...")
+        endpoint = "/webhooks"
+        webhooks = self._makeRequest(method="GET", endpoint=endpoint)
+        logger.debug(f"Webhooks found:\n{webhooks}\n")
+        if webhooks["items"]:
+            for webhook in webhooks:
+                if "ngrok" in webhook["name"].lower():
+                    logger.info(f'Deleting webhook {webhook["name"]}')
+                    self.deleteWebhook(webhook_id=webhook["id"])
 
     def getBotID(self) -> str:
         logger.info("Retrieving BOT ID...")
