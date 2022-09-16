@@ -1,9 +1,11 @@
+from importlib.metadata import files
 import json
 import logging
 import logging.config
 from jinja_templates import templates
 from modules import utils, webex_module, weather_module
 from flask import Flask, request
+from requests_toolbelt.multipart.encoder import MultipartEncoder
 
 # Initialize logger
 logging.config.fileConfig("logger.conf")
@@ -52,14 +54,26 @@ def index() -> tuple:
                                 attachments["content"]["body"][1]["columns"][1]["items"][0]["text"]
                             webex.sendMessageToRoom(
                                 room_id=room_id, text=text, attachments=attachments)
-                            return (data, 200)
-                        elif msg_contents["text"].lower() in  "start":
+                            return ("OK", 200)
+                        elif msg_contents["text"].lower() in "start":
                             logger.debug(f'Start command received:{msg_contents["text"]}')
                             attachments = json.loads(templates.J2_START.render())
                             text = attachments["content"]["body"][1]["text"]
                             webex.sendMessageToRoom(
                                 room_id=room_id, text=text, attachments=attachments)
-                            return (data, 200)
+                            return ("OK", 200)
+                        elif msg_contents["text"].lower() in "pint":
+                            logger.info("Coming right up!")
+                            text = "Enjoy!"
+                            m = MultipartEncoder(
+                                {
+                                    "roomId": room_id,
+                                    "text": text,
+                                    "files": ("pint.png", open("images/pint.png", "rb"), "image/png")
+                                }
+                            )
+                            webex.sendMessageToRoom(room_id=room_id, files=m, special=True)
+                            return ("OK", 200)
                         else:
                             logger.debug(f'Looking up weather info for {msg_contents["text"]}')
                             geolocation = weather.getGeolocationData(msg_contents["text"])

@@ -40,7 +40,7 @@ class OpenWeather():
                 f"{response.text}"
             )
         elif response.status_code >= 200 or response.status_code < 300:
-            logger.info("Operation successful!")
+            logger.debug("Operation successful!")
 
         return response.json()
 

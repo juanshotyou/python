@@ -28,13 +28,22 @@ class Messenger:
         self,
         method: str,
         endpoint: str,
-        payload: dict = {}
+        payload: dict = {},
+        headers: dict = {}
     ) -> dict:
         url = self.base_url + endpoint
         data = {}
         try:
             logger.debug(f"Executing {method} - {url} \n {payload}")
-            if payload:
+            if payload and headers:
+                response = requests.request(
+                    method=method,
+                    url=url,
+                    headers=headers,
+                    data=payload,
+                    verify=True,
+                )
+            elif payload and not headers:
                 response = requests.request(
                     method=method,
                     url=url,
@@ -63,7 +72,7 @@ class Messenger:
                 f"{response.text}"
             )
         elif response.status_code >= 200 or response.status_code < 300:
-            logger.info("Operation successful!")
+            logger.debug("Operation successful!")
 
         # Return data if needed
         if response.content:
@@ -107,8 +116,8 @@ class Messenger:
         logger.debug(f"Webhooks found:\n{webhooks}\n")
         if webhooks["items"]:
             for webhook in webhooks["items"]:
-                logger.debug(f"{webhook}")
-                if "ngrok" in webhook["name"].lower():
+                name = webhook["name"].lower()
+                if "ngrok" in name:
                     logger.info(f'Deleting webhook {webhook["name"]}')
                     self.deleteWebhook(webhook_id=webhook["id"])
 
@@ -144,20 +153,32 @@ class Messenger:
         room_id: str,
         text: str = None,
         files: str = None,
-        attachments: dict = None
+        attachments: dict = None,
+        special: bool = False,
     ) -> None:
         logger.info(f"Sending message to room {room_id}")
         endpoint = "/messages"
-        data = {
-            "roomId": room_id,
-            "text": text
-        }
-        if attachments:
-            data["attachments"] = [attachments]  # For Adaptive cards
-        if files:
-            data["files"] = files  # Must be URL to file
-        logger.debug(f"Message contents: \n{json.dumps(data, indent=2)}\n")
-        self._makeRequest(method="POST", endpoint=endpoint, payload=data)
+        if not special:
+            data = {
+                "roomId": room_id,
+                "text": text
+            }
+            if attachments:
+                data["attachments"] = [attachments]  # For Adaptive cards
+            if files:
+                data["files"] = files  # Must be URL to file
+            logger.debug(f"Message contents: \n{json.dumps(data, indent=2)}\n")
+            self._makeRequest(method="POST", endpoint=endpoint, payload=data)
+        else:
+            data = files
+            headers = {
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": data.content_type
+            }
+            logger.debug("Message with local content prepared")
+            self._makeRequest(
+                method="POST", endpoint=endpoint, payload=data, headers=headers)
+        
 
     def sendMessageToPersonEmail(self, email: str, message: str) -> None:
         logger.info(f"Sending message to {email}")
