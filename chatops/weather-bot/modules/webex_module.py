@@ -106,7 +106,8 @@ class Messenger:
         webhooks = self._makeRequest(method="GET", endpoint=endpoint)
         logger.debug(f"Webhooks found:\n{webhooks}\n")
         if webhooks["items"]:
-            for webhook in webhooks:
+            for webhook in webhooks["items"]:
+                logger.debug(f"{webhook}")
                 if "ngrok" in webhook["name"].lower():
                     logger.info(f'Deleting webhook {webhook["name"]}')
                     self.deleteWebhook(webhook_id=webhook["id"])

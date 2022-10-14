@@ -97,7 +97,7 @@ def main():
     webhook_urls = webex.getWebhooks()
     ngrok_urls = utils.getNgrokURLs()
     if not ngrok_urls:
-        logger.debug["No active Ngrok sessions found! Starting Ngrok..."]
+        logger.debug("No active Ngrok sessions found! Starting Ngrok...")
         utils.startNgrok()
         ngrok_urls = utils.getNgrokURLs()
     target_url = list(set(ngrok_urls) & set(webhook_urls))
