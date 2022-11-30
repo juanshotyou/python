@@ -20,7 +20,7 @@ gateway = Flask(__name__)
 weather = weather_module.OpenWeather()
 
 
-@gateway.route("/", methods=["GET", "POST"])
+@gateway.route("/weather", methods=["GET", "POST"])
 def index() -> tuple:
     if request.method == "GET":
         logger.info("GET request received.")
@@ -104,7 +104,7 @@ def index() -> tuple:
                         )
                     return (data, 200)
         else:
-            return ("Wrong data format", 400)
+            return ("Wrong data format. Please use JSON.", 400)
 
 
 def main():
@@ -118,11 +118,12 @@ def main():
     if target_url:
         logger.info(f"Target webhook: {target_url[0]}")
     else:
+        url = ngrok_urls[0] + "/weather"
         webex.deleteNgrokWebhooks()
         webex.registerWebhook(
-            url=ngrok_urls[0], name="NGROK general webhook", resource="all")
+            url=url, name="NGROK general wh", resource="all")
         webex.registerWebhook(
-            url=ngrok_urls[0], name="NGROK action webhook", resource="attachmentActions")
+            url=url, name="NGROK action wh", resource="attachmentActions")
     gateway.run(host="0.0.0.0", port=5005, debug=True)
 
 

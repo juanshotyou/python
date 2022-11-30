@@ -1,6 +1,5 @@
 import os
 import json
-from string import printable
 import requests
 import logging
 from dotenv import load_dotenv
@@ -31,6 +30,21 @@ class Messenger:
         payload: dict = {},
         headers: dict = {}
     ) -> dict:
+        """ Internal function that handles requests to the Webex Teams API. It
+            supports all CRUD operations and handles errors & data responses.
+
+            All endpoint strings are appended to the base_url: 
+                https://webexapis.com/v1
+
+        Args:
+            method (str): CRUD operation ("GET", "PUT", etc)
+            endpoint (str): API endpoint on which to make the request
+            payload (dict, optional): Data payload. Defaults to {}.
+            headers (dict, optional): Custom headers. Defaults to {}.
+
+        Returns:
+            dict: Data response where applicable or empty dict otherwise.
+        """
         url = self.base_url + endpoint
         data = {}
         try:
@@ -139,7 +153,8 @@ class Messenger:
         logger.info(f"Retrieving attachment action {action_id}")
         endpoint = "/attachment/actions/"+ action_id
         response = self._makeRequest(method="GET", endpoint=endpoint)
-        logger.debug(f"Attachment action retrieved:\n{json.dumps(response, indent=2)}\n")
+        logger.debug(
+            f"Attachment action retrieved:\n{json.dumps(response, indent=2)}\n")
         return response
 
     def getPersonInfo(self, person_id: str) -> dict:
@@ -178,7 +193,6 @@ class Messenger:
             logger.debug("Message with local content prepared")
             self._makeRequest(
                 method="POST", endpoint=endpoint, payload=data, headers=headers)
-        
 
     def sendMessageToPersonEmail(self, email: str, message: str) -> None:
         logger.info(f"Sending message to {email}")
