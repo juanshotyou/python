@@ -74,9 +74,11 @@ class Meraki:
 if __name__ == "__main__":
     # Initialize dashboard object
     dashboard = Meraki(token=token, api_url=api_url)
+
     # Get all orgs that the user has access to
     print("Attempting to download orgs list...")
     orgs = dashboard._makeRequest(method="GET", endpoint="/organizations")
+
     # If org is "VMO2 - NCA DEVNET", get and print all devices associated to it
     id = [org["id"] for org in orgs if org["name"] == "VMO2 - NCA DEVNET"]
     print("Attempting to retrieve device info for VMO2 - NCA DEVNET...")
@@ -87,6 +89,7 @@ if __name__ == "__main__":
             f"Device {device['name']} is a {device['model']} and has SN {device['serial']}. "
             f"It was last configured at {device['configurationUpdatedAt']}."
         )
+
     # Create a new network under the "VMO2 - NCA DEVNET" org
     print("Attempting to create a new network...")
     new_network = "VR_learning_net"
@@ -100,6 +103,7 @@ if __name__ == "__main__":
         "productTypes": ['appliance', 'switch', 'camera']
     }
     dashboard._makeRequest(method="POST", endpoint=f"/organizations/{id[0]}/networks", payload=payload)
+
     # Get new network ID and update its notes
     networks = dashboard._makeRequest(method="GET", endpoint=f"/organizations/{id[0]}/networks")
     network_id = [network["id"] for network in networks if network["name"] == "VR_learning_net"]
@@ -108,10 +112,12 @@ if __name__ == "__main__":
         "notes": "Added some notes to this network via API."
     }
     dashboard._makeRequest(method="PUT", endpoint=f"/networks/{network_id[0]}", payload=payload)
+
     # Check that there are no webhooks currently registered
     webhooks = dashboard._makeRequest(method="GET", endpoint=f"/networks/{network_id[0]}/webhooks/httpServers")
     if not webhooks:
         print(f"No webhooks found for network {network_id[0]}")
+
     # Register a new webhook
     print("Attempting to register a new webhook...")
     payload = {
@@ -120,16 +126,19 @@ if __name__ == "__main__":
         "url": "https://nca-dev.techsupport.co.uk/receiver"
     }
     dashboard._makeRequest(method="POST", endpoint=f"/networks/{network_id[0]}/webhooks/httpServers", payload=payload)
+
     # Check that new webhook can now be seen
     webhooks = dashboard._makeRequest(method="GET", endpoint=f"/networks/{network_id[0]}/webhooks/httpServers")
     if webhooks:
         print("The following webhooks have been found:")
         for webhook in webhooks:
             print(json.dumps(webhook, indent=2))
+
     # Get ID of new webhook and delete it from the network
     webhook_id = [webhook["id"] for webhook in webhooks if webhook["name"] == "VR_TEST_WEBHOOK"]
     print(f"Attempting to delete webhook {webhook_id[0]} from network {network_id[0]}...")
     dashboard._makeRequest(method="DELETE", endpoint=f"/networks/{network_id[0]}/webhooks/httpServers/{webhook_id[0]}")
+
     # Remove the new network
     print(f"Attempting to delete network {network_id[0]}...")
     dashboard._makeRequest(method="DELETE", endpoint=f"/networks/{network_id[0]}")
