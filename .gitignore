@@ -11,3 +11,4 @@ ise/.DS_Store
 *.log
 */*.log
 */*/*.log
+.vscode
