@@ -1,10 +1,10 @@
-ise/.env
-dnac/.env
-dnac/LSDD-Form-SD Access-v0.05.xls
 .DS_Store
-dnac/.DS_Store
-ise/.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+.env
 */.env
+*/*/.env
+__pycache__
 */__pycache__
 */*/__pycache__
 */*/*/__pycache__
@@ -12,3 +12,5 @@ ise/.DS_Store
 */*.log
 */*/*.log
 .vscode
+*/*/*.xls
+*/*/*.xlsx

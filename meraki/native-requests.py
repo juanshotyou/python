@@ -12,12 +12,14 @@ load_dotenv()
 token = os.environ.get("MERAKI_API_KEY")
 api_url = "https://api.meraki.com/api/v1"
 
+
 class NoRebuildAuthSession(requests.Session):
     def rebuild_auth(self, prepared_request, response) -> None:
         """ Needed to prevent the stripping of the Authorization header when
             the request is redirected. See Meraki API docs for info.
         """
         return
+
 
 class Meraki:
     def __init__(self, token: str, api_url: str) -> None:
