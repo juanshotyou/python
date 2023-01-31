@@ -17,7 +17,7 @@ class IOSXE:
             password=password
         )
         self._ip = ip_address
-    
+
     def getCapabilities(self) -> list:
         return self._manager.server_capabilities
 
